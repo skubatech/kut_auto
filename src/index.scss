@@ -1,6 +1,7 @@
-
 * {
   box-sizing: inherit;
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
 }
 
 html,
@@ -20,6 +21,7 @@ html {
 body {
   position: relative;
   display: block;
+  background: var(--black);
 }
 
 a {
@@ -37,4 +39,21 @@ h4,
 h5,
 p {
   margin: 0;
+}
+
+.container {
+  padding-top: 60px;
+  padding-right: 262px;
+  padding-bottom: 60px;
+  padding-left: 262px;
+}
+
+:root{
+  --grad-norm: linear-gradient(261.81deg, #19FB9B -6.33%, #6CC0E6 100%);
+  --Style: linear-gradient(95.02deg, #6862FD 15.91%, #1293C3 78.04%);
+  --grey: #777777;
+  --light-grey: #7E7E7E;
+  --grey-text: #9E9E9E;
+  --black: #111;
+  --white: #FFFFFF;
 }

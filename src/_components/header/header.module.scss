@@ -1,0 +1,61 @@
+.wrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+
+  .top {
+    display: flex;
+    border-bottom: 1px solid #313131;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    align-items: center;
+
+    .location {
+      display: flex;
+      color: var(--grey);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .location::before {
+      content: '';
+      display: flex;
+      background-image: url('../../../public/assets/icons/location.svg');
+      width: 15px;
+      height: 15px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .low {
+    .nav {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      color: #fff;
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      margin: 26px 0 0 0;
+      padding: 0;
+
+      li {
+        cursor: pointer;
+        transition: 1.3s;
+
+        &:hover {
+          background: linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}

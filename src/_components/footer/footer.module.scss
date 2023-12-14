@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--light-grey);
+  padding-bottom: 30px;
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    align-items: flex-end;
+
+    .docs {
+      display: flex;
+      flex-direction: column;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: var(--light-grey);
+
+      .requisites {
+        color: #7e7e7e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 38px;
+        text-transform: uppercase;
+      }
+    }
+
+    .social {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .email {
+        color: #7e7e7e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 38px;
+        text-align: end;
+      }
+    }
+  }
+
+  .reserved {
+    padding-bottom: 30px;
+    margin: 0 auto;
+    color: #7e7e7e;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}

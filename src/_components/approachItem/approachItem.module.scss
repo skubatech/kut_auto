@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    img {
+        width: 80px;
+    }
+
+    .title {
+      background: var(
+        --grad-norm,
+        linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17.749px;
+    text-align: center;
+  }
+}

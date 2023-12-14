@@ -1,0 +1,18 @@
+.wrapper {
+
+    .title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .list {
+        max-width: 600px;
+
+        .marker {
+            list-style-type: square;
+        }
+    }
+}
