@@ -15,7 +15,7 @@ export const Header: FC = () => {
         <ul className={styles.nav}>
             <li>Кейсы</li>
             <li>Услуги</li>
-            <li>Калькулятор</li>
+            <li id={styles.main}>Калькулятор</li>
             <li>Вопросы</li>
             <Button 
                 fontSize={27}

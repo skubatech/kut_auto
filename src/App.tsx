@@ -9,17 +9,28 @@ import { Banner } from './_components/banner';
 import { Footer } from './_components/footer';
 import { Description } from './_components/description';
 import { Approach } from './_components/approach';
+import { Title } from './_components/title/tittle';
+import { Youtube } from './_components/youtube';
+import { Cases } from './_components/cases';
+import { OurApproach } from './_components/ourApproach';
+import { Price } from './_components/price';
+import { Contacts } from './_components/contacts';
 
 export const App = () => {
   return (
     <div>
       <Header />
-      <Banner />
+      <Title />
       <Benefits />
-      <Statistics />
-      <Approach />
-      <Description />
-      <PriceCards />
+      <Youtube />
+      {/* <Banner /> */}
+      <Cases />
+      {/* <Statistics /> */}
+      {/* <Approach /> */}
+      <OurApproach />
+      
+      <Price />
+      <Contacts />
       <Footer />
     </div>
   );

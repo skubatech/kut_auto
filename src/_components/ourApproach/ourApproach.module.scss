@@ -1,0 +1,124 @@
+.wrapper {
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+
+  .titleWrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 0;
+    gap: 15px;
+    background: linear-gradient(270deg, #111 -8.44%, rgba(217, 217, 217, 0) 70.8%);
+
+    .car {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      mix-blend-mode: color-dodge;
+      z-index: -1;
+    }
+
+    .title {
+      font-size: 58px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 68px;
+      background: var(
+        --grad-norm,
+        linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    .description {
+      display: block;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 19px;
+      max-width: 797px;
+      text-transform: capitalize;
+    }
+  }
+
+  .stateWrap {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+    .stateTitle {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      max-width: 859px;
+    }
+
+    .stateText {
+      display: block;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 19px;
+      text-transform: capitalize;
+      max-width: 710px;
+    }
+  }
+
+  .diagnosisWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .diagnosisTitle {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    .diagnosisText {
+      display: block;
+      max-width: 639px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 19px;
+      text-transform: capitalize;
+    }
+
+    .diagnosis {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 45px;
+      align-items: center;
+    }
+  }
+
+  .formalization {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .formalizationTitle {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .formalizationDescription {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: lowercase;
+    }
+  }
+}

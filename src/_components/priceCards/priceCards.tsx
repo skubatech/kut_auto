@@ -22,7 +22,7 @@ const cards = [
 
 export const PriceCards:FC = () => {
   return (
-    <div className={`container ${styles.wrapper}`}> 
+    <div className={styles.wrapper}> 
     {
         cards.map((item, i) => (
             <PriceCard title={item.title} description={item.descrption} text={item.text} key={i}/>

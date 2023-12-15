@@ -24,7 +24,7 @@ const descriptions = [
 ]
 
 export const Description:FC = () => {
-    return <div className={`container ${styles.wrapper}`}>
+    return <div className={styles.wrapper}>
         {
             descriptions.map((item, i) => (
                 <DescriptionItem title={item.title} text={item.text} key={i}/>

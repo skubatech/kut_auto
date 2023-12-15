@@ -1,0 +1,16 @@
+.wrapper {
+  .title {
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 68px;
+    background: var(
+      --grad-norm,
+      linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+  }
+}

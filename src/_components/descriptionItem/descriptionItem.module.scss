@@ -1,18 +1,28 @@
 .wrapper {
+  max-width: 606px;
 
-    .title {
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase;
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .list {
+    max-width: 600px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .marker {
+      list-style-type: square;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: lowercase;
     }
-
-    .list {
-        max-width: 600px;
-
-        .marker {
-            list-style-type: square;
-        }
-    }
+  }
 }

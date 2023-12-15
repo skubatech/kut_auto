@@ -25,7 +25,7 @@ const approach = [
 
 export const Approach: FC = () => {
   return (
-    <div className={`container ${styles.wrapper}`}>
+    <div className={`${styles.wrapper}`}>
       {approach.map((item, i) => (
         <ApproachItem
           imgSrc={item.imgSrc}

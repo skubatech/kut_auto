@@ -45,9 +45,16 @@
       margin: 26px 0 0 0;
       padding: 0;
 
+      #main {
+        background: linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
       li {
         cursor: pointer;
-        transition: 1.3s;
+        // transition: 1.3s;        
 
         &:hover {
           background: linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%);
