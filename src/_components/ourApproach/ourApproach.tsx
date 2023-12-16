@@ -3,7 +3,7 @@ import styles from './ourApproach.module.scss';
 import { Approach } from '../approach';
 import { DiagnosisDes } from '../diagnosisDes';
 import { Description } from '../description';
-import { StepperCustom } from '../stepper';
+import { StepperCustom } from '../stepperCustom';
 import { diagnosisDesLeft, diagnosisDesRight } from './ourApproach.constants';
 
 export const OurApproach: FC = () => {

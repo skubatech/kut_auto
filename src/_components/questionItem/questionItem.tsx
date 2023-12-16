@@ -23,17 +23,17 @@ export const QuestionItem: FC<Props> = ({ question, answer }) => {
       aria-labelledby='nested-list-subheader'
       className={styles.wrapper}
     >
-      <ListItemButton onClick={handleClick}>
-        <ListItemText primary={question} />
-        {open ? (
-          <img src='assets/icons/arrowUp.svg' alt='Arrow icon' />
-        ) : (
-          <img src='assets/icons/arrowDown.svg' alt='Arrow icon' />
-        )}
+      <ListItemButton onClick={handleClick} sx={{ padding: 0 }}>
+        <ListItemText primary={<span className={styles.title}>{question}</span>} sx={{ fontSize: '40px' }} />
+        <img
+          src='assets/icons/arrowUp.svg'
+          alt='Arrow icon'
+          style={{ transform: open ? '' : 'rotate(180deg)' }}
+        />
       </ListItemButton>
       <Collapse in={open} timeout='auto' unmountOnExit>
         <List component='div' disablePadding>
-          <ListItemText primary={answer} />
+          <ListItemText primary={<span className={styles.text}>{answer}</span>} />
         </List>
       </Collapse>
     </List>

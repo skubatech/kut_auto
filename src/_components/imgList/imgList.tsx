@@ -22,8 +22,8 @@ export const ImgList:FC = () => {
       gap={0}
       sx={{ marginTop: '60px' }}
     >
-      {imgData.map((item) => (
-        <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+      {imgData.map((item, i) => (
+        <ImageListItem key={i} cols={item.cols || 1} rows={item.rows || 1}>
           <img
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}

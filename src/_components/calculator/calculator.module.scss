@@ -1,4 +1,8 @@
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
   .title {
     font-size: 58px;
     font-style: normal;
@@ -11,15 +15,11 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    max-width: 1046px;
   }
 
-  .contacts {
+  .calculatorWrap {
     display: flex;
-    justify-content: space-between;
-    margin-top: 45px;
-  }
 
-  .map {
-    border-radius: 50px;
   }
 }

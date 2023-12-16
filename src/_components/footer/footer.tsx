@@ -17,7 +17,7 @@ export const Footer: FC = () => {
             href="mailto:kut.auto.import@yandex.ru"
             className={styles.email}
           >
-            kut.auto.import@yandex.ru
+            mail@kut-auto.ru
           </a>
         </div>
       </div>

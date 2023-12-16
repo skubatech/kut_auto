@@ -3,8 +3,10 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import { StepIconProps } from '@mui/material/StepIcon';
-import { StepContent, Typography } from '@mui/material';
-import { steps } from './stepper.constants';
+import { StepContent } from '@mui/material';
+import { steps } from './stepperCustom.constants';
+import styles from './stepperCustom.module.scss';
+import { StepperDescription } from '../stepperDescription';
 
 
 const colorlibStepIcon = (props: StepIconProps) => {
@@ -35,13 +37,13 @@ export const StepperCustom: FC = () => {
         },
       }}
     >
-      {steps.map((item) => (
-        <Step key={item.label} active>
+      {steps.map((item, i) => (
+        <Step key={item.title} active>
           <StepLabel StepIconComponent={colorlibStepIcon}>
-            <Typography>{item.label}</Typography>
+            <h5 className={styles.title}>{item.title}</h5>
           </StepLabel>
           <StepContent>
-            <Typography>{item.description}</Typography>
+            <StepperDescription description={item.description} timeText={item.timeText} key={i}/>
           </StepContent>
         </Step>
       ))}

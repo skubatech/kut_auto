@@ -11,8 +11,7 @@ export const Questions:FC = () => {
         </h5>
         {
             questions.map((item, i) => (
-
-                <QuestionItem question={item.question} answer={item.answer}/>
+                <QuestionItem question={item.question} answer={item.answer} key={i}/>
             ))
         }
     </div>

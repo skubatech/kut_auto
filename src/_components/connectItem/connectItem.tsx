@@ -1,6 +1,5 @@
 import React, {FC} from "react";
 import styles from "./connectItem.module.scss";
-import { SocialCarousel } from "../socialCarousel";
 
 interface Props {
     imgSrc: string;

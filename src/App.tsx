@@ -10,6 +10,7 @@ import { OurApproach } from './_components/ourApproach';
 import { Price } from './_components/price';
 import { Contacts } from './_components/contacts';
 import { Questions } from './_components/questions';
+import { Calculator } from './_components/calculator';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
       <Youtube />
       <Cases />
       <OurApproach />
+      <Calculator />
       <Price />
       <Contacts />  
       <Questions />

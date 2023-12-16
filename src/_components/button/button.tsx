@@ -11,9 +11,9 @@ interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'col
 export const Button:FC<Props> = ({text, fontSize, fontWeight, textTransform, color, ...props}) => {
     return <button
         style={{ fontSize, fontWeight, textTransform }}
-        className={ color ? `${ styles.btn} ${styles.btnColor }` : `${ styles.btn} ${styles.btnWhite }`}
+        className={ color ? `${styles.btn} ${styles.btnColor }` : `${styles.btn} ${styles.btnWhite }`}
         {...props}
     >
-        {text}
+        <span className={color ? `${styles.text}` : `${styles.textWhite}`}>{text}</span>
     </button>
 }

@@ -1,4 +1,19 @@
 .wrapper {
-    border-top: 1px solid var(--grey-text);
-    border-bottom: 1px solid var(--grey-text);
+  border-top: 1px solid var(--grey-text);
+  border-bottom: 1px solid var(--grey-text);
+  padding: 18px 58px 18px 0 !important;
+
+  .title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 58.5px;
+  }
+
+  .text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
 }
