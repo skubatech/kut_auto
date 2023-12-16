@@ -1,6 +1,5 @@
 import React, {FC} from "react";
 import styles from "./button.module.scss";
-
 interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {
     text: string;
     fontSize?: number | 14;

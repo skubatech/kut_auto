@@ -1,1 +1,1 @@
-export * from './colot'
+export * from './color';
