@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const SocialItem:FC<Props> = ({ href, imgSrc, imgAlt }) => {
-    return <a className={styles.square} href={href} target="_blank" rel="noopener noreferrer">
+    return <a href={href} target="_blank" rel="noopener noreferrer">
         <img src={imgSrc} alt={imgAlt}/>
     </a>
 }

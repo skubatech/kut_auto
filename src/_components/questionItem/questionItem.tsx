@@ -22,6 +22,9 @@ export const QuestionItem: FC<Props> = ({ question, answer }) => {
       component='div'
       aria-labelledby='nested-list-subheader'
       className={styles.wrapper}
+      sx={{
+        padding: '18px 58px 18px 0px'
+      }}
     >
       <ListItemButton onClick={handleClick} sx={{ padding: 0 }}>
         <ListItemText primary={<span className={styles.title}>{question}</span>} sx={{ fontSize: '40px' }} />

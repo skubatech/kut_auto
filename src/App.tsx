@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.scss';
 import { Header } from './_components/header';
 import { Benefits } from './_components/benefits';
@@ -13,18 +13,30 @@ import { Questions } from './_components/questions';
 import { Calculator } from './_components/calculator';
 
 export const App = () => {
+  const pageRef = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
+
+  const handleClick = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollTo = (num) => {
+    if (num < pageRef.length) {
+      handleClick(pageRef[num]);
+    }
+  };
+
   return (
     <div>
-      <Header />
+      <Header scrollTo={scrollTo}/>
       <Title />
       <Benefits />
       <Youtube />
-      <Cases />
-      <OurApproach />
-      <Calculator />
+      <Cases ref={pageRef[0]}/>
+      <OurApproach ref={pageRef[1]} />
+      <Calculator ref={pageRef[2]} />
       <Price />
-      <Contacts />  
-      <Questions />
+      <Contacts ref={pageRef[3]}/>  
+      <Questions ref={pageRef[4]} />
       <Footer />
     </div>
   );

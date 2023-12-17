@@ -9,19 +9,22 @@ export const THEME = createTheme({
     MuiSelect: {
       styleOverrides: {
         root: {
+          boxSizing: 'border-box',
+          height: '70px',
           backgroundColor: COLORS.formField,
+          borderRadius: '5px',
 
           ':before': {
+            borderRadius: '5px',
             borderBottomColor: COLORS.formBorder,
           },
           ':after': {
             borderBottomColor: COLORS.formBorder,
           },
           ':hover:not(.Mui-disabled, .Mui-error):before': {
-            borderBottomColor: COLORS.formBorder
-          }
+            borderBottomColor: COLORS.formBorder,
+          },
         },
-
       },
     },
     MuiMenuItem: {
@@ -43,6 +46,10 @@ export const THEME = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: COLORS.formField,
+
+        //   '.&MuiDialog &.paper': {
+        //     backgroundColor: 'red'
+        //   }
         },
       },
     },
@@ -66,29 +73,45 @@ export const THEME = createTheme({
       },
     },
     MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          boxSizing: 'border-box',
+          height: '70px',
+          backgroundColor: COLORS.formField,
+          borderRadius: '5px',
+          color: COLORS.formPlaceholder,
+          ':hover': {
+            backgroundColor: COLORS.formField,
+          },
+          ':hover:not(.Mui-disabled, .Mui-error):before': {
+            borderBottomColor: COLORS.formBorder,
+          },
+          ':before': {
+            borderRadius: '5px',
+            borderBottomColor: COLORS.formBorder,
+          },
+          ':after': {
+            borderBottomColor: COLORS.formBorder,
+          },
+          '&.Mui-focused': {
+            backgroundColor: COLORS.formField,
+          }
+        },
+      },
+    },
+    MuiDialog: {
         styleOverrides: {
             root: {
-                backgroundColor: COLORS.formField,
-                color: COLORS.formPlaceholder,
-                ':hover': {
-                    backgroundColor: COLORS.formField
-                },
-                ':hover:not(.Mui-disabled, .Mui-error):before': {
-                    borderBottomColor: COLORS.formBorder,
-                    // backgroundColor: COLORS.formField
-                },
+                background: 'rgba(49, 49, 49, 0.30)',
+                backdropFilter: 'blur(8.5px)',
 
-                ':before': {
-                    borderBottomColor: COLORS.formBorder
-                }, 
-                ':after': {
-                    borderBottomColor: COLORS.formBorder
-                }, 
-                '&.Mui-focused': {
-                    backgroundColor: COLORS.formField
+                '& .MuiDialog-paper': {
+                    backgroundColor: COLORS.backgroundDialog,
+                    // border: '2px solid',
+                    // borderImageSource: 'linear-gradient(261.81deg, #19FB9B -6.33%, #6CC0E6 100%)',
                 }
             }
         }
-    }
+    },
   },
 });

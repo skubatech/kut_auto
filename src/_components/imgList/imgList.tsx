@@ -31,7 +31,7 @@ export const ImgList:FC = () => {
           />
           <ImageListItemBar
               sx={{
-                padding: '40px',
+                padding: '32px 0 0 27px',
                 background: 'none',
                 '.MuiImageListItemBar-titleWrap': {
                     padding: 0

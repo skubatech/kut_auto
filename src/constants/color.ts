@@ -3,5 +3,7 @@ export const COLORS = {
     formField: '#171717',
     formPlaceholder: '#585858',
     formBorder: 'rgba(255, 255, 255, 0.65)',
-    formHover: 'rgba(113, 113, 113, 0.09)'
+    formHover: 'rgba(113, 113, 113, 0.09)',
+    radioText: '#B3B3B3',
+    backgroundDialog: '#111111'
 }

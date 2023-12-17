@@ -1,11 +1,12 @@
-import React, { FC } from 'react';
+import React, { FC, forwardRef } from 'react';
 import styles from './questions.module.scss';
 import { QuestionItem } from '../questionItem';
 import { questions } from './questions.contants';
+import cn from 'classnames';
 
-export const Questions:FC = () => {
+export const Questions = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
-    <div className={`container ${styles.wrapper}`}>
+    <div className={cn('container', styles.wrapper)} ref={ref}>
         <h5 className={styles.title}>
         ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
         </h5>
@@ -16,4 +17,4 @@ export const Questions:FC = () => {
         }
     </div>
   );
-};
+});

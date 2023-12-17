@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 import styles from './contacts.module.scss';
 import { Connect } from '../connect';
+import cn from 'classnames';
 
-export const Contacts: FC = () => {
+export const Contacts = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
-    <div className={`container ${styles.wrapper}`}>
+    <div className={cn('container', styles.wrapper)} ref={ref}>
       <h4 className={styles.title}>КОНТАКТЫ</h4>
       <div className={styles.contacts}>
         <Connect />
@@ -19,4 +20,4 @@ export const Contacts: FC = () => {
       </div>
     </div>
   );
-};
+})

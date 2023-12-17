@@ -1,11 +1,7 @@
 .wrapper {
   position: relative;
-  //     background-image: url('../../../public/assets/icons/bannerCar.png');
-  //     background-repeat: no-repeat;
-  //     width: 1732.582px;
-  // height: 1037.679px;
-  // background: url('../../../public/assets/icons/bannerCar.png'), lightgray 0px -80.099px / 100% 114.548% no-repeat;
-  // mix-blend-mode: color-dodge;
+  background: linear-gradient(451deg, #111 13.95%, rgba(217, 217, 217, 0.00) 47.87%);
+  height: 1000px;
 
   .img {
     position: absolute;
@@ -15,10 +11,5 @@
     max-height: 1037.679px;
     mix-blend-mode: color-dodge;
     z-index: -1;
-    background: linear-gradient(
-      269deg,
-      #d9d9d9 41.95%,
-      rgba(217, 217, 217, 0) 71.87%
-    );
   }
 }

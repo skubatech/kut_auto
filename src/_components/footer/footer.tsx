@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import styles from './footer.module.scss';
 import { SocialCarousel } from '../socialCarousel';
+import cn from 'classnames';
 
-export const Footer: FC = () => {
+export const Footer = () => {
   return (
-    <footer className={`container ${styles.wrapper}`}>
+    <footer className={cn('container', styles.wrapper)}>
       <div className={styles.info}>
         <div className={styles.docs}>
           <span className={styles.requisites}>ип "название"</span>
@@ -12,7 +13,7 @@ export const Footer: FC = () => {
           <span className={styles.requisites}>огрн 532523563125631</span>
         </div>
         <div className={styles.social}>
-          <SocialCarousel />
+          <SocialCarousel colored={false}/>
           <a
             href="mailto:kut.auto.import@yandex.ru"
             className={styles.email}

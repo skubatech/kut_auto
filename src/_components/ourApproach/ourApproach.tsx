@@ -1,14 +1,15 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 import styles from './ourApproach.module.scss';
 import { Approach } from '../approach';
 import { DiagnosisDes } from '../diagnosisDes';
 import { Description } from '../description';
 import { StepperCustom } from '../stepperCustom';
 import { diagnosisDesLeft, diagnosisDesRight } from './ourApproach.constants';
+import cn from 'classnames';
 
-export const OurApproach: FC = () => {
+export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
-    <div className={`container ${styles.wrapper}`}>
+    <div className={cn('container', styles.wrapper)} ref={ref}>
       <div className={styles.titleWrap}>
         <img className={styles.car} src='assets/icons/approachCar.png' />
         <h4 className={styles.title}>наш подход</h4>
@@ -56,4 +57,5 @@ export const OurApproach: FC = () => {
       </div>
     </div>
   );
-};
+}
+)

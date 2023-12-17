@@ -16,8 +16,8 @@ export const CalculatorExample: FC = () => {
         allowFullScreen
       ></iframe>
       {
-        examples.map((item, i) => (
-            <CalculatorExampleItem title={item.title} text={item.text} key={i}/>
+        examples.map((item) => (
+            <CalculatorExampleItem title={item.title} text={item.text} key={item.text}/>
         ))
       }
     </div>

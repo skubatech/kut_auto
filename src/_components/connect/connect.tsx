@@ -20,7 +20,7 @@ export const Connect: FC = () => {
       </div>
       <div className={styles.social}>
         <span className={styles.title}>Социальные сети</span>
-        <SocialCarousel />
+        <SocialCarousel colored/>
       </div>
     </div>
   );

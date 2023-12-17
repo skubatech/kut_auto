@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import styles from './banner.module.scss';
-import { Button } from '../button';
+import { ButtonCustom } from '../button';
+import cn from 'classnames';
 
 export const Banner: FC = () => {
   return (
-    <div className={`container ${styles.wrapper}`}>
+    <div className={cn('container', styles.wrapper)}>
       <h3 className={styles.title}>САМЫЙ<br/> КАЧЕСТВЕННЫЙ<br/> АВТОПОДБОР В ЕВРОПЕ</h3>
       <span className={styles.description}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -13,13 +14,13 @@ export const Banner: FC = () => {
         commodo consequat
       </span>
       <div className={styles.btnWrap}>
-        <Button
+        <ButtonCustom
           textTransform='uppercase'
           text='сотрудничать'
           fontSize={32}
           fontWeight={700}
         />
-        <Button
+        <ButtonCustom
           color={true}
           textTransform='uppercase'
           text='калькулятор'

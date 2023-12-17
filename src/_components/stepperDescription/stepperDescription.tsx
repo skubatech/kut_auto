@@ -9,13 +9,13 @@ interface Props {
 export const StepperDescription: FC<Props> = ({ description, timeText }) => {
   return (
     <div className={styles.wrapper}>
-        <ul>
-          { description.map((item, i) => (
-            <li key={i}>{item}</li>
+        <ul className={styles.list}>
+          { description.map((item) => (
+            <li key={item}>{item}</li>
           ))}
         </ul>
-      <div>
-        <img src='assets/icons/telegram.svg' alt='Clocks' />
+      <div className={styles.timeWrap}>
+        <img src='assets/icons/clock.svg' alt='Clocks' />
         <span>{timeText}</span>
       </div>
     </div>
