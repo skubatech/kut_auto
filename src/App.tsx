@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './App.scss';
 import { Header } from './_components/header';
 import { Benefits } from './_components/benefits';
@@ -14,6 +14,12 @@ import { Calculator } from './_components/calculator';
 
 export const App = () => {
   const pageRef = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
+
+  useEffect(() => {
+    if (!localStorage.getItem('location')) {
+      localStorage.setItem('location', 'Москва');
+    }
+  }, []);
 
   const handleClick = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });

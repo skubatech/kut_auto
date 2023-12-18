@@ -13,18 +13,27 @@ interface Props {
 
 export const Header: FC<Props> = ({ scrollTo }) => {
   const [open, setOpen] = useState(false);
+
+  const location = localStorage.getItem('location');
+
+  
   const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
   };
+  
+  const changeLocation = (loc: string) => {
+    localStorage.setItem('location', loc)
+    handleClose();
+  }
 
   return (
     <header className={cn('container', styles.wrapper)}>
       <section className={styles.top}>
         <span className={styles.location} onClick={handleClickOpen}>
-          Москва
+          {location ?? 'Москва'}
         </span>
         <img src='assets/icons/logo.svg' alt='Logo' loading='lazy' />
         <SocialCarousel colored={false} />
@@ -70,18 +79,21 @@ export const Header: FC<Props> = ({ scrollTo }) => {
             textTransform='none'
             fontSize={24}
             fontWeight={500}
+            onClick={() => changeLocation('Москва')}
           />
           <ButtonCustom
             text='Нижний Новгород'
             textTransform='none'
             fontSize={24}
             fontWeight={500}
+            onClick={() => changeLocation('Нижний Новгород')}
           />
           <ButtonCustom
             text='Минск'
             textTransform='none'
             fontSize={24}
             fontWeight={500}
+            onClick={() => changeLocation('Минск')}
           />
         </DialogContent>
       </DialogCustom>

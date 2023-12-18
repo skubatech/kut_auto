@@ -11,3 +11,46 @@
   text-transform: capitalize;
   white-space: pre-wrap;
 }
+
+.titleWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  .titleCar {
+    @include text(48px, normal, 700, normal);
+  }
+
+  .btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+.feedbackWrap {
+  border-radius: 35px;
+  border: 1.5px solid #555;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 25px 25px 38px;
+  margin-top: 34px;
+
+  .nameWrap {
+    .name {
+      @include text(24px, normal, 700, 68px);
+      font-family: 'Epilogue', sans-serif;
+      margin-right: 16px;
+    }
+  }
+
+  .content {
+    @include text(16px, normal, 300, 19px);
+    font-family: 'Epilogue', sans-serif;
+  }
+}
