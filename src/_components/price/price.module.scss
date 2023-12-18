@@ -1,24 +1,35 @@
 .wrapper {
+  position: relative;
 
-    .descriptionWrap {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        .title {
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            text-transform: capitalize;
-          }
-        
-          .text {
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 19px;
-            text-transform: capitalize;
-          }
+  .descriptionWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .title {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: capitalize;
     }
 
+    .text {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      text-transform: capitalize;
+    }
+  }
+  
+  .back {
+    background: rgba(63, 93, 255, 0.35);
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    top: 80%;
+    left: 0;
+    fill: rgba(63, 93, 255, 0.24);
+    filter: blur(250px);
+  }
 }

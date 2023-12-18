@@ -7,6 +7,7 @@ import cn from 'classnames';
 export const Benefits = () => {
   return (
     <div className={cn('container', styles.wrapper)}>
+      <div className={styles.back}></div>
       {benefits.map((item, i) => (
         <BenefitsItem
           title={item.title}

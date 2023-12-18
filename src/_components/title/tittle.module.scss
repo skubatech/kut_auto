@@ -13,3 +13,15 @@
     z-index: -1;
   }
 }
+
+.back {
+  z-index: -1;
+  background: rgba(63, 93, 255, 0.35);
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 15%;
+  right: 0;
+  fill: rgba(63, 93, 255, 0.24);
+  filter: blur(250px);
+}

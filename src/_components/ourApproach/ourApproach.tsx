@@ -10,6 +10,7 @@ import cn from 'classnames';
 export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
     <div className={cn('container', styles.wrapper)} ref={ref}>
+      <div className={styles.back}></div>
       <div className={styles.titleWrap}>
         <img className={styles.car} src='assets/icons/approachCar.png' />
         <h4 className={styles.title}>наш подход</h4>
@@ -50,6 +51,7 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
           В РОССИЮ ИЗ-ЗA ГРАНИЦЫ “ПOД КЛЮЧ”
         </span>
         <Description />
+        <div className={styles.backBottom}></div>
       </div>
       <div>
         <h5 className={styles.whiteTitle}>ПЕРЕЧЕНЬ УСЛУГ</h5>

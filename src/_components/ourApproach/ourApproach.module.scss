@@ -2,6 +2,18 @@
   display: flex;
   gap: 60px;
   flex-direction: column;
+  position: relative;
+
+  .back {
+    background: rgba(63, 93, 255, 0.35);
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 23%;
+    left: 0;
+    fill: rgba(63, 93, 255, 0.24);
+    filter: blur(250px);
+  }
 
   .titleWrap {
     position: relative;
@@ -82,14 +94,6 @@
     flex-direction: column;
     gap: 15px;
 
-    // .diagnosisTitle {
-    //   font-size: 40px;
-    //   font-style: normal;
-    //   font-weight: 700;
-    //   line-height: normal;
-    //   text-transform: uppercase;
-    // }
-
     .diagnosisText {
       display: block;
       max-width: 639px;
@@ -113,13 +117,6 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    // .formalizationTitle {
-    //   font-size: 40px;
-    //   font-style: normal;
-    //   font-weight: 700;
-    //   line-height: normal;
-    //   text-transform: capitalize;
-    // }
 
     .formalizationDescription {
       font-size: 20px;
@@ -127,6 +124,17 @@
       font-weight: 400;
       line-height: normal;
       text-transform: lowercase;
+    }
+
+    .backBottom {
+      background: rgba(63, 93, 255, 0.35);
+      position: absolute;
+      width: 300px;
+      height: 400px;
+      bottom: 20%;
+      right: 0;
+      fill: rgba(63, 93, 255, 0.24);
+      filter: blur(250px);
     }
   }
 }

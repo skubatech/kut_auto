@@ -6,7 +6,8 @@ import cn from 'classnames';
 
 export const Cases = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
-    <div ref={ref}>
+    <div ref={ref} className={styles.casesWrap}>
+      <div className={styles.back}></div>
       <div className={cn('container', styles.wrapper)}>
         <h4 className={styles.title}>наши кейсы</h4>
         <ImgList />

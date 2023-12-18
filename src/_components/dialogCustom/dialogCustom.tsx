@@ -1,17 +1,16 @@
-import React, { FC, useState } from 'react';
+import React, { FC, ReactNode } from 'react';
 import styles from './dialogCustom.module.scss';
-import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import { ButtonCustom } from '../button/buttonCustom';
+import { SxProps } from '@mui/material';
 
 interface Props {
   open: boolean,
+  sx: SxProps,
+  children: ReactNode,
   onClose: () => void,
-
 }
 
-export const DialogCustom: FC<Props> = ({ open, onClose }) => {
+export const DialogCustom: FC<Props> = ({ open, sx, children, onClose }) => {
   return (
     <div className={styles.wrapper}>
       <Dialog
@@ -19,19 +18,12 @@ export const DialogCustom: FC<Props> = ({ open, onClose }) => {
         onClose={onClose}
         aria-labelledby='alert-dialog-title'
         aria-describedby='alert-dialog-description'
-        className={styles.dialogWrap}
         PaperProps={{
-          sx: {
-            padding: '60px',
-            maxWidth: '1019px',
-            borderRadius: '30px',
-            border: '2px solid #19FB9B',
-            display: 'flex',
-            gap: '30px'
-          } 
+          sx: sx 
         }}
       >
-        <div className={styles.titleWrap}>
+        {children}
+        {/* <div className={styles.titleWrap}>
           <h5 className={styles.title}>{'Выберете город доставки'}</h5>
           <button className={styles.btn} onClick={onClose}>
             <img src='assets/icons/close.svg' alt='Icon'/>
@@ -56,7 +48,7 @@ export const DialogCustom: FC<Props> = ({ open, onClose }) => {
             fontSize={24}
             fontWeight={500}
           />
-        </DialogContent>
+        </DialogContent> */}
       </Dialog>
     </div>
   );

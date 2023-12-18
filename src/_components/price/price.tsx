@@ -6,6 +6,7 @@ import cn from 'classnames';
 export const Price: FC = () => {
   return (
     <div className={cn('container', styles.wrapper)}>
+      <div className={styles.back}></div>
       <div className={styles.descriptionWrap}>
         <h5 className={styles.title}>СТОИМОСТЬ</h5>
         <span className={styles.text}>
