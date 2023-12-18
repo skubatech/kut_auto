@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -11,21 +13,13 @@
     align-items: flex-end;
 
     .docs {
+      @include text(14px, normal, 400, 38px, var(--light-grey));
       display: flex;
       flex-direction: column;
-      font-family: Roboto;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 38px;
       text-transform: uppercase;
-      color: var(--light-grey);
 
       .requisites {
-        color: #7e7e7e;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 38px;
+        @include text(14px, normal, 400, 38px, var(--light-grey));
         text-transform: uppercase;
       }
     }
@@ -36,21 +30,15 @@
       gap: 15px;
 
       .email {
-        color: #7e7e7e;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 38px;
+        @include text(14px, normal, 400, 38px, var(--light-grey));
         text-align: end;
       }
     }
   }
 
   .reserved {
+    @include text(16px, normal, 400, 150%, var(--light-grey));
     padding-bottom: 30px;
     margin: 0 auto;
-    color: #7e7e7e;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
   }
 }

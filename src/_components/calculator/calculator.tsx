@@ -29,8 +29,8 @@ export const Calculator = forwardRef<HTMLDivElement, object>((_, ref) => {
         onClose={handleClose}
         sx={{
           padding: '80px',
-          maxWidth: '1019px',
-          height: '1294px',
+          maxWidth: '1146px',
+          // height: '1294px',
           borderRadius: '30px',
           border: '2px solid #19FB9B',
         }}

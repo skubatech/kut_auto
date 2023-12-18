@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -6,17 +8,12 @@
   align-items: flex-start;
 
   .title {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
+    @include text(32px, normal, 700, 40px);
     text-transform: uppercase;
   }
 
   .description {
-    color: var(--grey-text);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.5px;
+    @include text(16px, normal, 500, 19.5px, var(--grey-text)); 
   }
 
   .info {

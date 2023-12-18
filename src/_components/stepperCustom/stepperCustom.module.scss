@@ -1,8 +1,6 @@
+@import '../../textMixin.scss';
 .title {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  @include text(24px, normal, 600, normal);
   text-transform: uppercase;
   padding-left: 112px;
 }

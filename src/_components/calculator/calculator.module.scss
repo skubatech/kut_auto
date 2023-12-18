@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -5,10 +7,7 @@
   position: relative;
 
   .title {
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 68px;
+    @include text(58px, normal, 700, 68px);
     background: var(
       --grad-norm,
       linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%)
@@ -43,11 +42,8 @@
   align-items: center;
 
   .titleWrap {
+    @include text(22px, normal, 700, 27px);
     width: 100%;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
     display: flex;
     justify-content: space-between;
 
@@ -64,30 +60,23 @@
   }
 
   .title {
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include text(48px, normal, 700, normal);
   }
 
   .price {
-    font-size: 96px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include text(96px, normal, 700, normal);
     margin-top: 44px;
   }
 
   .description {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include text(24px, normal, 400, normal);
     margin-top: 85px;
 
     .textUpper {
       font-weight: 700;
       text-transform: uppercase;
+      display: block;
+      margin-bottom: 16px;
     }
   }
 
@@ -96,17 +85,11 @@
     margin-bottom: 116px;
 
     .totalTitle {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
+      @include text(24px, normal, 600, normal);
     }
 
     .totalListItem {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include text(24px, normal, 400, normal);
     }
   }
 }

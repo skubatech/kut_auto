@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   padding-left: 120px;
   padding-right: 120px;
@@ -10,12 +12,8 @@
     align-items: center;
 
     .location {
+      @include text(20px, normal, 400, normal, var(--grey));
       display: flex;
-      color: var(--grey);
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
       align-items: center;
       gap: 5px;
       cursor: pointer;
@@ -33,27 +31,17 @@
 
   .low {
     .nav {
+      @include text(27px, normal, 400, 150%);
       list-style-type: none;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      color: #fff;
-      font-size: 27px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
       margin: 26px 0 0 0;
       padding: 0;
 
-      #main {
-        background: linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
+      
       li {
-        cursor: pointer;       
+        cursor: pointer;
 
         &:hover {
           background: linear-gradient(90deg, #19fb9b -6.33%, #6cc0e6 100%);

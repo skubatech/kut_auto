@@ -1,11 +1,10 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   max-width: 606px;
 
   .title {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include text(24px, normal, 700, normal);
     text-transform: uppercase;
   }
 
@@ -17,11 +16,8 @@
     gap: 8px;
 
     .marker {
+      @include text(20px, normal, 400, normal);
       list-style-type: square;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
       text-transform: lowercase;
     }
   }

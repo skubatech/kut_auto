@@ -1,21 +1,16 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .info {
+    @include text(64px, normal, 254, normal);
     font-family: 'Epilogue', sans-serif;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 254;
-    line-height: normal;
   }
 
   .text {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    @include text(14px, normal, 500, normal);
   }
 }

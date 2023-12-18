@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   display: flex;
   gap: 60px;
@@ -32,10 +34,7 @@
     }
 
     .title {
-      font-size: 58px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 68px;
+      @include text(58px, normal, 700, 68px);
       background: var(
         --grad-norm,
         linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%)
@@ -47,22 +46,16 @@
     }
 
     .description {
+      @include text(16px, normal, 300, 19px);
       display: block;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 19px;
       max-width: 797px;
       text-transform: capitalize;
     }
   }
 
   .whiteTitle {
-    font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-transform: uppercase;
+    @include text(40px, normal, 700, normal);
+    text-transform: uppercase;
   }
 
   .stateWrap {
@@ -71,19 +64,13 @@
     flex-direction: column;
 
     .stateTitle {
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
+      @include text(40px, normal, 700, normal);
       max-width: 859px;
     }
 
     .stateText {
+      @include text(16px, normal, 300, 19px);
       display: block;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 19px;
       text-transform: capitalize;
       max-width: 710px;
     }
@@ -95,12 +82,9 @@
     gap: 15px;
 
     .diagnosisText {
+      @include text(16px, normal, 300, 19px);
       display: block;
       max-width: 639px;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 19px;
       text-transform: capitalize;
     }
 
@@ -119,10 +103,7 @@
     gap: 15px;
 
     .formalizationDescription {
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include text(20px, normal, 400, normal);
       text-transform: lowercase;
     }
 

@@ -1,0 +1,35 @@
+.outer {
+  background-color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.back {
+  width: 0%;
+  transition: all 0.4s ease-out;
+  background: linear-gradient(90deg, #19fb9b -6.33%, #6cc0e6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.backMain {
+    transition: all 0.4s ease-out;
+    background: linear-gradient(90deg, #19fb9b -6.33%, #6cc0e6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.inner {
+  background-color: transparent;
+}
+
+li {
+  color: var(--white);
+}
+
+.outer:hover .back {
+  width: 100%;
+}

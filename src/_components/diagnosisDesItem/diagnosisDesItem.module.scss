@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -13,21 +15,14 @@
       gap: 10px;
       flex-direction: column;
       max-width: 163px;
+
       .title {
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
+        @include text(10px, normal, 500, normal, var(--grey-text));
         text-transform: uppercase;
-        color: var(--grey-text);
       }
     
       .text {
-        font-size: 9px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        color: var(--grey-text);
+        @include text(9px, normal, 500, normal, var(--grey-text));
       }
     }
   

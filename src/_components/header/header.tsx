@@ -5,6 +5,7 @@ import { SocialCarousel } from '../socialCarousel';
 import { DialogCustom } from '../dialogCustom';
 import cn from 'classnames';
 import { DialogContent } from '@mui/material';
+import { NavItem } from '../navItem';
 
 interface Props {
   scrollTo: (num: number) => void;
@@ -30,12 +31,11 @@ export const Header: FC<Props> = ({ scrollTo }) => {
       </section>
       <nav className={styles.low}>
         <ul className={styles.nav}>
-          <li onClick={() => scrollTo(0)}>Кейсы</li>
-          <li onClick={() => scrollTo(1)}>Услуги</li>
-          <li id={styles.main} onClick={() => scrollTo(2)}>
-            Калькулятор
-          </li>
-          <li onClick={() => scrollTo(4)}>Вопросы</li>
+
+        <NavItem text='Кейсы' scrollTo={() => scrollTo(0)} />
+        <NavItem text='Услуги' scrollTo={() => scrollTo(1)} />
+        <NavItem text='Калькулятор' main={true} scrollTo={() => scrollTo(2)} />
+        <NavItem text='Вопросы' scrollTo={() => scrollTo(4)} />
           <ButtonCustom
             fontSize={27}
             fontWeight={400}

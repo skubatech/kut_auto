@@ -1,17 +1,13 @@
+@import '../../textMixin.scss';
+
 .title {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  @include text(48px, normal, 700, normal);
   text-transform: capitalize;
   margin-bottom: 15px;
   display: block;
 }
 .subTitle {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 19px; 
+  @include text(16px, normal, 400, 19px);
   text-transform: capitalize;
   white-space: pre-wrap;
 }

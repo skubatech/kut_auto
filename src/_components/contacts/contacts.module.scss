@@ -1,9 +1,8 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   .title {
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 68px;
+    @include text(58px, normal, 700, 68px);
     background: var(
       --grad-norm,
       linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%)

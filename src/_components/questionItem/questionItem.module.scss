@@ -1,18 +1,14 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   border-top: 1px solid var(--grey-text);
   border-bottom: 1px solid var(--grey-text);
 
   .title {
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 58.5px;
+    @include text(40px, normal, 500, 58.5px);
   }
 
   .text {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
+    @include text(16px, normal, 500, 120%);
   }
 }

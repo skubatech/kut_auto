@@ -1,8 +1,7 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   .title {
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include text(42px, normal, 700, normal);
   }
 }

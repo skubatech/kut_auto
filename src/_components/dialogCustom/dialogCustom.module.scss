@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .btnWrap {
   display: flex;
   gap: 30px;
@@ -11,10 +13,7 @@
 
   .title {
     font-family: 'Epilogue', sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 19px;
+    @include text(48px, normal, 300, 19px);
   }
 
   .btn {

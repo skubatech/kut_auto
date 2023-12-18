@@ -1,3 +1,5 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -14,6 +16,7 @@
   margin-top: 60px;
 
   .title {
+    @include text(58px, normal, 700, 68px);
     background: var(
       --grad-norm,
       linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%)
@@ -21,18 +24,11 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 58px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 68px;
     letter-spacing: -1.16px;
   }
 
   .description {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19.5px;
+    @include text(14px, normal, 400, 20px);
   }
 
   .btnWrap {
