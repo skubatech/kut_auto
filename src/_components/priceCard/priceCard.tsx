@@ -6,9 +6,10 @@ interface Props {
     title: string;
     description: string;
     text: string;
+    filledBtn?: boolean;
 }
 
-export const PriceCard: FC<Props> = ({ title, description, text }) => {
+export const PriceCard: FC<Props> = ({ title, description, text, filledBtn }) => {
   return (
     <div className={styles.wrapper}> 
         <span className={styles.title}>{title}</span>
@@ -19,6 +20,7 @@ export const PriceCard: FC<Props> = ({ title, description, text }) => {
             text='получить' 
             fontSize={32} 
             fontWeight={700}
+            isFilled={filledBtn}
         />
     </div>
   );

@@ -3,7 +3,11 @@ import styles from './banner.module.scss';
 import { ButtonCustom } from '../button';
 import cn from 'classnames';
 
-export const Banner: FC = () => {
+interface Props {
+  scrollTo: (num: number) => void
+}
+
+export const Banner: FC<Props> = ({scrollTo}) => {
   return (
     <div className={cn('container', styles.wrapper)}>
       <h3 className={styles.title}>САМЫЙ<br/> КАЧЕСТВЕННЫЙ<br/> АВТОПОДБОР В ЕВРОПЕ</h3>
@@ -19,6 +23,7 @@ export const Banner: FC = () => {
           text='сотрудничать'
           fontSize={32}
           fontWeight={700}
+          onClick={() => scrollTo(3)}
         />
         <ButtonCustom
           color={true}
@@ -26,6 +31,7 @@ export const Banner: FC = () => {
           text='калькулятор'
           fontSize={32}
           fontWeight={700}
+          onClick={() => scrollTo(2)}
         />
       </div>
     </div>

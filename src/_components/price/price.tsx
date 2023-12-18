@@ -13,7 +13,6 @@ export const Price: FC = () => {
           odio.
         </span>
       </div>
-
       <PriceCards />
     </div>
   );

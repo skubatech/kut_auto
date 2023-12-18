@@ -7,16 +7,17 @@ interface Props extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'col
     fontWeight?: 400 | 500 | 600 | 700;
     textTransform: 'none' | 'uppercase';
     color?: boolean;
+    isFilled?: boolean; 
     onClick?: () => void
 }
 
-export const ButtonCustom:FC<Props> = ({text, fontSize, fontWeight, textTransform, color, onClick, ...props}) => {
+export const ButtonCustom:FC<Props> = ({text, fontSize, fontWeight, textTransform, color, isFilled, onClick, ...props}) => {
     return <button
         style={{ fontSize, fontWeight, textTransform }}
-        className={cn(styles.btn, { [styles.btnColor]: color, [styles.btnWhite]: !color })}
+        className={cn(styles.btn, { [styles.btnColor]: color, [styles.btnWhite]: !color, [styles.filled]: isFilled })}
         onClick={onClick}
         {...props}
     >
-        <span className={cn({ [styles.text]: color, [styles.textWhite]: !color })}>{text}</span>
+        <span className={cn({ [styles.text]: color, [styles.textWhite]: !color, [styles.filledText]: isFilled })}>{text}</span>
     </button>
 }

@@ -28,7 +28,7 @@ export const App = () => {
   return (
     <div>
       <Header scrollTo={scrollTo}/>
-      <Title />
+      <Title scrollTo={scrollTo}/>
       <Benefits />
       <Youtube />
       <Cases ref={pageRef[0]}/>
