@@ -1,10 +1,16 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import styles from './contacts.module.scss';
 import { Connect } from '../connect';
 import cn from 'classnames';
 
 export const Contacts = forwardRef<HTMLDivElement, object>((_, ref) => {
-  const location = localStorage.getItem('location');
+  const [location, setLocation] = useState(localStorage.getItem('location'));
+
+  useEffect(() => {
+    window.addEventListener('storage', () => {
+      setLocation(localStorage.getItem('location'));
+    });
+  }, []);
 
   const getMap = () => {
     switch (location) {

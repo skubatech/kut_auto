@@ -1,14 +1,36 @@
-import React, { FC } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './connect.module.scss';
 import { ConnectItem } from '../connectItem';
 import { SocialCarousel } from '../socialCarousel';
-import { connectItems } from './connect.constants';
+import { connectItemsMoscow, connectItemsMinsk, connectItemsNovgorod } from './connect.constants';
 
-export const Connect: FC = () => {
+export const Connect = () => {
+  const [location, setLocation] = useState(localStorage.getItem('location'));
+
+  useEffect(() => {
+    window.addEventListener('storage', () => {
+      setLocation(localStorage.getItem('location'));
+    });
+  }, [])
+
+  const getContacts = () => {
+    switch(location) {
+      case 'Москва':
+        return connectItemsMoscow;
+      case 'Нижний Новгород':
+        return connectItemsNovgorod;
+      case 'Минск':
+        return connectItemsMinsk;
+
+      default: 
+        return connectItemsMoscow;
+    }
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.connectWrap}>
-        {connectItems.map((item, i) => (
+        {getContacts().map((item, i) => (
           <ConnectItem
             imgSrc={item.imgSrc}
             imgAlt={item.imgAlt}

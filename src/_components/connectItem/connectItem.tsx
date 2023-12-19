@@ -10,7 +10,7 @@ interface Props {
 
 export const ConnectItem:FC<Props> = ({ imgSrc, imgAlt, url, text }) => {
     return <div className={styles.wrapper}>
-      <a href={url} className={styles.link}>
+      <a href={url} className={styles.link} target="_blank" rel="noopener noreferrer">
         <img src={imgSrc} alt={imgAlt} />
         {text}
       </a>

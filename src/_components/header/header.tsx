@@ -13,21 +13,21 @@ interface Props {
 
 export const Header: FC<Props> = ({ scrollTo }) => {
   const [open, setOpen] = useState(false);
-
   const location = localStorage.getItem('location');
 
-  
   const handleClickOpen = () => {
     setOpen(true);
   };
+  
   const handleClose = () => {
     setOpen(false);
   };
-  
+
   const changeLocation = (loc: string) => {
-    localStorage.setItem('location', loc)
+    localStorage.setItem('location', loc);
+    window.dispatchEvent(new Event('storage'));
     handleClose();
-  }
+  };
 
   return (
     <header className={cn('container', styles.wrapper)}>
@@ -40,11 +40,14 @@ export const Header: FC<Props> = ({ scrollTo }) => {
       </section>
       <nav className={styles.low}>
         <ul className={styles.nav}>
-
-        <NavItem text='Кейсы' scrollTo={() => scrollTo(0)} />
-        <NavItem text='Услуги' scrollTo={() => scrollTo(1)} />
-        <NavItem text='Калькулятор' main={true} scrollTo={() => scrollTo(2)} />
-        <NavItem text='Вопросы' scrollTo={() => scrollTo(4)} />
+          <NavItem text='Кейсы' scrollTo={() => scrollTo(0)} />
+          <NavItem text='Услуги' scrollTo={() => scrollTo(1)} />
+          <NavItem
+            text='Калькулятор'
+            main={true}
+            scrollTo={() => scrollTo(2)}
+          />
+          <NavItem text='Вопросы' scrollTo={() => scrollTo(4)} />
           <ButtonCustom
             fontSize={27}
             fontWeight={400}
