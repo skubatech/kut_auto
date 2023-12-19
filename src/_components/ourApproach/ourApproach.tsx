@@ -12,7 +12,7 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
     <div className={cn('container', styles.wrapper)} ref={ref}>
       <div className={styles.back}></div>
       <div className={styles.titleWrap}>
-        <img className={styles.car} src='assets/icons/approachCar.png' />
+        <img className={styles.car} src='assets/icons/approachCar.png' alt='Car'/>
         <h4 className={styles.title}>наш подход</h4>
         <span className={styles.description}>
           Lorem ipsum dolor sit amet consectetur. Vitae vestibulum consequat
