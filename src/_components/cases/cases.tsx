@@ -5,9 +5,9 @@ import { ImgList } from '../imgList/imgList';
 import cn from 'classnames';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger); 
 
 export const Cases = forwardRef<HTMLDivElement, object>((_, ref) => {
+  gsap.registerPlugin(ScrollTrigger); 
   const statisticsRef = useRef(null);
   
   useEffect(() => {
@@ -16,13 +16,14 @@ export const Cases = forwardRef<HTMLDivElement, object>((_, ref) => {
       el,
       { 
         width: '60%', 
-        opacity: 0, 
+        opacity: 0,
       },
       {
         width: '100%',
         height: '100%',
         opacity: 1,
         duration: 1.7,
+        delay: 0.5,
         scrollTrigger: { 
           trigger: el,
         },

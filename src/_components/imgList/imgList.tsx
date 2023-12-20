@@ -71,7 +71,8 @@ export const ImgList: FC = () => {
           width: '852px',
           overflow: 'hidden',
           borderRadius: '20px',
-          border: '2px solid #19FB9B',
+          border: '4px solid #19FBDF',
+          boxShadow: '0px 0px 50px 5px rgba(184, 184, 184, 0.25)',
         }}
       >
         <div className={styles.titleWrap}>

@@ -27,7 +27,7 @@ export const Contacts = forwardRef<HTMLDivElement, object>((_, ref) => {
 
   return (
     <div className={cn('container', styles.wrapper)} ref={ref}>
-      <h4 className={styles.title}>КОНТАКТЫ</h4>
+      <h4 className={styles.title}>контакты</h4>
       <div className={styles.contacts}>
         <Connect />
         <iframe

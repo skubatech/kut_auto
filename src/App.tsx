@@ -11,6 +11,7 @@ import { Price } from './_components/price';
 import { Contacts } from './_components/contacts';
 import { Questions } from './_components/questions';
 import { Calculator } from './_components/calculator';
+import { Manager } from './_components/manager';
 
 export const App = () => {
   const pageRef = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
@@ -43,6 +44,7 @@ export const App = () => {
       <Price />
       <Contacts ref={pageRef[3]}/>  
       <Questions ref={pageRef[4]} />
+      <Manager />
       <Footer />
     </div>
   );

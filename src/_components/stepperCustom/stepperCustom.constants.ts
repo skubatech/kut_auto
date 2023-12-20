@@ -19,17 +19,17 @@ export const steps = [
     timeText: '4-5 раб. дня',
   },
   {
-    title: '3. ПОИСК',
+    title: '3. Поиск',
     description: [],
     timeText: '3 раб. дня',
   },
   {
-    title: '4. ОСМОТР',
+    title: '4. Осмотр',
     description: [],
     timeText: '3 раб. дня',
   },
   {
-    title: '5. ДОСТАВКА И РАСТИТАМОЖКА',
+    title: '5. Доставка и растаможка',
     description: [],
     timeText: '1 раб. день',
   },

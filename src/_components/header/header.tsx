@@ -1,19 +1,18 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import styles from './header.module.scss';
 import { ButtonCustom } from '../button';
 import { SocialCarousel } from '../socialCarousel';
-import { DialogCustom } from '../dialogCustom';
 import cn from 'classnames';
-import { DialogContent } from '@mui/material';
 import { NavItem } from '../navItem';
+import { ChooseLocation } from '../chooseLocation';
 
 interface Props {
   scrollTo: (num: number) => void;
 }
 
 export const Header: FC<Props> = ({ scrollTo }) => {
+  const [location, setLocation] = useState(localStorage.getItem('location'));
   const [open, setOpen] = useState(false);
-  const location = localStorage.getItem('location');
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -23,11 +22,12 @@ export const Header: FC<Props> = ({ scrollTo }) => {
     setOpen(false);
   };
 
-  const changeLocation = (loc: string) => {
-    localStorage.setItem('location', loc);
-    window.dispatchEvent(new Event('storage'));
-    handleClose();
-  };
+  useEffect(() => {
+    window.addEventListener('storage', () => {
+      setLocation(localStorage.getItem('location'));
+    });
+  }, []);
+
 
   return (
     <header className={cn('container', styles.wrapper)}>
@@ -58,48 +58,7 @@ export const Header: FC<Props> = ({ scrollTo }) => {
           />
         </ul>
       </nav>
-      <DialogCustom
-        open={open}
-        onClose={handleClose}
-        sx={{
-          padding: '60px',
-          maxWidth: '1019px',
-          borderRadius: '30px',
-          border: '2px solid #19FB9B',
-          display: 'flex',
-          gap: '30px',
-        }}
-      >
-        <div className={styles.titleWrap}>
-          <h5 className={styles.title}>{'Выберете город доставки'}</h5>
-          <button className={styles.btn} onClick={handleClose}>
-            <img src='assets/icons/close.svg' alt='Icon' />
-          </button>
-        </div>
-        <DialogContent className={styles.btnWrap}>
-          <ButtonCustom
-            text='Москва'
-            textTransform='none'
-            fontSize={24}
-            fontWeight={500}
-            onClick={() => changeLocation('Москва')}
-          />
-          <ButtonCustom
-            text='Нижний Новгород'
-            textTransform='none'
-            fontSize={24}
-            fontWeight={500}
-            onClick={() => changeLocation('Нижний Новгород')}
-          />
-          <ButtonCustom
-            text='Минск'
-            textTransform='none'
-            fontSize={24}
-            fontWeight={500}
-            onClick={() => changeLocation('Минск')}
-          />
-        </DialogContent>
-      </DialogCustom>
+      <ChooseLocation open={open} onClose={handleClose}/>
     </header>
   );
 };

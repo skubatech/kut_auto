@@ -23,32 +23,6 @@ export const DialogCustom: FC<Props> = ({ open, sx, children, onClose }) => {
         }}
       >
         {children}
-        {/* <div className={styles.titleWrap}>
-          <h5 className={styles.title}>{'Выберете город доставки'}</h5>
-          <button className={styles.btn} onClick={onClose}>
-            <img src='assets/icons/close.svg' alt='Icon'/>
-          </button>
-        </div>
-        <DialogContent className={styles.btnWrap}>
-          <ButtonCustom
-            text='Москва'
-            textTransform='none'
-            fontSize={24}
-            fontWeight={500}
-          />
-          <ButtonCustom
-            text='Нижний Новгород'
-            textTransform='none'
-            fontSize={24}
-            fontWeight={500}
-          />
-          <ButtonCustom
-            text='Минск'
-            textTransform='none'
-            fontSize={24}
-            fontWeight={500}
-          />
-        </DialogContent> */}
       </Dialog>
     </div>
   );

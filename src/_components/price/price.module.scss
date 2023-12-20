@@ -10,7 +10,7 @@
 
     .title {
       @include text(40px, normal, 700, normal);
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
 
     .text {

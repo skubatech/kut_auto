@@ -1,36 +1,102 @@
 @import '../../textMixin.scss';
 
 .wrapper {
-  width: 563px;
-  height: 631px;
-  position: relative;
-  border-radius: 20px;
-  border: 4px solid #19fbdf;
+  position: fixed;
+  bottom: 1.5%;
+  right: 1.5%;
 
-  box-shadow: 0px 0px 50px 5px rgba(184, 184, 184, 0.25);
+  .iconDefault {
+    width: 80px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity .3s ease-out;
 
-  .icon {
-    position: absolute;
-    top: -12%;
-    left: 31%;
+    &:hover {
+      opacity: 1;
+      transition: opacity .3s ease-out;
+    }
   }
 
-  .titleWrap {
+  .iconNone {
+    display: none;
+  }
+
+  .blockWrap {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-bottom: 1px solid var(--grey-text);
-    margin-top: 89px;
+    gap: 32px;
+    .block {
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+      background: var(--black);
+      width: 563px;
+      height: 631px;
+      position: relative;
+      border-radius: 20px;
+      border: 4px solid #19fbdf;
+      box-shadow: 0px 0px 50px 5px rgba(184, 184, 184, 0.25);
 
-    .title {
-      font-family: 'Epilogue', sans-serif;
-      display: block;
-      @include text(48px, normal, 600, normal);
-    }
+      .icon {
+        position: absolute;
+        top: -13%;
+        left: 36%;
+      }
 
-    .description {
-      @include text(26px, normal, 400, normal);
-      display: block;
+      .titleWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--grey-text);
+        margin-top: 89px;
+        gap: 22px;
+        margin-top: 89px;
+
+        .title {
+          font-family: 'Epilogue', sans-serif;
+          display: block;
+          @include text(48px, normal, 600, normal);
+          max-width: 60%;
+          text-align: center;
+        }
+
+        .description {
+          @include text(26px, normal, 400, normal);
+          display: block;
+          text-align: center;
+          margin-bottom: 22px;
+          max-width: 60%;
+        }
+      }
+
+      .linksWrap {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 56px;
+      }
+
+      .phone {
+        @include text(40px, normal, 400, 38px);
+        font-family: 'Epilogue', sans-serif;
+        text-align: center;
+        margin-top: 72px;
+      }
     }
+  }
+
+  .btn {
+    align-self: flex-end;
+    cursor: pointer;
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+    background: linear-gradient(
+      180deg,
+      #0552c0 0%,
+      #0d92b2 54.69%,
+      #13c7a7 100%
+    );
+    border: none;
+    box-shadow: 0px 6px 21px 0px #002955;
   }
 }

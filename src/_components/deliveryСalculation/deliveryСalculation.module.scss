@@ -1,5 +1,71 @@
+@import '../../textMixin.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: 45px;
+}
+
+.dialogWrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .titleWrap {
+    @include text(22px, normal, 700, 27px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      @include text(22px, normal, 700, 27px);
+      text-transform: uppercase;
+    }
+
+    .btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+  .title {
+    @include text(48px, normal, 700, normal);
+    text-transform: uppercase;
+  }
+
+  .price {
+    @include text(96px, normal, 700, normal);
+    margin-top: 44px;
+  }
+
+  .description {
+    @include text(24px, normal, 400, normal);
+    margin-top: 85px;
+
+    .textUpper {
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+
+  .totalWrap {
+    margin-top: 78px;
+    margin-bottom: 116px;
+
+    .totalTitle {
+      @include text(24px, normal, 600, normal);
+    }
+
+    .totalListItem {
+      @include text(24px, normal, 400, normal);
+    }
+  }
 }

@@ -66,6 +66,7 @@
     .stateTitle {
       @include text(40px, normal, 700, normal);
       max-width: 859px;
+      text-transform: uppercase;
     }
 
     .stateText {

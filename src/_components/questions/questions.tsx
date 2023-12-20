@@ -7,14 +7,10 @@ import cn from 'classnames';
 export const Questions = forwardRef<HTMLDivElement, object>((_, ref) => {
   return (
     <div className={cn('container', styles.wrapper)} ref={ref}>
-        <h5 className={styles.title}>
-        ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
-        </h5>
-        {
-            questions.map((item, i) => (
-                <QuestionItem question={item.question} answer={item.answer} key={i}/>
-            ))
-        }
+      <h5 className={styles.title}>часто задаваемые вопросы</h5>
+      {questions.map((item, i) => (
+        <QuestionItem question={item.question} answer={item.answer} key={i} />
+      ))}
     </div>
   );
 });
