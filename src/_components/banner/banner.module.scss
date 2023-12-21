@@ -30,6 +30,7 @@
 
   .description {
     @include text(14px, normal, 400, 20px);
+    max-width: 581px;
   }
 
   .btnWrap {

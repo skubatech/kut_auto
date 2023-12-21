@@ -1,5 +1,6 @@
 .wrapper {
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
+  .video {
+    width: 625px;
+    height: 427px;
+  }
 }

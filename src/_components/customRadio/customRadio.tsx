@@ -8,50 +8,54 @@ import React, { FC } from 'react';
 import styles from './customRadio.module.scss';
 
 interface Props {
-    title: string;
-    labelLeft: string;
-    labelRight: string;
+  id: string;
+  value: string;
+  title: string;
+  labelLeft: string;
+  labelRight: string;
+  onChange: (fieldId: string, value: string) => void;
 }
 
-export const CustomRadio: FC<Props> = ({title, labelLeft, labelRight}) => {
+export const CustomRadio: FC<Props> = ({ id, value, title, labelLeft, labelRight, onChange }) => {
   return (
     <div className={styles.wrapper}>
-        <span className={styles.title}>{title}</span>
+      <span className={styles.title}>{title}</span>
       <FormControl className={styles.formWrapper}>
         <RadioGroup
-          aria-labelledby='demo-radio-buttons-group-label'
-          defaultValue='female'
+          aria-labelledby={`${id}-label`}
+          defaultValue={value}
           name='radio-buttons-group'
+          className={styles.radioGroup}
         >
           <FormControlLabel
-            value='female'
+            value={labelLeft}
             control={
               <Radio
                 color='info'
                 checkedIcon={<img src='assets/icons/radio.svg' alt='Icon' />}
-                icon={<img src='assets/icons/circle.svg'  alt='Icon'/>}
+                icon={<img src='assets/icons/circle.svg' alt='Icon' />}
               />
             }
             label={labelLeft}
-            checked={true}
+            checked={value === labelLeft}
+            onChange={(event) =>
+              onChange(id, (event.target as HTMLInputElement).value)
+            }
           />
-        </RadioGroup>
-        <RadioGroup
-          aria-labelledby='demo-radio-buttons-group-label'
-          defaultValue='female'
-          name='radio-buttons-group'
-        >
           <FormControlLabel
-            value='female'
+            value={labelRight}
             control={
               <Radio
                 color='info'
-                checkedIcon={<img src='assets/icons/radio.svg' alt='Icon'/>}
-                icon={<img src='assets/icons/circle.svg' alt='Icon'/>}
+                checkedIcon={<img src='assets/icons/radio.svg' alt='Icon' />}
+                icon={<img src='assets/icons/circle.svg' alt='Icon' />}
               />
             }
             label={labelRight}
-            checked={false}
+            checked={value === labelRight}
+            onChange={(event) =>
+              onChange(id, (event.target as HTMLInputElement).value)
+            }
           />
         </RadioGroup>
       </FormControl>

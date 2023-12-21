@@ -3,25 +3,32 @@ import styles from './customSelect.module.scss';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
+import { FormHelperText } from '@mui/material';
 
-interface Values {
+interface Options {
   text: string;
   value: string;
 }
 
 interface Props {
+  id: string;
+  value: string;
   title: string;
-  values: Values[];
+  error: boolean;
+  options: Options[];
+  onChange: (fieldId: string, value: string) => void;
 }
 
-export const CustomSelect: FC<Props> = ({ title, values }) => {
-  const [age, setAge] = useState('');
+export const CustomSelect: FC<Props> = ({
+  id,
+  title,
+  error,
+  options,
+  value,
+  onChange,
+}) => {
   const [open, setOpen] = useState(false);
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -34,21 +41,23 @@ export const CustomSelect: FC<Props> = ({ title, values }) => {
   return (
     <div className={styles.wrapper}>
       <h5 className={styles.title}>{title}</h5>
-      <FormControl variant='standard' fullWidth>
+      <FormControl variant='standard' fullWidth error={error}>
         <InputLabel
-          id='demo-simple-select-standard-label'
+          id={`${id}-label`}
           sx={{
             paddingTop: '19px',
-            paddingLeft: '29px'
+            paddingLeft: '29px',
           }}
         >
           {title}
         </InputLabel>
         <Select
-          labelId='demo-simple-select-standard-label'
-          id='demo-simple-select-standard'
-          value={age}
-          onChange={handleChange}
+          labelId={`${id}-label`}
+          id={id}
+          value={value}
+          onChange={(event) => {
+            onChange(id, event.target.value);
+          }}
           label={title}
           open={open}
           onClose={handleClose}
@@ -60,18 +69,21 @@ export const CustomSelect: FC<Props> = ({ title, values }) => {
               style={{ transform: open ? '' : 'rotate(180deg)' }}
             />
           )}
-          sx={{paddingRight: '16px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
+          sx={{
+            paddingRight: '16px',
+            paddingLeft: '29px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
-          {values.map((item) => (
+          {options.map((item) => (
             <MenuItem value={item.value} key={item.text}>
               {item.text}
             </MenuItem>
           ))}
         </Select>
+        <FormHelperText>Выберите значение</FormHelperText>
       </FormControl>
     </div>
   );

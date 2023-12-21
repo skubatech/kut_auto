@@ -53,7 +53,7 @@ export const Header: FC<Props> = ({ scrollTo }) => {
             fontWeight={400}
             color={true}
             textTransform='none'
-            text='Связаться с нами'
+            text='Контакты'
             onClick={() => scrollTo(3)}
           />
         </ul>

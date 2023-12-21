@@ -17,7 +17,11 @@
       @include text(14px, normal, 400, 38px, var(--light-grey));
       display: flex;
       flex-direction: column;
-      text-transform: uppercase;
+      // text-transform: uppercase;
+      .email {
+        @include text(14px, normal, 400, 38px, var(--light-grey));
+        text-align: end;
+      }
 
       .requisites {
         @include text(14px, normal, 400, 38px, var(--light-grey));
@@ -29,11 +33,6 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-
-      .email {
-        @include text(14px, normal, 400, 38px, var(--light-grey));
-        text-align: end;
-      }
     }
   }
 

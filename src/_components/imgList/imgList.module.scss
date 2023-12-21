@@ -1,5 +1,14 @@
 @import '../../textMixin.scss';
 
+.imgItem {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+    transition: opacity .4s ease-in-out;
+  }
+}
+
 .title {
   @include text(48px, normal, 700, normal);
   text-transform: capitalize;
