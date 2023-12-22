@@ -83,7 +83,9 @@ export const CustomSelect: FC<Props> = ({
             </MenuItem>
           ))}
         </Select>
-        <FormHelperText>Выберите значение</FormHelperText>
+        {
+          error && <FormHelperText>Выберите значение</FormHelperText>
+        }
       </FormControl>
     </div>
   );

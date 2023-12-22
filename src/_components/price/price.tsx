@@ -8,10 +8,9 @@ export const Price: FC = () => {
     <div className={cn('container', styles.wrapper)}>
       <div className={styles.back}></div>
       <div className={styles.descriptionWrap}>
-        <h5 className={styles.title}>стоимость</h5>
+        <h5 className={styles.title}>стоимость услуг</h5>
         <span className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur. Vitae vestibulum consequat
-          odio.
+          Узнайте по телефону
         </span>
       </div>
       <PriceCards />

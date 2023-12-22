@@ -1,18 +1,24 @@
 export const benefits = [
   {
-    title: 'безопасная сделка',
+    title: 'Официальный автокредит на автомобили под заказ из Европы',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     icon: 'assets/icons/document.svg',
   },
   {
-    title: 'обратная связь',
+    title: 'СРОК ДОСТАВКИ От 7 дней ',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     icon: 'assets/icons/headphones.svg',
   },
   {
-    title: 'честные отзывы',
+    title: 'Экономия от 10 до 40%',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    icon: 'assets/icons/star.svg',
+  },
+  {
+    title: 'Предоплата от 10%',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     icon: 'assets/icons/star.svg',

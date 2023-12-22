@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import styles from './deliveryСalculation.module.scss';
 import { CustomSelect } from '../customSelect';
 import { CustomInput } from '../customInput';
@@ -7,7 +7,119 @@ import { ButtonCustom } from '../button';
 import { calculatorSum, values } from './deliveryCalculation.constants';
 import { DialogCustom } from '../dialogCustom';
 
-export const DeliveryCalculation = () => {
+interface Props {
+  scrollTo: (num: number) => void;
+}
+
+export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
+  const [finalCarPrice, setFinalCarPrice] = useState(0);
+  const [res, setRes] = useState(0);
+  const [sbor, setSbor] = useState(0);
+
+  const fullCarPrice = (fullCustom, price) => {
+    let expenses = 1000;
+    let carExpenses = 0;
+
+    if (price <= 25000) {
+      carExpenses = price * 0.12 + expenses + fullCustom;
+    } else if (price > 25000 && price <= 35000) {
+      carExpenses = price * 0.112 + expenses + fullCustom;
+    } else if (price > 35000 && price <= 45000) {
+      carExpenses = price * 0.115 + expenses + fullCustom;
+    } else if (price > 45000 && price <= 55000) {
+      carExpenses = price * 0.12 + expenses + fullCustom;
+    } else if (price > 55000 && price <= 65000) {
+      carExpenses = price * 0.11 + expenses + fullCustom;
+    } else if (price > 65000 && price <= 75000) {
+      carExpenses = price * 0.12 + expenses + fullCustom;
+    } else if (price > 75000) {
+      carExpenses = price * 0.105 + expenses + fullCustom;
+    }
+
+    const nds = location !== 'Минск' ? 2000 : 1000;
+
+    if (form.nds === 'Только брутто') {
+      setFinalCarPrice(Number(carExpenses) + Number(price) + nds);
+    } else {
+      setFinalCarPrice(Number(carExpenses) + Number(price) * 0.84 + nds);
+    }
+  };
+
+  function customCalculations(res, capacity) {
+    let fullCustom;
+    if (parseInt(form.age, 10) < 3) {
+      fullCustom = res;
+    } else {
+      if (capacity <= 2500) {
+        fullCustom = Number(res) + 1500;
+      } else {
+        fullCustom = Number(res) + 1800;
+      }
+    }
+    fullCarPrice(fullCustom, parseInt(form.price, 10));
+  }
+
+  function checkFunc(age, price, capacity, engine) {
+    if (engine === 'Электро') {
+      formula(0, 0);
+    } else {
+      naturalPerson(age, price, capacity);
+    }
+  }
+
+  function formula(cap, euro) {
+    setRes((cap * euro) / 2);
+    customCalculations(res, cap);
+
+    return res;
+  }
+
+  function naturalPerson(age, price, capacity) {
+    if (age < 3) {
+      setRes(price * 0.4);
+      customCalculations(res, capacity);
+      return res;
+    } else if (age >= 3 && age <= 5) {
+      if (capacity <= 1000) {
+        formula(capacity, 1.5);
+      } else if (capacity > 1001 && capacity <= 1500) {
+        formula(capacity, 1.7);
+      } else if (capacity > 1501 && capacity <= 1800) {
+        formula(capacity, 2.5);
+      } else if (capacity > 1801 && capacity <= 2300) {
+        formula(capacity, 2.7);
+      } else if (capacity > 2301 && capacity <= 3000) {
+        formula(capacity, 3);
+      } else if (capacity > 3001) {
+        formula(capacity, 3.6);
+      }
+    } else if (age > 5) {
+      if (capacity <= 1000) {
+        formula(capacity, 3);
+      } else if (capacity > 1001 && capacity <= 1500) {
+        formula(capacity, 3.2);
+      } else if (capacity > 1501 && capacity <= 1800) {
+        formula(capacity, 3.5);
+      } else if (capacity > 1801 && capacity <= 2300) {
+        formula(capacity, 4.8);
+      } else if (capacity > 2301 && capacity <= 3000) {
+        formula(capacity, 5);
+      } else if (capacity > 3001) {
+        formula(capacity, 5.7);
+      }
+    }
+  }
+
+  function utilSbor(age, type) {
+    if (age < 3) {
+      return setSbor(544.5);
+    } else if (age >= 3 && age <= 7) {
+      return setSbor(816.7);
+    } else if (age > 7) {
+      return type === 'electro' ? setSbor(816.7) : setSbor(1225.1);
+    }
+  }
+
   const [location, setLocation] = useState(localStorage.getItem('location'));
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({
@@ -28,6 +140,8 @@ export const DeliveryCalculation = () => {
     ) {
       setError(false);
       console.log(form);
+      checkFunc(form.age, form.price, form.volumeEngine, form.engine);
+      utilSbor(form.age, form.engine);
       setOpen(true);
     } else {
       setError(true);
@@ -37,6 +151,14 @@ export const DeliveryCalculation = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    if (!open) {
+      setFinalCarPrice(0);
+      setRes(0);
+      setSbor(0);
+    }
+  }, [open]);
 
   const changeEndingCity = (attribute: 'in' | 'to') => {
     if (attribute === 'in') {
@@ -88,7 +210,6 @@ export const DeliveryCalculation = () => {
   const changeArray = () => {
     const newCalculatorSum = calculatorSum.map((item, i, arr) => {
       if (i === arr.length - 2) {
-        console.log(`${item} ${changeEndingCity('to')}.`);
         item = `${item} ${changeEndingCity('to')}.`;
       }
       return item;
@@ -178,7 +299,7 @@ export const DeliveryCalculation = () => {
             </button>
           </div>
           <h5 className={styles.title}>{changeEndingCity('in')}</h5>
-          <span className={styles.price}>1186.96 €</span>
+          <span className={styles.price}>{finalCarPrice.toFixed(2)} €</span>
           <div className={styles.description}>
             <span className={styles.textUpper}>
               {`На выходе вы получаете готовый автомобиль в ${changeEndingCity(
@@ -207,11 +328,15 @@ export const DeliveryCalculation = () => {
             </ul>
           </div>
           <ButtonCustom
-            text='свяжитесь с нами'
+            text='связаться с нами'
             fontSize={32}
             fontWeight={700}
             textTransform='uppercase'
             color
+            onClick={() => {
+              handleClose();
+              scrollTo(3);
+            }}
           />
         </div>
       </DialogCustom>

@@ -3,13 +3,13 @@ export const connectItemsMoscow = [
     imgSrc: 'assets/icons/connectTelegram.svg',
     imgAlt: 'Telegram',
     url: 'https://web.telegram.org/k/',
-    text: 'Свяжитесь с нами в телеграм',
+    text: 'Связаться с нами в Telegram',
   },
   {
     imgSrc: 'assets/icons/connectWhatsapp.svg',
     imgAlt: 'Whatsapp',
     url: 'https://wa.me/79154243000',
-    text: 'Напишите нашему менеджеру',
+    text: 'Связаться с нами в WhatsApp',
   },
   {
     imgSrc: 'assets/icons/connectPhone.svg',
@@ -24,13 +24,13 @@ export const connectItemsNovgorod = [
     imgSrc: 'assets/icons/connectTelegram.svg',
     imgAlt: 'Telegram',
     url: 'https://t.me/kut_auto_nn',
-    text: 'Свяжитесь с нами в телеграм',
+    text: 'Связаться с нами в Telegram',
   },
   {
     imgSrc: 'assets/icons/connectWhatsapp.svg',
     imgAlt: 'Whatsapp',
     url: 'https://wa.me/79933981637',
-    text: 'Напишите нашему менеджеру',
+    text: 'Связаться с нами в WhatsApp',
   },
   {
     imgSrc: 'assets/icons/connectPhone.svg',
@@ -45,13 +45,13 @@ export const connectItemsMinsk = [
     imgSrc: 'assets/icons/connectTelegram.svg',
     imgAlt: 'Telegram',
     url: 'https://t.me/kut_auto_minsk',
-    text: 'Свяжитесь с нами в телеграм',
+    text: 'Связаться с нами в Telegram',
   },
   {
     imgSrc: 'assets/icons/connectWhatsapp.svg',
     imgAlt: 'Whatsapp',
     url: 'https://wa.me/375259564276',
-    text: 'Напишите нашему менеджеру',
+    text: 'Связаться с нами в WhatsApp',
   },
   {
     imgSrc: 'assets/icons/connectPhone.svg',

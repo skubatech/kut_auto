@@ -1,15 +1,15 @@
 export const values = [ 
     {
         text: 'До 3х лет',
-        value: '3'
-    },
-    {
-        text: '3-5 лет',
         value: '2'
     },
     {
+        text: '3-5 лет',
+        value: '4'
+    },
+    {
         text: 'Больше 5 лет',
-        value: '1'
+        value: '6'
     },
 ];
 

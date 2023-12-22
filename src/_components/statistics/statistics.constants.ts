@@ -1,10 +1,10 @@
 export const statistics = [
   {
-    info: '94%',
+    info: '97%',
     text: 'довольных клиентов',
   },
   {
-    info: '7',
+    info: '6',
     text: 'обращений по гарантии',
   },
   {

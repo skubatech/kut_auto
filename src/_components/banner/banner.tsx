@@ -20,9 +20,9 @@ export const Banner: FC<Props> = ({ scrollTo }) => {
   return (
     <div className={cn('container', styles.wrapper)} id='banner'>
       <h3 className={styles.title}>
-        самый
-        <br /> качественный
-        <br /> автоподбор в европе
+        качественные
+        <br /> автомобили из
+        <br /> европы под заказ
       </h3>
       <span className={styles.description}>
         Наша компания предоставляет полный комплекс услуг, связанных с
@@ -33,7 +33,7 @@ export const Banner: FC<Props> = ({ scrollTo }) => {
       <div className={styles.btnWrap}>
         <ButtonCustom
           textTransform='uppercase'
-          text='получить консультацию'
+          text='консультация'
           fontSize={32}
           fontWeight={700}
           onClick={() => scrollTo(3)}
