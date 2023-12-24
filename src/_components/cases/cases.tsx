@@ -23,7 +23,7 @@ export const Cases = forwardRef<HTMLDivElement, object>((_, ref) => {
         height: '100%',
         opacity: 1,
         duration: 1.7,
-        delay: 0.5,
+        delay: 1,
         scrollTrigger: { 
           trigger: el,
         },

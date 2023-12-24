@@ -3,13 +3,12 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  max-width: 410px;
   gap: 24px;
-  align-items: flex-start;
+  align-items: center;
 
   .title {
-    @include text(32px, normal, 700, 40px);
-    text-transform: uppercase;
+    @include text(32px, normal, 700, 120%);
+    width: 489px;
   }
 
   .description {

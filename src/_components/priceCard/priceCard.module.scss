@@ -7,22 +7,27 @@
     align-items: center;
     border-radius: 10px;
     padding: 37px 50px;
+    max-width: 444px;
 
   .title {
+    @include text(36px, normal, 500, normal);
+    text-align: center;
+    margin-bottom: 35px;
+    white-space: pre;
+  }
+
+  .description {
     @include text(48px, normal, 700, normal);
     text-transform: capitalize;
     margin-bottom: 35px;
   }
 
-  .description {
-    @include text(16px, normal, 500, 19px);
-    text-transform: capitalize;
-    margin-bottom: 35px;
+  .text {
+    @include text(20px, normal, 400, 120%);
   }
 
-  .text {
-    @include text(20px, normal, 400, 19.5px);
-    margin-bottom: 67px;
+  .list {
+    height: 100%;
   }
 }
 .wrapper:nth-child(2) {

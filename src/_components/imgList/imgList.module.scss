@@ -10,8 +10,7 @@
 }
 
 .title {
-  @include text(48px, normal, 700, normal);
-  text-transform: capitalize;
+  @include text(33px, normal, 700, normal);
   margin-bottom: 15px;
   display: block;
 }

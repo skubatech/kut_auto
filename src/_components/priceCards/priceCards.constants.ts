@@ -1,20 +1,20 @@
 export const cards = [
   {
-    title: 'Осмотр одного авто от 4 000 ₽',
+    title: `Осмотр \n одного авто `,
     descrption:
-      'Lorem ipsum dolor sit amet consectetur. Justo fames volutpat cursus posuere quisque sit tellus arcu egestas. Consectetur nisi diam sit volutpat pulvinar magna tortor. ',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'от 4 000 ₽',
+    text: ['Оценка справедливой стоимости автомобиля.', 'Осмотр кузова, салона, электрики.', 'Компьютерная диагностика.', 'Рекомендации эксперта.', 'Отчет по осмотру автомобиля.', 'Аргументированный торг с продавцом.'],
   },
   {
-    title: 'Авто под ключ От 60 000 ₽ ',
+    title: `Авто \n под ключ`,
     descrption:
-      'Lorem ipsum dolor sit amet consectetur. Justo fames volutpat cursus posuere quisque sit tellus arcu egestas. Consectetur nisi diam sit volutpat pulvinar magna tortor. ',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'От 60 000 ₽',
+    text: ['Поиск автомобиля до результата.', 'Экономия личного времени и денег.', 'Осмотр кузова, салона, электрики и узлов.', 'Компьютерная диагностика.', 'Диагностика на СТО.', 'Рекомендации эксперта.', 'Сопровождение процесса покупки.', 'Контроль передачи денег и оформления документов.', 'Возможность получить лучший авто за свои деньги.'],
   },
   {
-    title: 'Эксперт на день От 15 000 ₽',
+    title: `Эксперт \n на день`,
     descrption:
-      'Lorem ipsum dolor sit amet consectetur. Justo fames volutpat cursus posuere quisque sit tellus arcu egestas. Consectetur nisi diam sit volutpat pulvinar magna tortor. ',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'От 15 000 ₽',
+    text: ['Осмотр кузова, салона, электрики и узлов.', 'Компьютерная диагностика.', 'Диагностика на СТО.', 'Рекомендации эксперта.', 'Неограниченное количество автомобилей в течение дня.', 'Перемещение на автомобиле эксперта.'],
   },
 ];

@@ -1,13 +1,14 @@
+@import '../../textMixin.scss';
+
 .wrapper {
-    padding-left: 112px;
+  padding-left: 112px;
 
-    .list {
-        padding-inline-start: 32px;
-    }
+  .list {
+    padding-inline-start: 32px;
+  }
 
-    .timeWrap {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-    }
+  .text {
+    @include text(16px, normal, 400, normal);
+    margin-top: 16px;
+  }
 }

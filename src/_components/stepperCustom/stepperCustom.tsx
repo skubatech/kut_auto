@@ -15,9 +15,12 @@ const colorlibStepIcon = (props: StepIconProps) => {
   const icons: { [index: string]: React.ReactElement } = {
     1: <img src='assets/icons/user.svg' />,
     2: <img src='assets/icons/paper.svg' />,
-    3: <img src='assets/icons/directory.svg' />,
-    4: <img src='assets/icons/pen.svg' />,
-    5: <img src='assets/icons/car.svg' />,
+    3: <img src='assets/icons/search.svg' />,
+    4: <img src='assets/icons/car.svg' />,
+    5: <img src='assets/icons/prepayment.svg' />,
+    6: <img src='assets/icons/delivery.svg' />,
+    7: <img src='assets/icons/obtaining.svg' />,
+    8: <img src='assets/icons/payment.svg' />,
   };
 
   return <div className={className}>{icons[String(props.icon)]}</div>;
@@ -43,7 +46,7 @@ export const StepperCustom: FC = () => {
             <h5 className={styles.title}>{item.title}</h5>
           </StepLabel>
           <StepContent>
-            <StepperDescription description={item.description} timeText={item.timeText} key={i}/>
+            <StepperDescription description={item.description} descriptionItems={item.descriptionItems} key={i}/>
           </StepContent>
         </Step>
       ))}

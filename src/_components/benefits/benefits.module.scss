@@ -1,6 +1,7 @@
 .wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
     position: relative;
 
     .back {

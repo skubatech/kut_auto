@@ -56,7 +56,7 @@ export const ImgList: FC = () => {
                 padding: 0,
               },
             }}
-            subtitle={<span className={styles.subTitle}>{item.subTitle}</span>}
+            // subtitle={<span className={styles.subTitle}>{item.subTitle}</span>}
             title={<span className={styles.title}>{item.title}</span>}
             position='top'
             actionPosition='left'

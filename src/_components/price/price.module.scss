@@ -15,7 +15,6 @@
 
     .text {
       @include text(16px, normal, 400, 19px);
-      text-transform: capitalize;
     }
   }
   

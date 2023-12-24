@@ -21,10 +21,11 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
       {
         opacity: 1,
         duration: 1,
-        delay: 1,
+        delay: 1.5,
         y: 0,
         scrollTrigger: {
           trigger: '#diagnosis',
+          start: 'top center'
         },
       }
     );
@@ -41,12 +42,12 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
         />
         <h4 className={styles.title}>наш подход</h4>
         <span className={styles.description}>
-          Мы подберем для вас Лучшее предложение на рынке с гарантией
+          Мы подберем для вас лучшее предложение на рынке с гарантией
           технической и юридической чистоты
         </span>
       </div>
       <div className={styles.stateWrap}>
-        <h5 className={styles.stateTitle}>
+        <h5 className={styles.stateTitle} id='diagnosis'>
           открываем глаза на реальное состояние автомобиля
         </h5>
         <span className={styles.stateText}>
@@ -55,7 +56,7 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
         </span>
         <Approach />
       </div>
-      <div className={styles.diagnosisWrap} id='diagnosis'>
+      <div className={styles.diagnosisWrap}>
         <h5 className={styles.whiteTitleCenter}>мы диагностируем</h5>
         <span className={styles.diagnosisText}>
           Гарантия качества и безопасности
