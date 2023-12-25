@@ -16,7 +16,7 @@
   .text {
     @include text(16px, normal, 500, 120%);
     @include arrayProps((
-      font-size: 14px null 10px 16px
+      font-size: 14px null null 16px
   ));
   }
 }

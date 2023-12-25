@@ -2,10 +2,12 @@
 
 .imgItem {
   opacity: 0.5;
+  transition: all .4s ease-in-out;
 
   &:hover {
     opacity: 1;
-    transition: opacity .4s ease-in-out;
+    
+    scale: 1.1;
   }
 }
 

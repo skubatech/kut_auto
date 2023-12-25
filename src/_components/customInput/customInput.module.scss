@@ -7,5 +7,9 @@
 
   .title {
     @include text(42px, normal, 700, normal);
+
+    @include arrayProps((
+      font-size: 24px null 42px
+    ));
   }
 }

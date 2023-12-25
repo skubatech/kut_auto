@@ -11,10 +11,10 @@
     .title {
       @include text(40px, normal, 700, normal);
       text-transform: uppercase;
-    }
 
-    .text {
-      @include text(16px, normal, 400, 19px);
+      @include arrayProps((
+        font-size: 24px null 40px
+      ));
     }
   }
   

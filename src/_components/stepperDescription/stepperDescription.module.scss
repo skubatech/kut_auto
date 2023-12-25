@@ -1,7 +1,9 @@
 @import 'src/theme/scss/helpers';
 
 .wrapper {
-  padding-left: 112px;
+  @include arrayProps((
+    padding-left: 15px 36px 64px 112px
+  ));
 
   .list {
     padding-inline-start: 32px;
@@ -10,5 +12,9 @@
   .text {
     @include text(16px, normal, 400, normal);
     margin-top: 16px;
+
+    @include arrayProps((
+      font-size: 14px 16px
+    ));
   }
 }

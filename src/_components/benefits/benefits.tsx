@@ -30,7 +30,6 @@ export const Benefits = () => {
       {benefits.map((item, i) => (
         <BenefitsItem
           title={item.title}
-          description={item.description}
           icon={item.icon}
           key={i}
         />

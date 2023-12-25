@@ -3,5 +3,9 @@
 .title {
   @include text(24px, normal, 600, normal);
   text-transform: uppercase;
-  padding-left: 112px;
+
+  @include arrayProps((
+    font-size: 14px 16px 20px 24px,
+    padding-left: 15px 36px 64px 112px
+  ));
 }

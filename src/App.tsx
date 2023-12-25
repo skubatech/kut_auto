@@ -42,7 +42,7 @@ export const App = () => {
       <Cases ref={pageRef[0]}/>
       <OurApproach ref={pageRef[1]} />
       <Calculator ref={pageRef[2]} scrollTo={scrollTo}/>
-      <Price />
+      <Price scrollTo={scrollTo}/>
       <Contacts ref={pageRef[3]}/>  
       <Questions ref={pageRef[4]} />
       <Manager />

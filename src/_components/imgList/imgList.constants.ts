@@ -7,8 +7,8 @@ export const imgData = [
     cols: 1,
   },
   {
-    img: 'assets/icons/x5.png',
-    title: 'BMW X5 G05',
+    img: 'assets/icons/golf.png',
+    title: 'VW Golf Alltrack',
     subTitle: 'Lorem ipsum dolor sit amet consectetur..',
     rows: 1,
     cols: 2,
@@ -21,8 +21,9 @@ export const imgData = [
     cols: 1,
   },
   {
-    img: 'assets/icons/golf.png',
-    title: 'VW Golf Alltrack',
+    img: 'assets/icons/x5.png',
+    title: 'BMW X5 G05',
+
     subTitle: 'Lorem ipsum dolor sit amet consectetur..',
     cols: 2,
     rows: 3,

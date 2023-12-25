@@ -34,16 +34,16 @@ export const Banner: FC<Props> = ({ scrollTo }) => {
         <ButtonCustom
           textTransform='uppercase'
           text='консультация'
-          fontSize={32}
           fontWeight={700}
+          className={styles.btn}
           onClick={() => scrollTo(3)}
         />
         <ButtonCustom
           color={true}
           textTransform='uppercase'
           text='калькулятор'
-          fontSize={32}
           fontWeight={700}
+          className={styles.btn}
           onClick={() => scrollTo(2)}
         />
       </div>

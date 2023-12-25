@@ -5,9 +5,18 @@
     flex-direction: row;
     gap: 45px;
 
+    
+    @include arrayProps((
+      gap: 15px 25px 35px 45px
+    ));
+
     img {
       width: 42px;
       height: 40px;
+
+      @include arrayProps((
+        width: 24px 36px null 42px
+      ));
     }
 
     .description {

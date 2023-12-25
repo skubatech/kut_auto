@@ -9,10 +9,9 @@
   .title {
     @include text(32px, normal, 700, 120%);
     max-width: 489px;
-  }
-
-  .description {
-    @include text(16px, normal, 500, 19.5px, var(--grey-text)); 
+    @include arrayProps((
+      font-size: 24px null 32px,
+    ));
   }
 
   .info {

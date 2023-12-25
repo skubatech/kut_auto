@@ -13,6 +13,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-transform: uppercase;
+
+      @include arrayProps((
+        font-size: 36px null 58px,
+      ));
     }
   }
 

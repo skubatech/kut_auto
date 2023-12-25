@@ -1,5 +1,13 @@
+@import 'src/theme/scss/helpers';
+
 .wrapper {
     display: flex;
     margin-top: 77px;
     justify-content: space-around;
+    align-items: center;
+
+    @include arrayProps((
+        margin-top: 30px null null 77px,
+        flex-direction: 'column-reverse' 'row'
+      ));
 }

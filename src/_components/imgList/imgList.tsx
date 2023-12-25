@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { ImageListItemBar } from '@mui/material';
+import { ImageListItemBar, useMediaQuery, useTheme } from '@mui/material';
 import styles from './imgList.module.scss';
 import { Feedback, feedbackList, imgData } from './imgList.constants';
 import { DialogCustom } from '../dialogCustom';
@@ -16,6 +16,8 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 }
 
 export const ImgList: FC = () => {
+  const theme = useTheme();
+
   const [open, setOpen] = useState(false);
   const [dialogTitle, setDialogTitle] = useState('');
   const [feedback, setFeedback] = useState<Feedback>(null);
@@ -32,7 +34,19 @@ export const ImgList: FC = () => {
   };
 
   return (
-    <ImageList variant='quilted' cols={4} gap={0} sx={{ marginTop: '60px' }}>
+    <ImageList
+      variant='quilted'
+      gap={0}
+      cols={4}
+      sx={{
+        marginTop: '60px',
+        // gridTemplateColumns: {
+        //   xs: 'repeat(1, 1fr)',
+        //   sm: 'repeat(3, 1f)',
+        //   lg: 'repeat(4, 1fr)' 
+        // }
+      }}
+    >
       {imgData.map((item, i) => (
         <ImageListItem
           key={i}
@@ -40,7 +54,7 @@ export const ImgList: FC = () => {
           rows={item.rows || 1}
           onClick={() => handleClickOpen(item.title)}
           id={item.title}
-          sx={{ cursor: 'pointer' }}
+          sx={{ cursor: 'pointer', overflow: 'hidden' }}
         >
           <img
             {...srcset(item.img, 121, item.rows, item.cols)}

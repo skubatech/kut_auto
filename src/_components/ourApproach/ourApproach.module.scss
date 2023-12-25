@@ -25,13 +25,19 @@
     gap: 15px;
     height: 231px;
     background: linear-gradient(90deg, #111 43.56%, rgba(217, 217, 217, 0));
+    overflow: hidden;
 
     .car {
       position: absolute;
       top: 0;
-      right: 30px;
+      // right: 30px;
       mix-blend-mode: color-dodge;
       z-index: -1;
+
+      @include arrayProps((
+        // right: null null 30px,
+        left: 0 0 '20%' null '37%'
+      ));
     }
 
     .title {
@@ -44,6 +50,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-transform: uppercase;
+
+      @include arrayProps((
+        font-size: 36px null 42px 58px,
+      ));
     }
 
     .description {
@@ -56,12 +66,20 @@
   .whiteTitle {
     @include text(40px, normal, 700, normal);
     text-transform: uppercase;
+
+    @include arrayProps((
+      font-size: 24px null 40px
+    ));
   }
 
   .whiteTitleCenter {
     @include text(40px, normal, 700, normal);
     text-transform: uppercase;
     text-align: center;
+
+    @include arrayProps((
+      font-size: 24px null 32px 40px,
+    ));
   }
 
   .stateWrap {
@@ -73,6 +91,10 @@
       @include text(40px, normal, 700, normal);
       max-width: 859px;
       text-transform: uppercase;
+
+      @include arrayProps((
+        font-size: 24px null 36px 40px,
+      ));
     }
 
     .stateText {
@@ -91,6 +113,10 @@
       @include text(16px, normal, 300, 19px);
       display: block;
       text-align: center;
+
+      @include arrayProps((
+      font-size: 12px 14px null 16px,
+    ));
     }
 
     .diagnosis {
@@ -99,6 +125,12 @@
       justify-content: space-evenly;
       margin-top: 45px;
       align-items: center;
+
+      .porshe {
+        @include arrayProps((
+          width: 136px 233px 290px 396px,
+        ));
+      }
     }
   }
 

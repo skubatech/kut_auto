@@ -98,14 +98,14 @@ export const Manager = () => {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <img src='assets/icons/managerWhatsApp.svg' alt='Icon' />
+                <img src='assets/icons/managerWhatsApp.svg' alt='Icon' className={styles.linkIcon}/>
               </a>
               <a
                 href={getLinks().telegram}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <img src='assets/icons/managerTelegram.svg' alt='Icon' />
+                <img src='assets/icons/managerTelegram.svg' alt='Icon' className={styles.linkIcon} />
               </a>
             </div>
             <a href={getLinks().phoneLink} className={styles.phone}>

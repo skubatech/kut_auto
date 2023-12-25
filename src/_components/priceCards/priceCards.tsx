@@ -3,7 +3,11 @@ import styles from './priceCards.module.scss';
 import { PriceCard } from '../priceCard/priceCard';
 import { cards } from './priceCards.constants';
 
-export const PriceCards: FC = () => {
+interface Props {
+  scrollTo: (num: number) => void;
+}
+
+export const PriceCards: FC<Props> = ({ scrollTo }) => {
   return (
     <div className={styles.wrapper}>
       {cards.map((item, i) => (
@@ -13,6 +17,7 @@ export const PriceCards: FC = () => {
           text={item.text}
           key={item.descrption}
           filledBtn={i === 1}
+          scrollTo={scrollTo}
         />
       ))}
     </div>

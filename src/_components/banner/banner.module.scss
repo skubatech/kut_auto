@@ -15,6 +15,10 @@
   max-width: 900px;
   margin-top: 60px;
 
+  @include arrayProps((
+    margin-top: 15px 20px 32px 60px,
+  ));
+
   .title {
     @include text(58px, normal, 700, 68px);
     background: var(
@@ -26,6 +30,10 @@
     -webkit-text-fill-color: transparent;
     letter-spacing: -1.16px;
     text-transform: uppercase;
+
+    @include arrayProps((
+      font-size: 48px null null 58px,
+    ));
   }
 
   .description {
@@ -38,7 +46,10 @@
     justify-content: space-between;
 
     .btn {
-      margin-right: 30px;
+      // margin-right: 30px;
+      @include arrayProps((
+        font-size: 16px 24px 32px 32px,
+      ));
     }
   }
 }

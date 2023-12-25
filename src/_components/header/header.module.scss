@@ -2,6 +2,7 @@
 
 .wrapper {
   @include arrayProps((
+    display: none block,
     padding-left: 24px 50px 80px 120px,
     padding-right: 24px 50px 80px 120px,
   ));
@@ -41,7 +42,9 @@
       margin: 26px 0 0 0;
       padding: 0;
 
-      
+      @include arrayProps((
+        font-size: 27px 21px null 27px
+      ));
       li {
         cursor: pointer;
 
@@ -51,6 +54,12 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
+      }
+
+      .btn {
+        @include arrayProps((
+          font-size: 21px null 27px,
+        ));
       }
     }
   }

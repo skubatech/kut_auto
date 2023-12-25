@@ -1,9 +1,15 @@
+@import 'src/theme/scss/helpers';
+
 .btn {
   cursor: pointer;
   border-radius: 50px;
   padding: 15px 40px;
   font-style: normal;
   background: linear-gradient(262deg, #19fb9b -6.33%, #6cc0e6 100%);
+  
+  @include arrayProps((
+    padding: '8px 16px' '12px 20px' '15px 40px',
+  ));
 }
 
 .btnColor {

@@ -3,19 +3,16 @@
 .wrapper {
   position: relative;
   background: linear-gradient(451deg, #111 13.95%, rgba(217, 217, 217, 0.00) 47.87%);
-  height: 1000px;
   overflow: hidden;
 
   @include arrayProps((
-    height: 345px 557px 800px 1000px,
+    height: 550px 700px 800px 1000px,
   ));
 
   .img {
     position: absolute;
     right: 0;
     top: 0;
-    // max-width: 1732.582px;
-    // max-height: 1037.679px;
     mix-blend-mode: color-dodge;
     z-index: -1;
 

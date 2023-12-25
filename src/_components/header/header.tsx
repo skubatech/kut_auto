@@ -49,11 +49,11 @@ export const Header: FC<Props> = ({ scrollTo }) => {
           />
           <NavItem text='Вопросы' scrollTo={() => scrollTo(4)} />
           <ButtonCustom
-            fontSize={27}
             fontWeight={400}
             color={true}
             textTransform='none'
             text='Контакты'
+            className={styles.btn}
             onClick={() => scrollTo(3)}
           />
         </ul>

@@ -8,6 +8,10 @@
   .info {
     @include text(64px, normal, 254, normal);
     font-family: 'Epilogue', sans-serif;
+
+    @include arrayProps((
+    font-size: 64px 42px 56px 64px
+  ));
   }
 
   .text {

@@ -16,6 +16,9 @@
 
     img {
         width: 80px;
+        @include arrayProps((
+        width: 45px 60px 60px 80px,
+      ));
     }
 
     .title {

@@ -17,11 +17,20 @@
     -webkit-text-fill-color: transparent;
     max-width: 1046px;
     text-transform: uppercase;
+
+    @include arrayProps((
+      font-size: 36px null null 58px,
+      max-width: '80%' null null '100%'
+    ));
   }
 
   .calculatorWrap {
     display: flex;
     justify-content: space-between;
+
+    @include arrayProps((
+      flex-direction: 'column-reverse' 'row'
+    ));
   }
 
   .back {

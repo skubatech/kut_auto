@@ -8,5 +8,16 @@
   .title {
     @include text(40px, normal, 700, normal);
     text-transform: uppercase;
+
+    @include arrayProps((
+      font-size: 24px null 32px 40px,
+    ));
+  }
+
+  .video {
+    @include arrayProps((
+      width: '100%',
+      height: 218px 400px 612px 812px
+    ));
   }
 }

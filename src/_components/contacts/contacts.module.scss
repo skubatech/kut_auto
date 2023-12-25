@@ -11,12 +11,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
+
+    @include arrayProps((
+      font-size: 36px null 58px,
+    ));
   }
 
   .contacts {
     display: flex;
     justify-content: space-between;
     margin-top: 45px;
+
+    @include arrayProps((
+      flex-direction: 'column-reverse' 'row'
+    ));
   }
 
   .map {

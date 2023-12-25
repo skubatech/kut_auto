@@ -5,6 +5,6 @@
   margin-right: auto;
 
   @include arrayProps((
-    max-width: 375px 768px 1024px 1440px 1920px
+    max-width: 767px 1023px 1440px 1920px
   ))
 }
