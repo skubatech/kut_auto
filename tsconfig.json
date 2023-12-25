@@ -10,7 +10,8 @@
     "paths": {
       "*": ["src/types/*"],
       "@/*": [ "./src/*" ],
-      "@theme/*": [ "./src/assets/scss/*" ],
+      "@theme/*": [ "./src/theme/*" ],
+      "@theme": [ "./src/theme/scss" ]
     },
     "jsx": "react",
     "allowSyntheticDefaultImports": true

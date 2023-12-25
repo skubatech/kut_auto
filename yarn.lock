@@ -8316,6 +8316,17 @@ sanitize.css@*:
   resolved "https://registry.npmjs.org/sanitize.css/-/sanitize.css-13.0.0.tgz"
   integrity sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==
 
+sass-loader@^10.1.1:
+  version "10.5.1"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.5.1.tgz#4cfb9cd17e09afc7d8787fdb57d665254c3aadcb"
+  integrity sha512-P8BGIW6OxYLJWaWG8DROibc98Uw/B90oHPYOjPQ5/tF572OTTwkhxSxpaQzD5lYam36zQd0cxjh24b4rcdNIZQ==
+  dependencies:
+    klona "^2.0.4"
+    loader-utils "^2.0.0"
+    neo-async "^2.6.2"
+    schema-utils "^3.0.0"
+    semver "^7.3.2"
+
 sass-loader@^12.3.0:
   version "12.6.0"
   resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-12.6.0.tgz"

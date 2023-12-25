@@ -1,4 +1,5 @@
-@import '../../textMixin.scss';
+@import 'src/theme/scss/helpers';
+
 .title {
   @include text(24px, normal, 600, normal);
   text-transform: uppercase;

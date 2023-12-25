@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './App.scss';
+import './App.module.scss';
 import { Header } from './_components/header';
 import { Benefits } from './_components/benefits';
 import { Footer } from './_components/footer';
@@ -12,6 +12,7 @@ import { Contacts } from './_components/contacts';
 import { Questions } from './_components/questions';
 import { Calculator } from './_components/calculator';
 import { Manager } from './_components/manager';
+import styles from './App.module.scss';
 
 export const App = () => {
   const pageRef = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
@@ -33,7 +34,7 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <div className={styles.main}>
       <Header scrollTo={scrollTo}/>
       <Title scrollTo={scrollTo}/>
       <Benefits />
