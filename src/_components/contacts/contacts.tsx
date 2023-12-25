@@ -33,8 +33,6 @@ export const Contacts = forwardRef<HTMLDivElement, object>((_, ref) => {
         <iframe
           title='Yandex Map'
           src={getMap()}
-          width='700'
-          height='500'
           frameBorder='1'
           allowFullScreen
           className={styles.map}

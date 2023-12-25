@@ -8,7 +8,7 @@
 
   .title {
     @include text(32px, normal, 700, 120%);
-    width: 489px;
+    max-width: 489px;
   }
 
   .description {

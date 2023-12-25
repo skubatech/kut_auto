@@ -1,6 +1,13 @@
+@import 'src/theme/scss/helpers';
+
 .wrapper {
   .video {
     width: 625px;
     height: 427px;
+
+    @include arrayProps((
+      width: '100%' null 416px 625px,
+      height: 260px null 332px 427px
+  ));
   }
 }

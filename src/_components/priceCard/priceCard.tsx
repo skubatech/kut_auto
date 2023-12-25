@@ -27,9 +27,10 @@ export const PriceCard: FC<Props> = ({
       <ButtonCustom
         textTransform='uppercase'
         text='получить'
-        fontSize={32}
+        // fontSize={32}
         fontWeight={700}
         isFilled={filledBtn}
+        className={styles.button}
       />
     </div>
   );

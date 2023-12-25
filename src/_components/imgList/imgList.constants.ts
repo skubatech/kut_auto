@@ -1,34 +1,34 @@
 export const imgData = [
   {
-    img: 'assets/icons/audiA6.png',
-    title: 'Tesla Model 3',
+    img: 'assets/icons/x4.png',
+    title: 'BMW X4',
     subTitle: 'Lorem ipsum dolor sit amet consectetur.',
     rows: 1,
     cols: 1,
   },
   {
-    img: 'assets/icons/audiA6.png',
-    title: 'Mercedes GLS',
+    img: 'assets/icons/x5.png',
+    title: 'BMW X5 G05',
     subTitle: 'Lorem ipsum dolor sit amet consectetur..',
     rows: 1,
     cols: 2,
   },
   {
-    img: 'assets/icons/audiA6.png',
-    title: 'BMW X5',
+    img: 'assets/icons/gls.png',
+    title: 'MB GLS',
     subTitle: 'Lorem ipsum dolor sit amet consectetur..',
     rows: 1,
     cols: 1,
   },
   {
-    img: 'assets/icons/volvo2XC90.png',
-    title: 'Audi A6',
+    img: 'assets/icons/golf.png',
+    title: 'VW Golf Alltrack',
     subTitle: 'Lorem ipsum dolor sit amet consectetur..',
     cols: 2,
     rows: 3,
   },
   {
-    img: 'assets/icons/audiA6.png',
+    img: 'assets/icons/cx5.png',
     title: 'Mazda CX-5',
     subTitle:
       'Lorem ipsum dolor sit amet consectetur. Pellentesque rhoncus fringilla nunc urna aliquet.',
@@ -36,16 +36,16 @@ export const imgData = [
     rows: 2,
   },
   {
-    img: 'assets/icons/volvoXC90.png',
-    title: 'VW Golf Alltrack',
+    img: 'assets/icons/tesla.png',
+    title: 'Tesla Model 3',
     subTitle:
       'Lorem ipsum dolor sit amet consectetur. Pellentesque rhoncus fringilla nunc urna aliquet.',
     rows: 3,
     cols: 1,
   },
   {
-    img: 'assets/icons/audiA6.png',
-    title: 'BMW X4',
+    img: 'assets/icons/a6.png',
+    title: 'Audi A6',
     subTitle:
       'Lorem ipsum dolor sit amet consectetur. Pellentesque rhoncus fringilla nunc urna aliquet.',
     cols: 1,
@@ -80,12 +80,12 @@ export const feedbackList:Record<string, Feedback> = {
     name: 'Иннокентий',
     content: 'Хорошие ребята из Автоподбора Кут, могут помочь во всем связанном с автомобилями и не только, рекомендую своим друзьям, как реально надежных проводников в мире машин. Вася и Никита , спасибо!'
   },
-  'BMW X5': {
+  'BMW X5 G05': {
     link: 'https://www.youtube.com/embed/aV7_YCTFCrk?si=mIi3QKzHpFtdvkgG&amp;start=401',
     name: 'Денис',
     content: 'Ребята привезли отличную машину на перепродажу, нареканий не было обнаружено, спасибо большое!'
   },
-  'Mercedes GLS': {
+  'MB GLS': {
     link: 'https://www.youtube.com/embed/-cMgRtrL4eA?si=WY3ag8qs69CagAbD&amp;start=337',
     name: 'Дмитрий',
     content: 'Обратился с заказом авто из Германии. С первого общения подкупила полная клиентоориентированность. Плюс крайне лояльные условия при заказе. Можно сказать эксклюзивные для рынка. Обговорили мои хотелки. Сбросил сам несколько ссылок на авто в Германии. Собственно одну из этих авто и купили после проверки. Мои рекомендации. Просто все отлично. Пять баллов. Скорость, условия, общение.'
