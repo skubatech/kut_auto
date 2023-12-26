@@ -5,9 +5,10 @@
     margin-top: 77px;
     justify-content: space-around;
     align-items: center;
+    gap: 45px;
 
     @include arrayProps((
-        margin-top: 30px null null 77px,
-        flex-direction: 'column-reverse' 'row'
+        margin-top: 20px 30px null 77px,
+        flex-direction: 'column' 'row'
       ));
 }

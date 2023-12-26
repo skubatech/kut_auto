@@ -54,6 +54,73 @@ export const imgData = [
   },
 ];
 
+export const imgDataSm = [
+  {
+    img: 'assets/icons/gls.png',
+    title: 'MB GLS',
+    subTitle: 'Lorem ipsum dolor sit amet consectetur..',
+    rows: 1,
+    cols: 1,
+  },
+  {
+    img: 'assets/icons/a6.png',
+    title: 'Audi A6',
+    subTitle:
+      'Lorem ipsum dolor sit amet consectetur. Pellentesque rhoncus fringilla nunc urna aliquet.',
+    cols: 1,
+    rows: 1,
+  },
+  {
+    img: 'assets/icons/x5.png',
+    title: 'BMW X5 G05',
+
+    subTitle: 'Lorem ipsum dolor sit amet consectetur..',
+    cols: 1,
+    rows: 3,
+  },
+];
+
+export const imgDataMd = [
+  {
+    img: 'assets/icons/x4.png',
+    title: 'BMW X4',
+    subTitle: 'Lorem ipsum dolor sit amet consectetur.',
+    rows: 2,
+    cols: 2,
+  },
+  {
+    img: 'assets/icons/gls.png',
+    title: 'MB GLS',
+    subTitle: 'Lorem ipsum dolor sit amet consectetur..',
+    rows: 2,
+    cols: 1,
+  },
+  {
+    img: 'assets/icons/cx5.png',
+    title: 'Mazda CX-5',
+    subTitle:
+      'Lorem ipsum dolor sit amet consectetur. Pellentesque rhoncus fringilla nunc urna aliquet.',
+    cols: 1,
+    rows: 1,
+  },
+  {
+    img: 'assets/icons/tesla.png',
+    title: 'Tesla Model 3',
+    subTitle:
+      'Lorem ipsum dolor sit amet consectetur. Pellentesque rhoncus fringilla nunc urna aliquet.',
+    rows: 1,
+    cols: 1,
+  },
+  {
+    img: 'assets/icons/a6.png',
+    title: 'Audi A6',
+    subTitle:
+      'Lorem ipsum dolor sit amet consectetur. Pellentesque rhoncus fringilla nunc urna aliquet.',
+    cols: 1,
+    rows: 1,
+  },
+];
+
 export interface Feedback {
   link: string,
   name: string,

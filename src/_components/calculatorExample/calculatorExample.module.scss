@@ -2,8 +2,7 @@
 
 .wrapper {
   .video {
-    width: 625px;
-    height: 427px;
+    border-radius: 10px;
 
     @include arrayProps((
       width: '100%' null 416px 483px 625px,

@@ -273,9 +273,9 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
         <ButtonCustom
           text='рассчитать'
           textTransform='uppercase'
-          fontSize={32}
           fontWeight={700}
           color
+          className={styles.btn}
           onClick={handleClickOpen}
         />
       </div>
@@ -329,10 +329,10 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
           </div>
           <ButtonCustom
             text='связаться с нами'
-            fontSize={32}
             fontWeight={700}
             textTransform='uppercase'
             color
+            className={styles.btn}
             onClick={() => {
               handleClose();
               scrollTo(3);

@@ -1,7 +1,21 @@
+@import 'src/theme/scss/helpers';
+
+.wrap {
+    overflow: hidden;
+}
+
 .wrapper {
     display: flex;
     // gap: 30px;
     margin-top: 45px;
     justify-content: space-between;
+    white-space: nowrap;
+  transition: transform 0.3s;
+
+    @include arrayProps((
+    //   overflow: hidden visible,
+      
+    ));
+
 }
 

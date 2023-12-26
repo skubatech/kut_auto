@@ -34,7 +34,9 @@ export const Benefits = () => {
           key={i}
         />
       ))}
-      <ChooseLocation open={visibleDialog} onClose={() => setVisibleDialog(false)} />
+      {
+        visibleDialog && <ChooseLocation open={visibleDialog} onClose={() => setVisibleDialog(false)} />
+      }
     </div>
   );
 };

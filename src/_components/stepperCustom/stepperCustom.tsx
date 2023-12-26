@@ -7,11 +7,9 @@ import { StepContent } from '@mui/material';
 import { steps } from './stepperCustom.constants';
 import styles from './stepperCustom.module.scss';
 import { StepperDescription } from '../stepperDescription';
-
+import cn from 'classnames';
 
 const colorlibStepIcon = (props: StepIconProps) => {
-  const { className } = props;
-
   const icons: { [index: string]: React.ReactElement } = {
     1: <img src='assets/icons/user.svg' />,
     2: <img src='assets/icons/paper.svg' />,
@@ -23,7 +21,7 @@ const colorlibStepIcon = (props: StepIconProps) => {
     8: <img src='assets/icons/payment.svg' />,
   };
 
-  return <div className={className}>{icons[String(props.icon)]}</div>;
+  return <div>{icons[String(props.icon)]}</div>;
 };
 
 export const StepperCustom: FC = () => {
@@ -31,7 +29,6 @@ export const StepperCustom: FC = () => {
     <Stepper
       orientation='vertical'
       sx={{
-        marginTop: '60px',
         '.MuiStepContent-root': {
           borderColor: '#6CC0E6',
         },
@@ -39,11 +36,12 @@ export const StepperCustom: FC = () => {
           borderColor: '#6CC0E6',
         },
       }}
+      className={styles.wrapper}
     >
       {steps.map((item, i) => (
         <Step key={item.title} active>
           <StepLabel StepIconComponent={colorlibStepIcon}>
-            <h5 className={styles.title}>{item.title}</h5>
+            <h5 className={cn(styles.title, { [styles.titleBig]: i === 1 })}>{item.title}</h5>
           </StepLabel>
           <StepContent>
             <StepperDescription description={item.description} descriptionItems={item.descriptionItems} key={i}/>

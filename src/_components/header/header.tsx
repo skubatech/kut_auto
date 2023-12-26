@@ -5,6 +5,7 @@ import { SocialCarousel } from '../socialCarousel';
 import cn from 'classnames';
 import { NavItem } from '../navItem';
 import { ChooseLocation } from '../chooseLocation';
+import gsap from 'gsap';
 
 interface Props {
   scrollTo: (num: number) => void;
@@ -13,6 +14,7 @@ interface Props {
 export const Header: FC<Props> = ({ scrollTo }) => {
   const [location, setLocation] = useState(localStorage.getItem('location'));
   const [open, setOpen] = useState(false);
+  const [openBurger, setOpenBurger] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -28,6 +30,21 @@ export const Header: FC<Props> = ({ scrollTo }) => {
     });
   }, []);
 
+  const openBurgerMenu = () => {
+    setOpenBurger(true);
+  }
+
+  const closeBurgerMenu = () => {
+    setOpenBurger(false);
+  }
+
+  useEffect(() => {
+    gsap.fromTo(
+      '#burger',
+      { x: 0, y: -20 },
+      { x: 0, y: 10, duration: .5 }
+    )
+  }, [openBurger]);
 
   return (
     <header className={cn('container', styles.wrapper)}>
@@ -35,16 +52,15 @@ export const Header: FC<Props> = ({ scrollTo }) => {
         <span className={styles.location} onClick={handleClickOpen}>
           {location ?? 'Москва'}
         </span>
-        <img src='assets/icons/logo.svg' alt='Logo' loading='lazy' />
-        <SocialCarousel colored={false} />
+        <img src='assets/icons/logo.svg' alt='Logo' loading='lazy' className={ styles.logo } />
+        <SocialCarousel colored={false} className={styles.social} />
       </section>
       <nav className={styles.low}>
-        <ul className={styles.nav}>
+        <ul className={cn(styles.nav, { [styles.burgerNav]: openBurger })} id="burger">
           <NavItem text='Кейсы' scrollTo={() => scrollTo(0)} />
           <NavItem text='Услуги' scrollTo={() => scrollTo(1)} />
           <NavItem
             text='Калькулятор'
-            main={true}
             scrollTo={() => scrollTo(2)}
           />
           <NavItem text='Вопросы' scrollTo={() => scrollTo(4)} />
@@ -57,6 +73,20 @@ export const Header: FC<Props> = ({ scrollTo }) => {
             onClick={() => scrollTo(3)}
           />
         </ul>
+        <img
+          src={
+            openBurger
+              ? 'assets/icons/closeBurger.png'
+              : 'assets/icons/burger.png'
+            }
+            alt='menu icon'
+            className={styles.burger}
+            onClick={
+              openBurger
+                ? closeBurgerMenu
+                : openBurgerMenu
+            }
+        />
       </nav>
       <ChooseLocation open={open} onClose={handleClose}/>
     </header>

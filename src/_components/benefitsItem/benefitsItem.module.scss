@@ -6,6 +6,13 @@
   gap: 24px;
   align-items: center;
 
+  .icon {
+    @include arrayProps((
+      width: 35px 60px 71px,
+      height: 35px 60px 71px,
+    ));
+  }
+
   .title {
     @include text(32px, normal, 700, 120%);
     max-width: 489px;

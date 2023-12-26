@@ -6,6 +6,7 @@ interface Props {
   title: string;
   description: string;
   text: string[];
+  id: string;
   filledBtn?: boolean;
   scrollTo: (num: number) => void;
 }
@@ -14,11 +15,12 @@ export const PriceCard: FC<Props> = ({
   title,
   description,
   text,
+  id,
   filledBtn,
-  scrollTo
+  scrollTo,
 }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id={id}>
       <span className={styles.title}>{title}</span>
       <span className={styles.description}>{description}</span>
       <ul className={styles.list}>
@@ -29,7 +31,6 @@ export const PriceCard: FC<Props> = ({
       <ButtonCustom
         textTransform='uppercase'
         text='получить'
-        // fontSize={32}
         fontWeight={700}
         isFilled={filledBtn}
         className={styles.button}

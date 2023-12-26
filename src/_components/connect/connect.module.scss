@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
     gap: 45px;
+
+    @include arrayProps((
+      gap: 30px 40px null 45px
+    ));
   }
 
   .social {

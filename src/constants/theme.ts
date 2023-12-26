@@ -8,7 +8,7 @@ export const THEME = createTheme({
       sm: 375,
       md: 768,
       lg: 1024,
-      xl: 1440
+      xl: 1440,
     },
   },
   typography: {
@@ -40,7 +40,6 @@ export const THEME = createTheme({
       styleOverrides: {
         label: {
           fontFamily: 'Epilogue, sans-serif',
-          fontSize: '28px',
           fontStyle: 'normal',
           fontWeight: 400,
           lineHeight: '19px',
@@ -128,5 +127,12 @@ export const THEME = createTheme({
         },
       },
     },
+    MuiStepLabel: {
+      styleOverrides: {
+        iconContainer: {
+          paddingRight: 0
+        }
+      }
+    }
   },
 });

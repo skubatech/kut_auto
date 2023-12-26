@@ -34,10 +34,12 @@ export const CustomRadio: FC<Props> = ({ id, value, title, labelLeft, labelRight
                 color='info'
                 checkedIcon={<img src='assets/icons/radio.svg' alt='Icon' />}
                 icon={<img src='assets/icons/circle.svg' alt='Icon' />}
+                className={styles.radio}
               />
             }
             label={labelLeft}
             checked={value === labelLeft}
+            className={styles.label}
             onChange={(event) =>
               onChange(id, (event.target as HTMLInputElement).value)
             }
@@ -49,9 +51,11 @@ export const CustomRadio: FC<Props> = ({ id, value, title, labelLeft, labelRight
                 color='info'
                 checkedIcon={<img src='assets/icons/radio.svg' alt='Icon' />}
                 icon={<img src='assets/icons/circle.svg' alt='Icon' />}
+                className={styles.radio}
               />
             }
             label={labelRight}
+            className={styles.label}
             checked={value === labelRight}
             onChange={(event) =>
               onChange(id, (event.target as HTMLInputElement).value)

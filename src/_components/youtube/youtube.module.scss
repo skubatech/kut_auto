@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: 45px;
 
+  @include arrayProps((
+    gap: 15px 45px,
+  ));
+
   .title {
     @include text(40px, normal, 700, normal);
     text-transform: uppercase;

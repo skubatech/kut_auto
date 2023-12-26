@@ -1,0 +1,24 @@
+@import 'src/theme/scss/helpers';
+
+.btnCarouselWrap {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+
+  @include arrayProps((
+      display: 'flex' 'none'
+    ));
+
+  .btnCarousel {
+    width: 40px;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--grad-norm);
+    z-index: 1;
+  }
+
+  .active {
+    background: var(--white);
+  }
+}

@@ -18,5 +18,19 @@
       flex-direction: row;
       gap: 10%;
     }
+    .label {
+      span {
+        @include arrayProps((
+          font-size: 14px 16px null 28px
+        ));
+      }
+    }
+      .radio {
+        img {
+          @include arrayProps((
+            width: 15px null 16px 24px
+          ));
+        }
+      }
   }
 }

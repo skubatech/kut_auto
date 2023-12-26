@@ -12,11 +12,14 @@
     .back {
         background: rgba(63, 93, 255, 0.35);
         position: absolute;
-        width: 400px;
         height: 400px;
         top: 0;
         left: 0;
         fill: rgba(63, 93, 255, 0.24);
         filter: blur(250px);
+
+        @include arrayProps((
+            width: 0 400px
+        ));
     }
 }

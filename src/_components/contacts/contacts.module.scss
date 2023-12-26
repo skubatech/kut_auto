@@ -23,7 +23,8 @@
     margin-top: 45px;
 
     @include arrayProps((
-      flex-direction: 'column-reverse' 'row'
+      flex-direction: 'column' 'row',
+      margin-top: 25px null 30px 45px,
     ));
   }
 
@@ -31,11 +32,11 @@
     border-radius: 50px;
     width: 700px;
     height: 500px;
-
     
     @include arrayProps((
-      width: 382px null 434px 700px,
-      height: 273px null 295px 500px
+      width: '100%' null 434px 700px,
+      height: 273px null 295px 500px,
+      margin-top: 30px 0
   ));
   }
 }

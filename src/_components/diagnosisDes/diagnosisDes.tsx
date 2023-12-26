@@ -11,18 +11,22 @@ interface DiagnosisValue {
 
 interface Props {
   values: DiagnosisValue[];
+  onMouseEnter: (e) => void;
+  onMouseLeave: () => void;
 }
 
-export const DiagnosisDes: FC<Props> = ({ values }) => {
+export const DiagnosisDes: FC <Props> = ({ values, onMouseEnter, onMouseLeave }) => {
   return (
     <div className={styles.wrapper}>
-      {values.map((item, i) => (
+      {values.map((item) => (
         <DiagnosisDesItem
           imgSrc={item.imgSrc}
           imgAlt={item.imgAlt}
           title={item.title}
           text={item.text}
-          key={i}
+          key={item.title}
+          id={item.title}
+          onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
         />
       ))}
     </div>

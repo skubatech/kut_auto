@@ -6,6 +6,11 @@
   flex-direction: column;
   position: relative;
 
+  
+  @include arrayProps((
+    gap: 30px 60px
+  ));
+
   .back {
     background: rgba(63, 93, 255, 0.35);
     position: absolute;
@@ -15,6 +20,7 @@
     left: 0;
     fill: rgba(63, 93, 255, 0.24);
     filter: blur(250px);
+    z-index: -1;
   }
 
   .titleWrap {
@@ -36,7 +42,7 @@
 
       @include arrayProps((
         // right: null null 30px,
-        left: 0 0 '20%' null '37%'
+        left: '-90%' 0 '20%' null '37%'
       ));
     }
 
@@ -123,12 +129,213 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      margin-top: 45px;
       align-items: center;
+      position: relative;
+
+      @include arrayProps((
+          gap: 15px 35px, 
+          margin-top: 30px 45px
+        ));
 
       .porshe {
         @include arrayProps((
           width: 136px 233px 290px 396px,
+        ));
+      }
+
+      .porsheEffectNone {
+        display: none;
+      }
+
+      .porsheEngine {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '66%',
+          left: '48%',
+        ));
+      }
+
+      .porsheTreaty {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '33%',
+          left: '50%',
+        ));
+      }
+
+      .porsheGearbox {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '54%',
+          left: '48.2%',
+        ));
+      }
+
+      .porsheInlet1 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '10%',
+          left: '45%',
+        ));
+      }
+
+      .porsheInlet2 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '9%',
+          left: '52%',
+        ));
+      }
+
+      .porsheInlet3 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '73%',
+          left: '48.2%',
+        ));
+      }
+
+      .porsheBody1 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '10%',
+          left: '50.5%',
+        ));
+      }
+
+      .porsheBody2 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '18%',
+          left: '48%',
+        ));
+      }
+
+      .porsheBody3 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '22%',
+          left: '43%',
+        ));
+      }
+
+      .porsheBody4 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '36%',
+          left: '42%',
+        ));
+      }
+
+      .porsheBody5 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '48%',
+          left: '48%',
+        ));
+      }
+
+      .porsheBody6 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '66%',
+          left: '53%',
+        ));
+      }
+
+      .porsheSuspension1 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '66%',
+          left: '53%',
+        ));
+      }
+
+      .porsheSuspension2 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '66%',
+          left: '43.2%',
+        ));
+      }
+
+      .porsheSuspension3 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '20%',
+          left: '53%',
+        ));
+      }
+
+      .porsheSuspension4 {
+        position: absolute;
+        background-image: url('../../../public/assets/icons/effectCar.svg');
+        width: 55px;
+        height: 55px;
+
+        @include arrayProps((
+          top: '20%',
+          left: '43%',
         ));
       }
     }

@@ -15,10 +15,9 @@
     align-items: center;
 
     img {
-        width: 80px;
         @include arrayProps((
-        width: 45px 60px 60px 80px,
-      ));
+          width: 70px 60px null 80px,
+        ));
     }
 
     .title {
@@ -35,5 +34,8 @@
   .text {
     @include text(16px, normal, 400, 18px, var(--white));
     text-align: center;
+    @include arrayProps((
+      font-size: 14px 16px,
+    ));
   }
 }

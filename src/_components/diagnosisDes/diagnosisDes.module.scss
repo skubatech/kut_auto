@@ -1,5 +1,10 @@
+@import 'src/theme/scss/helpers';
+
 .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    
+  @include arrayProps((
+    gap: 10px 30px
+  ));
 }

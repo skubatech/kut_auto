@@ -1,4 +1,10 @@
+@import 'src/theme/scss/helpers';
+
 .carousel {
   display: flex;
   gap: 34px;
+  
+  @include arrayProps((
+    gap: 20px null 24px 34px  
+  ));
 }

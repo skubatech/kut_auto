@@ -11,12 +11,11 @@
   );
   gap: 40px;
   backdrop-filter: blur(7.5px);
-  padding: 60px 50px;
   max-width: 900px;
-  margin-top: 60px;
 
   @include arrayProps((
-    margin-top: 15px 20px 32px 60px,
+    margin-top: 0 20px 32px 60px,
+    padding: '20px 8px' '35px 30px' 60px 50px
   ));
 
   .title {
@@ -32,7 +31,8 @@
     text-transform: uppercase;
 
     @include arrayProps((
-      font-size: 48px null null 58px,
+      font-size: 24px null 48px 58px,
+      line-height: normal 68px
     ));
   }
 
@@ -48,7 +48,7 @@
     .btn {
       // margin-right: 30px;
       @include arrayProps((
-        font-size: 16px 24px 32px 32px,
+        font-size: 14px 24px 32px 32px,
       ));
     }
   }

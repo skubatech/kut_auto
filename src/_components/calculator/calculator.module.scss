@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: 45px;
   position: relative;
+  
+  @include arrayProps((
+      gap: 30px 45px
+    ));
 
   .title {
     @include text(58px, normal, 700, 68px);
@@ -20,7 +24,8 @@
 
     @include arrayProps((
       font-size: 36px null null 58px,
-      max-width: '80%' null null '100%'
+      max-width: '100%' null,
+      line-height: 'normal' null null 68px
     ));
   }
 
@@ -29,7 +34,8 @@
     justify-content: space-between;
 
     @include arrayProps((
-      flex-direction: 'column-reverse' 'row'
+      flex-direction: 'column-reverse' 'row',
+      gap: 30px 0
     ));
   }
 

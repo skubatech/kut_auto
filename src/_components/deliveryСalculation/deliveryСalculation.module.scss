@@ -6,8 +6,15 @@
   gap: 45px;
 
   @include arrayProps((
-    max-width: '100%' '50%' null auto
+    max-width: '100%' '50%' null auto,
+    gap: 15px 40px null 45px
   ));
+
+  .btn {
+    @include arrayProps((
+      font-size: 24px null null 32px
+    ));
+  }
 }
 
 .dialogWrap {
@@ -71,5 +78,11 @@
     .totalListItem {
       @include text(24px, normal, 400, normal);
     }
+  }
+
+  .btn {
+    @include arrayProps((
+      font-size: 24px null null 32px
+    ));
   }
 }

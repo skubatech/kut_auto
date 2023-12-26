@@ -1,5 +1,12 @@
 @import 'src/theme/scss/helpers';
 
+.list {
+ 
+  @include arrayProps((
+    margin-top: 15px 60px
+  ));
+}
+
 .imgItem {
   opacity: 0.5;
   transition: all .4s ease-in-out;
@@ -16,11 +23,10 @@
   margin-bottom: 15px;
   display: block;
   text-transform: uppercase;
-}
-.subTitle {
-  @include text(16px, normal, 400, 19px);
-  text-transform: capitalize;
-  white-space: pre-wrap;
+
+  @include arrayProps((
+    font-size: 20px 24px 30px 33px,
+  ));
 }
 
 .titleWrap {
@@ -64,4 +70,13 @@
     @include text(16px, normal, 300, 19px);
     font-family: 'Epilogue', sans-serif;
   }
+}
+
+.video {
+  border-radius: 13px;
+  
+  @include arrayProps((
+    width: '100%',
+    height: 200px 276px 427px,
+  ));
 }

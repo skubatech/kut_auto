@@ -3,7 +3,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { ImageListItemBar, useMediaQuery, useTheme } from '@mui/material';
 import styles from './imgList.module.scss';
-import { Feedback, feedbackList, imgData } from './imgList.constants';
+import { Feedback, feedbackList, imgData, imgDataMd, imgDataSm } from './imgList.constants';
 import { DialogCustom } from '../dialogCustom';
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
@@ -17,6 +17,8 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 
 export const ImgList: FC = () => {
   const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.between('xs', 'md'));
+  const isMd = useMediaQuery(theme.breakpoints.between('md', 'lg'));
 
   const [open, setOpen] = useState(false);
   const [dialogTitle, setDialogTitle] = useState('');
@@ -33,21 +35,38 @@ export const ImgList: FC = () => {
     setFeedback(null);
   };
 
+  const getImageList = () => {
+    if (isXs) {
+      return imgDataSm;
+    }
+
+    if (isMd) {
+      return imgDataMd;
+    }
+
+    return imgData;
+  }
+
+  const getColumnsCount = () => {
+    if (isXs) {
+      return 1;
+    }
+
+    if (isMd) {
+      return 3;
+    }
+
+    return 4;
+  }
+
   return (
     <ImageList
       variant='quilted'
       gap={0}
-      cols={4}
-      sx={{
-        marginTop: '60px',
-        // gridTemplateColumns: {
-        //   xs: 'repeat(1, 1fr)',
-        //   sm: 'repeat(3, 1f)',
-        //   lg: 'repeat(4, 1fr)' 
-        // }
-      }}
+      cols={getColumnsCount()}
+      className={styles.list}
     >
-      {imgData.map((item, i) => (
+      {getImageList().map((item, i) => (
         <ImageListItem
           key={i}
           cols={item.cols || 1}
@@ -64,13 +83,16 @@ export const ImgList: FC = () => {
           />
           <ImageListItemBar
             sx={{
-              padding: '32px 0 0 27px',
+              padding: {
+                sm: '18px 0 0 10px',
+                md: '22px 0 0 16px',
+                lg: '32px 0 0 27px'
+              },
               background: 'none',
               '.MuiImageListItemBar-titleWrap': {
                 padding: 0,
               },
             }}
-            // subtitle={<span className={styles.subTitle}>{item.subTitle}</span>}
             title={<span className={styles.title}>{item.title}</span>}
             position='top'
             actionPosition='left'
@@ -99,14 +121,13 @@ export const ImgList: FC = () => {
         {feedback && (
           <>
             <iframe
-              width='760px'
-              height='427px '
+              className={styles.video}
               src={feedback.link}
               title='YouTube video player'
               frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
               allowFullScreen
-              style={{ borderRadius: '13px' }}
+              style={{  }}
             ></iframe>
             <div className={styles.feedbackWrap}>
               <div className={styles.nameWrap}>

@@ -7,17 +7,25 @@
   padding-bottom: 30px;
   margin-top: 60px;
 
+  @include arrayProps((
+    margin-top: 0 60px    
+  ));
+
   .info {
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
     align-items: flex-end;
 
+    @include arrayProps((
+      flex-direction: 'column-reverse' 'row',
+      align-items: 'flex-start' 'flex-end'
+    ));
+
     .docs {
       @include text(14px, normal, 400, 38px, var(--light-grey));
       display: flex;
       flex-direction: column;
-      // text-transform: uppercase;
       .email {
         @include text(14px, normal, 400, 38px, var(--light-grey));
         text-align: end;
@@ -40,5 +48,10 @@
     @include text(16px, normal, 400, 150%, var(--light-grey));
     padding-bottom: 30px;
     margin: 0 auto;
+
+    @include arrayProps((
+      font-size: 12px 16px,
+      padding-bottom: 0 30px
+    ));
   }
 }

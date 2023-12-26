@@ -10,11 +10,15 @@
     font-family: 'Epilogue', sans-serif;
 
     @include arrayProps((
-    font-size: 64px 42px 56px 64px
-  ));
+      font-size: 40px 40px 56px 64px
+    ));
   }
 
   .text {
     @include text(14px, normal, 500, normal);
+
+    @include arrayProps((
+      font-size: 10px 12px null 14px
+    ));
   }
 }

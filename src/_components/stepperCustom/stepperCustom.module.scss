@@ -1,5 +1,12 @@
 @import 'src/theme/scss/helpers';
 
+.wrapper {
+  margin-top: 60px;
+  @include arrayProps((
+    margin-top: 30px null 36px 60px
+  ));
+}
+
 .title {
   @include text(24px, normal, 600, normal);
   text-transform: uppercase;
@@ -7,5 +14,11 @@
   @include arrayProps((
     font-size: 14px 16px 20px 24px,
     padding-left: 15px 36px 64px 112px
+  ));
+}
+
+.titleBig {
+  @include arrayProps((
+    padding-left: 12px 32px 60px 108px
   ));
 }

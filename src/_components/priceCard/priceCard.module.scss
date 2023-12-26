@@ -1,17 +1,25 @@
 @import 'src/theme/scss/helpers';
 
 .wrapper {
-    background: linear-gradient(90deg, #14CDA5 0%, #4C8098 40.67%, #540088 101.41%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    padding: 37px 50px;
+  background: linear-gradient(
+    90deg,
+    #14cda5 0%,
+    #4c8098 40.67%,
+    #540088 101.41%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 37px 50px;
+  flex-shrink: 0;
 
-    @include arrayProps((
-    max-width: '100%' 220px 285px 335px 444px,
-    padding: '4px' '16px 8px' '27px 14px' '26px 36px' '37px 50px'
-  ));
+  @include arrayProps(
+    (
+      max-width: '100%' 220px 285px 335px 444px,
+      padding: '4px' '16px 8px' '27px 14px' '26px 36px' '37px 50px',
+    )
+  );
 
   .title {
     @include text(36px, normal, 500, normal);
@@ -19,10 +27,12 @@
     margin-bottom: 35px;
     white-space: pre;
 
-    @include arrayProps((
-      font-size: 36px 21px 20px 30px 36px,
-      margin-bottom: 26px 16px 8px 10px
-  ));
+    @include arrayProps(
+      (
+        font-size: 36px 21px 20px 30px 36px,
+        margin-bottom: 26px 16px 8px 10px,
+      )
+    );
   }
 
   .description {
@@ -30,34 +40,47 @@
     text-transform: capitalize;
     margin-bottom: 35px;
 
-    @include arrayProps((
-      font-size: 36px 24px null 36px 48px,
-      margin-bottom: 26px 0 8px 10px
-  ));
+    @include arrayProps(
+      (
+        font-size: 36px 24px null 36px 48px,
+        margin-bottom: 26px 0 8px 10px,
+      )
+    );
   }
 
   .text {
     @include text(20px, normal, 400, 120%);
 
-    @include arrayProps((
-      font-size: 14px 10px 12px 16px 20px
-  ));
+    @include arrayProps(
+      (
+        font-size: 14px 10px 12px 16px 20px,
+      )
+    );
   }
 
   .list {
     height: 100%;
 
-    @include arrayProps((
-      padding-left: 8px 21px 14px 16px
-  ));
+    @include arrayProps(
+      (
+        padding-left: 37px 21px 14px 16px,
+      )
+    );
+
+    li {
+      white-space: normal;
+    }
   }
 
   .button {
-    @include arrayProps((
-      font-size: 32px 16px null 32px
-  ));
+    @include arrayProps(
+      (
+        font-size: 24px 16px null 32px,
+      )
+    );
   }
 }
+
 .wrapper:nth-child(2) {
-    background: var(--Style, #6862FD);;
+  background: var(--Style, #6862fd);
 }

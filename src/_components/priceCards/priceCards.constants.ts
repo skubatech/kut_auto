@@ -1,4 +1,11 @@
-export const cards = [
+export interface Cards {
+  title: string,
+  descrption: string,
+  text: string[]
+}
+
+
+export const cards: Cards[] = [
   {
     title: `Осмотр \n одного авто `,
     descrption:

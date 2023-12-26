@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import styles from './ourApproach.module.scss';
 import { Approach } from '../approach';
 import { DiagnosisDes } from '../diagnosisDes';
@@ -31,6 +31,32 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
     );
   }, []);
 
+  const [cnDetail, setCnDetail] = useState('porsheEffectNone');
+
+  const onMouseEnterHandler = (id) => {
+    if(id === 'двигатель') {
+      setCnDetail('porsheEngine');
+    }
+    if(id === 'коробка передач') {
+      setCnDetail('porsheGearbox');
+    }
+    if(id === 'кузов') {
+      setCnDetail('porsheBody2');
+    }
+    if(id === 'юр. чистота') {
+      setCnDetail('porsheTreaty');
+    }
+    if(id === 'впуск') {
+      setCnDetail(`porsheInlet3`);
+    }
+    if(id === 'подвеска') {
+      setCnDetail('porsheSuspension1');
+    }
+  };
+
+  const onMouseLeaveHandler = () => {
+    setCnDetail('porsheEffectNone');
+  };
   return (
     <div className={cn('container', styles.wrapper)} ref={ref}>
       <div className={styles.back}></div>
@@ -62,9 +88,10 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
           Гарантия качества и безопасности
         </span>
         <div className={styles.diagnosis}>
-          <DiagnosisDes values={diagnosisDesLeft} />
+          <DiagnosisDes values={diagnosisDesLeft} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}/>
           <img src='assets/icons/diagnosisCar.png' alt='Car' id='car' className={styles.porshe}/>
-          <DiagnosisDes values={diagnosisDesRight} />
+          <div className={styles[cnDetail]}></div>
+          <DiagnosisDes values={diagnosisDesRight} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}/>
         </div>
       </div>
       <div>

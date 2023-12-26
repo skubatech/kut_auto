@@ -40,22 +40,22 @@ export const ChooseLocation: FC<Props> = ({ open, onClose }) => {
         <ButtonCustom
           text='Москва'
           textTransform='none'
-          fontSize={24}
           fontWeight={500}
+          className={styles.buttonLoc}
           onClick={() => changeLocation('Москва')}
         />
         <ButtonCustom
           text='Нижний Новгород'
           textTransform='none'
-          fontSize={24}
           fontWeight={500}
+          className={styles.buttonLoc}
           onClick={() => changeLocation('Нижний Новгород')}
         />
         <ButtonCustom
           text='Минск'
           textTransform='none'
-          fontSize={24}
           fontWeight={500}
+          className={styles.buttonLoc}
           onClick={() => changeLocation('Минск')}
         />
       </DialogContent>

@@ -23,7 +23,11 @@ export const QuestionItem: FC<Props> = ({ question, answer }) => {
       aria-labelledby='nested-list-subheader'
       className={styles.wrapper}
       sx={{
-        padding: '18px 58px 18px 0px'
+        padding: {
+          sm: '10px 0',
+          md: '18px 10px 18px 0',
+          xl: '18px 24px 18px 0'
+        }
       }}
     >
       <ListItemButton onClick={handleClick} sx={{ padding: 0 }}>
