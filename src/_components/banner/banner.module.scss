@@ -47,7 +47,6 @@
     justify-content: space-between;
 
     .btn {
-      // margin-right: 30px;
       @include arrayProps((
         font-size: 14px 24px 32px 32px,
       ));

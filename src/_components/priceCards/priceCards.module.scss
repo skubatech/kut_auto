@@ -9,12 +9,6 @@
     margin-top: 45px;
     justify-content: space-between;
     white-space: nowrap;
-  transition: transform 0.3s;
-
-    @include arrayProps((
-    //   overflow: hidden visible,
-      
-    ));
-
+    transition: transform 0.3s;
 }
 

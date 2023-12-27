@@ -4,7 +4,6 @@ export interface Cards {
   text: string[]
 }
 
-
 export const cards: Cards[] = [
   {
     title: `Осмотр \n одного авто `,

@@ -14,18 +14,9 @@ export const Footer = () => {
           >
             mail@kut-auto.ru
           </a>
-          {/* <span className={styles.requisites}>ип "название"</span>
-          <span className={styles.requisites}>инн 621613161653</span>
-          <span className={styles.requisites}>огрн 532523563125631</span> */}
         </div>
         <div className={styles.social}>
           <SocialCarousel colored={false}/>
-          {/* <a
-            href="mailto:kut.auto.import@yandex.ru"
-            className={styles.email}
-          >
-            mail@kut-auto.ru
-          </a> */}
         </div>
       </div>
 
