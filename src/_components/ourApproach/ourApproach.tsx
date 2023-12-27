@@ -31,31 +31,31 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
     );
   }, []);
 
-  const [cnDetail, setCnDetail] = useState('porsheEffectNone');
+  const [cnDetail, setCnDetail] = useState<string[]>([]);
 
   const onMouseEnterHandler = (id) => {
     if(id === 'двигатель') {
-      setCnDetail('porsheEngine');
+      setCnDetail(['porsheEngine']);
     }
     if(id === 'коробка передач') {
-      setCnDetail('porsheGearbox');
+      setCnDetail(['porsheGearbox']);
     }
     if(id === 'кузов') {
-      setCnDetail('porsheBody2');
+      setCnDetail(['porsheBody1', 'porsheBody2', 'porsheBody3', 'porsheBody4', 'porsheBody5', 'porsheBody6']);
     }
     if(id === 'юр. чистота') {
-      setCnDetail('porsheTreaty');
+      setCnDetail(['porsheTreaty']);
     }
     if(id === 'впуск') {
-      setCnDetail(`porsheInlet3`);
+      setCnDetail([`porsheInlet1`, `porsheInlet2`, `porsheInlet3`]);
     }
     if(id === 'подвеска') {
-      setCnDetail('porsheSuspension1');
+      setCnDetail(['porsheSuspension1']);
     }
   };
 
   const onMouseLeaveHandler = () => {
-    setCnDetail('porsheEffectNone');
+    setCnDetail([]);
   };
   return (
     <div className={cn('container', styles.wrapper)} ref={ref}>
@@ -90,7 +90,11 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
         <div className={styles.diagnosis}>
           <DiagnosisDes values={diagnosisDesLeft} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}/>
           <img src='assets/icons/diagnosisCar.png' alt='Car' id='car' className={styles.porshe}/>
-          <div className={styles[cnDetail]}></div>
+          {
+            cnDetail.map(item => (
+              <div className={styles[item]} />
+            ))
+          }
           <DiagnosisDes values={diagnosisDesRight} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}/>
         </div>
       </div>
