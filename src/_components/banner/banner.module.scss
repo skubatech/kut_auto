@@ -15,7 +15,8 @@
 
   @include arrayProps((
     margin-top: 0 20px 32px 60px,
-    padding: '20px 8px' '35px 30px' 60px 50px
+    padding: '20px 8px' '35px 30px' 60px 50px,
+    max-width: 640px null 900px
   ));
 
   .title {
@@ -31,8 +32,8 @@
     text-transform: uppercase;
 
     @include arrayProps((
-      font-size: 24px null 48px 58px,
-      line-height: normal 68px
+      font-size: 24px 32px 48px 58px,
+      line-height: normal null 68px
     ));
   }
 

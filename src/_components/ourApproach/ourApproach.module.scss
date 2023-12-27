@@ -56,7 +56,7 @@
       text-transform: uppercase;
 
       @include arrayProps((
-        font-size: 36px null 42px 58px,
+        font-size: 36px null 58px,
       ));
     }
 
@@ -135,7 +135,12 @@
           margin-top: 30px 45px
         ));
 
+        .circle {
+          display: flex;
+        }
+
       .porshe {
+        // transition: all 0.3s ease-out;
         @include arrayProps((
           width: 136px 233px 290px 396px,
         ));
@@ -148,8 +153,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '66%',
-          left: '48%',
+          top: '59%' '66%' null '68%',
+          left: '43%' '46.3%' '47.2%' '47.4%' '48%',
         ));
       }
 
@@ -160,8 +165,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '33%',
-          left: '50%',
+          top: '22%' '29%' '31%' '33%',
+          left: '46%' '49%' '50%' '51%' '50%',
         ));
       }
 
@@ -172,8 +177,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '54%',
-          left: '48.2%',
+          top: '45%' '50%' '52%' '55%' '54%',
+          left: '43%' '46.4%' '47.3%' '47.3%' '48%',
         ));
       }
 
@@ -184,8 +189,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '10%',
-          left: '45%',
+          top: '0%' '5%' '7%' '8%' '10%',
+          left: '36%' '41%' '43%' '42%' '45%',
         ));
       }
 
@@ -196,8 +201,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '9%',
-          left: '52%',
+          top: '0%' '5%' '7%' '8%' '9%',
+          left: '49%' '51%' '52%' '53%' '52%',
         ));
       }
 
@@ -208,8 +213,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '73%',
-          left: '48.2%',
+          top: '63%' '68%' '73%',
+          left: '43.2%' '46.2%' '47.2%' null '48.2%',
         ));
       }
 
@@ -220,8 +225,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '10%',
-          left: '50.5%',
+          top: '0%' '5%' '7%' '8%' '10%',
+          left: '46.5%' '50.5%' '50.5%' '52.5%' '50.5%',
         ));
       }
 
@@ -232,8 +237,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '18%',
-          left: '48%',
+          top: '9%' '12%' '15%' '17%' '18%',
+          left: '43%' '46.2%' '47%' '47.3%' '48%',
         ));
       }
 
@@ -244,8 +249,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '22%',
-          left: '43%',
+          top: '14%' '22%' null null '22%',
+          left: '37%' '40%' '42%' '40%' '43%',
         ));
       }
 
@@ -256,8 +261,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '36%',
-          left: '42%',
+          top: '27%' '36%' '35%' '37%' '36%',
+          left: '35%' '38%' '40%' '39%' '42%',
         ));
       }
 
@@ -268,8 +273,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '48%',
-          left: '48%',
+          top: '40%' '46%' null '50%' '48%',
+          left: '43%' '46%' '47%' '47.3%' '48%',
         ));
       }
 
@@ -280,8 +285,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '66%',
-          left: '53%',
+          top: '58%' '63%' '62%' '66%',
+          left: '49%' '52%' '52.2%' '54%' '53%',
         ));
       }
 
@@ -292,8 +297,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '66%',
-          left: '53%',
+          top: '57%' '63%' null '66%',
+          left: '49%' '52%' null '54%' '53%',
         ));
       }
 
@@ -304,8 +309,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '66%',
-          left: '43.2%',
+          top: '57%' '63%' null '66%',
+          left: '37.2%' '40.2%' '42.2%' '41.2%' '43.2%',
         ));
       }
 
@@ -316,8 +321,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '20%',
-          left: '53%',
+          top: '11%' '17%' '18%' '20%',
+          left: '49%' '52%' '53%' '54%' '53%',
         ));
       }
 
@@ -328,8 +333,8 @@
         height: 55px;
 
         @include arrayProps((
-          top: '20%',
-          left: '43%',
+          top: '11%' '17%' '18%' '20%',
+          left:  '37%' '40%' '41%' null '43%',
         ));
       }
     }

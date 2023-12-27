@@ -26,7 +26,7 @@
       max-width: 163px;
 
       @include arrayProps((
-        max-width: 86px 163px,
+        max-width: 86px 163px 250px,
       ));
       transition: all 0.3s ease-out;
       background: linear-gradient(90deg, #19fb9b -6.33%, #6cc0e6 100%);
@@ -50,10 +50,9 @@
       display: flex;
       gap: 10px;
       flex-direction: column;
-      max-width: 163px;
 
       @include arrayProps((
-        max-width: 86px 163px,
+        max-width: 86px 163px 250px,
         gap: 3px 10px,
       ));
 
@@ -61,14 +60,14 @@
         @include text(10px, normal, 500, normal, var(--grey-text));
         text-transform: uppercase;
         @include arrayProps((
-          font-size: 4px 9px
+          font-size: 4px 9px 12px 14px
         ));
       }
     
       .text {
         @include text(9px, normal, 500, normal, var(--grey-text));
         @include arrayProps((
-          font-size: 4px 9px
+          font-size: 4px 9px 12px 14px
         ));
       }
     }

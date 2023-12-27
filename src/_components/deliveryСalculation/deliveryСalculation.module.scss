@@ -29,9 +29,17 @@
     display: flex;
     justify-content: space-between;
 
+    @include arrayProps((
+      font-size: 12px 16px 20px 22px
+    ));
+
     .title {
       @include text(22px, normal, 700, 27px);
       text-transform: uppercase;
+
+      @include arrayProps((
+        font-size: 12px 22px
+      ));
     }
 
     .btn {
@@ -40,49 +48,85 @@
       cursor: pointer;
 
       img {
-        height: 20px;
-        width: 20px;
+        @include arrayProps((
+          width: 12px 20px,
+          height: 12px 20px
+        ));
       }
     }
   }
   .title {
-    @include text(48px, normal, 700, normal);
+    @include text(36px, normal, 700, normal);
     text-transform: uppercase;
+
+    @include arrayProps((
+      font-size: 16px 28px null 32px 
+    ));
   }
 
   .price {
-    @include text(96px, normal, 700, normal);
-    margin-top: 44px;
+    @include text(64px, normal, 700, normal);
+    @include arrayProps((
+      font-size: 24px 48px 52px 58px,
+      margin-top: 8px 16px 0 18px
+    ));
   }
 
   .description {
-    @include text(24px, normal, 400, normal);
-    margin-top: 85px;
+    @include text(18px, normal, 400, normal);
+    width: 100%;
+
+    @include arrayProps((
+      margin-top: 12px 20px null 22px,
+      font-size: 12px 16px 18px
+    ));
 
     .textUpper {
       font-weight: 700;
       text-transform: uppercase;
       display: block;
       margin-bottom: 16px;
+      font-size: 21px;
+
+      @include arrayProps((
+        font-size: 12px 16px 21px
+      ));
     }
   }
 
   .totalWrap {
-    margin-top: 78px;
-    margin-bottom: 116px;
+    
+    @include arrayProps((
+      margin-top: 16px 20px null 24px,
+      margin-bottom: 16px 20px null 24px,
+    ));
 
     .totalTitle {
       @include text(24px, normal, 600, normal);
+
+      @include arrayProps((
+        font-size: 12px 18px 20px 24px
+      ));
     }
 
-    .totalListItem {
-      @include text(24px, normal, 400, normal);
+    .totalList {
+      @include arrayProps((
+        padding-left: 12px 40px
+      ));
+
+      .totalListItem {
+        @include text(18px, normal, 400, normal);
+  
+        @include arrayProps((
+          font-size: 12px 14px 16px 18px
+        ));
+      }
     }
   }
 
   .btn {
     @include arrayProps((
-      font-size: 24px null null 32px
+      font-size: 16px 20px null 24px 
     ));
   }
 }

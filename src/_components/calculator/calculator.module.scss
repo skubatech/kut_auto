@@ -23,7 +23,7 @@
     text-transform: uppercase;
 
     @include arrayProps((
-      font-size: 36px null null 58px,
+      font-size: 36px null 58px,
       max-width: '100%' null,
       line-height: 'normal' null null 68px
     ));

@@ -3,6 +3,7 @@ import styles from './manager.module.scss';
 import cn from 'classnames';
 import gsap from 'gsap';
 import { linksMinsk, linksMoscow, linksNovgorod } from './manager.constants';
+import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 
 export const Manager = () => {
   const [location, setLocation] = useState(localStorage.getItem('location'));
@@ -65,7 +66,8 @@ export const Manager = () => {
   }, [open]);
 
   return (
-    <div className={styles.wrapper}>
+    <ClickAwayListener onClickAway={() => setOpen(false)}>
+      <div className={styles.wrapper}>
       {!open && (
         <img
           src='assets/icons/managerIcon.svg'
@@ -118,5 +120,6 @@ export const Manager = () => {
         </div>
       )}
     </div>
+    </ClickAwayListener>
   );
 };

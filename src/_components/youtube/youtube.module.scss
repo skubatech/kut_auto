@@ -21,7 +21,7 @@
   .video {
     @include arrayProps((
       width: '100%',
-      height: 218px 400px 612px 812px
+      height: 218px 400px 512px 556px 812px
     ));
   }
 }

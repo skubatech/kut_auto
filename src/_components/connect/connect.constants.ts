@@ -44,7 +44,7 @@ export const connectItemsMinsk = [
   {
     imgSrc: 'assets/icons/connectTelegram.svg',
     imgAlt: 'Telegram',
-    url: 'https://t.me/kut_auto_minsk',
+    url: 'https://t.me/kutauto',
     text: 'Связаться с нами в Telegram',
   },
   {

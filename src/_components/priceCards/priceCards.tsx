@@ -15,6 +15,7 @@ export const PriceCards: FC<Props> = ({ scrollTo }) => {
   const [activeIndex, setActiveIndex] = useState(currentBreakpoints ? 1 : 0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = 0;
@@ -32,13 +33,16 @@ export const PriceCards: FC<Props> = ({ scrollTo }) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 10) {
-      return updateIndex(activeIndex + 1);
-    }
-
-    if (touchStart - touchEnd < 10) {
-      return updateIndex(activeIndex - 1);
+  const handleTouchEnd = (e) => {
+    console.log(e.target.type)
+    if (e.target.type === '') {
+      if (touchStart - touchEnd > 100) {
+        return updateIndex(activeIndex + 1);
+      }
+  
+      if (touchStart - touchEnd < 100) {
+        return updateIndex(activeIndex - 1);
+      }
     }
   };
 
@@ -50,7 +54,7 @@ export const PriceCards: FC<Props> = ({ scrollTo }) => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         style={{
-          transform: `translate(-${activeIndex * 100}%)`,
+          transform: currentBreakpoints ? `translate(-${activeIndex * 100}%)` : '',
         }}
       >
         {cards.map((item, i) => (

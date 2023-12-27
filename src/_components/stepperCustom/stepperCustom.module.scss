@@ -13,12 +13,12 @@
 
   @include arrayProps((
     font-size: 14px 16px 20px 24px,
-    padding-left: 15px 36px 64px 112px
+    padding-left: 15px 36px 56px 82px 112px
   ));
 }
 
 .titleBig {
   @include arrayProps((
-    padding-left: 12px 32px 60px 108px
+    padding-left: 12px 32px 54px 78px 108px
   ));
 }

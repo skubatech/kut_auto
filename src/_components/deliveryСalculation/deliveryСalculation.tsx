@@ -283,7 +283,10 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
         open={open}
         onClose={handleClose}
         sx={{
-          padding: '80px',
+          padding: {
+            sm: '16px',
+            md: '50px'
+          },
           maxWidth: '1146px',
           borderRadius: '30px',
           border: '4px solid #19FB9B',
@@ -317,7 +320,7 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
                 'in'
               )} под ключ со всем перечнем услуг:`}
             </span>
-            <ul>
+            <ul className={styles.totalList}>
               {changeArray().map((item) => {
                 return (
                   <li key={item} className={styles.totalListItem}>

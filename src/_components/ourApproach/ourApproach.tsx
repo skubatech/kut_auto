@@ -2,7 +2,6 @@ import React, { forwardRef, useEffect, useState } from 'react';
 import styles from './ourApproach.module.scss';
 import { Approach } from '../approach';
 import { DiagnosisDes } from '../diagnosisDes';
-import { Description } from '../description';
 import { StepperCustom } from '../stepperCustom';
 import { diagnosisDesLeft, diagnosisDesRight } from './ourApproach.constants';
 import cn from 'classnames';
@@ -10,6 +9,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
+  const [cnDetail, setCnDetail] = useState<string[]>([]);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     gsap.fromTo(
@@ -30,8 +30,21 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
       }
     );
   }, []);
+ 
+  useEffect(() => {
+    gsap.fromTo(
+      '#porshe',
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.7,
+      }
+    );
+  }, [cnDetail.length])
 
-  const [cnDetail, setCnDetail] = useState<string[]>([]);
+ 
 
   const onMouseEnterHandler = (id) => {
     if(id === 'двигатель') {
@@ -47,10 +60,10 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
       setCnDetail(['porsheTreaty']);
     }
     if(id === 'впуск') {
-      setCnDetail([`porsheInlet1`, `porsheInlet2`, `porsheInlet3`]);
+      setCnDetail(['porsheInlet1', 'porsheInlet2', 'porsheInlet3']);
     }
     if(id === 'подвеска') {
-      setCnDetail(['porsheSuspension1']);
+      setCnDetail(['porsheSuspension1', 'porsheSuspension2', 'porsheSuspension3', 'porsheSuspension4']);
     }
   };
 
@@ -58,7 +71,7 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
     setCnDetail([]);
   };
   return (
-    <div className={cn('container', styles.wrapper)} ref={ref}>
+    <div className={cn('container', styles.wrapper)}>
       <div className={styles.back}></div>
       <div className={styles.titleWrap}>
         <img
@@ -92,14 +105,14 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
           <img src='assets/icons/diagnosisCar.png' alt='Car' id='car' className={styles.porshe}/>
           {
             cnDetail.map(item => (
-              <div className={styles[item]} />
+              <div className={styles[item]} id='porshe'/>
             ))
           }
           <DiagnosisDes values={diagnosisDesRight} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}/>
         </div>
       </div>
       <div>
-        <h5 className={styles.whiteTitle}>перечень услуг</h5>
+        <h5 className={styles.whiteTitle} ref={ref}>перечень услуг</h5>
         <StepperCustom />
       </div>
     </div>

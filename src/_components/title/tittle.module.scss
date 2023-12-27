@@ -6,7 +6,7 @@
   overflow: hidden;
 
   @include arrayProps((
-    height: 430px 700px 800px 1000px,
+    height: 430px 555px 800px 1000px,
   ));
 
   .img {
@@ -15,10 +15,6 @@
     top: 0;
     mix-blend-mode: color-dodge;
     z-index: -1;
-
-  //   @include arrayProps((
-  //   height: 345px 557px 800px 1000px,
-  // ));
   }
 }
 

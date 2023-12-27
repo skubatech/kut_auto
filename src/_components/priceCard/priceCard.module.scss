@@ -17,7 +17,7 @@
   @include arrayProps(
     (
       max-width: '100%' 220px 285px 335px 444px,
-      padding: '4px' '16px 8px' '27px 14px' '26px 36px' '37px 50px',
+      padding: '32px 8px' null '27px 14px' '26px 36px' '37px 50px',
     )
   );
 
@@ -29,8 +29,8 @@
 
     @include arrayProps(
       (
-        font-size: 36px 21px 20px 30px 36px,
-        margin-bottom: 26px 16px 8px 10px,
+        font-size: 24px 21px 20px 30px 36px,
+        margin-bottom: 16px 16px 8px 10px,
       )
     );
   }
@@ -42,8 +42,8 @@
 
     @include arrayProps(
       (
-        font-size: 36px 24px null 36px 48px,
-        margin-bottom: 26px 0 8px 10px,
+        font-size: 32px 24px null 36px 48px,
+        margin-bottom: 4px 0 8px 10px,
       )
     );
   }
@@ -63,7 +63,7 @@
 
     @include arrayProps(
       (
-        padding-left: 37px 21px 14px 16px,
+        padding-left: 28px 21px 14px 16px,
       )
     );
 

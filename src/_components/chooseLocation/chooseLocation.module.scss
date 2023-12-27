@@ -4,6 +4,10 @@
   display: flex;
   gap: 30px;
 
+  @include arrayProps((
+    flex-direction: 'column' 'row'
+  ));
+
   .buttonLoc {
     @include arrayProps((
       font-size: 16px 20px 21px 24px,
@@ -17,13 +21,18 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--border-grey);
   padding-bottom: 30px;
+  align-items: center;
+
+  @include arrayProps((
+    padding-bottom: 20px 25px null 30px 
+  ));
 
   .title {
     @include text(48px, normal, 300, 19px);
     font-family: 'Epilogue', sans-serif;
 
     @include arrayProps((
-      font-size: 24px 32px null 48px 
+      font-size: 18px 32px null 48px 
     ));
   }
 
@@ -32,9 +41,15 @@
     outline: none;
     border: none;
     cursor: pointer;
-  }
 
-  @include arrayProps((
-    padding-bottom: 20px 25px null 30px 
-  ));
+    @include arrayProps((
+      padding: 0 'auto'
+    ));
+
+    img {
+      @include arrayProps((
+        width: 20px auto 
+      ));
+    }
+  }
 }

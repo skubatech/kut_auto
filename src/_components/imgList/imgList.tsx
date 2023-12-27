@@ -64,6 +64,7 @@ export const ImgList: FC = () => {
       variant='quilted'
       gap={0}
       cols={getColumnsCount()}
+      sx= {{ overflow: 'hidden' }}
       className={styles.list}
     >
       {getImageList().map((item, i) => (
@@ -73,7 +74,8 @@ export const ImgList: FC = () => {
           rows={item.rows || 1}
           onClick={() => handleClickOpen(item.title)}
           id={item.title}
-          sx={{ cursor: 'pointer', overflow: 'hidden' }}
+          sx={{ cursor: 'pointer' }}
+          className={styles.imageListItem}
         >
           <img
             {...srcset(item.img, 121, item.rows, item.cols)}
@@ -103,7 +105,11 @@ export const ImgList: FC = () => {
         open={open}
         onClose={handleClose}
         sx={{
-          padding: '50px 46px',
+          padding: 
+          {
+            sm: '20px',
+            md: '50px 46px' 
+          },
           maxWidth: '900px',
           width: '852px',
           overflow: 'hidden',

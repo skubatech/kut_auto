@@ -21,13 +21,19 @@ export const ChooseLocation: FC<Props> = ({ open, onClose }) => {
       open={open}
       onClose={onClose}
       sx={{
-        padding: '60px',
+        padding: {
+          sm: '24px',
+          md: '60px'
+        },
         maxWidth: '1019px',
         borderRadius: '30px',
         border: '2px solid #19FB9B',
         boxShadow: '0px 0px 50px 5px rgba(184, 184, 184, 0.25)',
         display: 'flex',
-        gap: '30px',
+        gap: {
+          sm: '12px',
+          md: '30px'
+        },
       }}
     >
       <div className={styles.titleWrap}>

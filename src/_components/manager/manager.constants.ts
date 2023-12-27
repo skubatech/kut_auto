@@ -14,7 +14,7 @@ export const linksNovgorod = {
 
 export const linksMinsk = {
     whats: 'https://wa.me/375259564276',
-    telegram: 'https://t.me/kut_auto_minsk',
+    telegram: 'https://t.me/kutauto',
     phoneLink: 'tel:+375-25-956-42-76', 
     phone: '+375 (25) 956-42-76', 
 }

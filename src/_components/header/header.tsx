@@ -72,6 +72,7 @@ export const Header: FC<Props> = ({ scrollTo }) => {
             className={styles.btn}
             onClick={() => scrollTo(3)}
           />
+          <SocialCarousel colored={false} className={cn(styles.social, styles.socialBurger)} />
         </ul>
         <img
           src={
