@@ -21,5 +21,11 @@
       @include text(20px, normal, 500, normal);
       text-transform: uppercase;
     }
+
+    .socialCarousel {
+      @include arrayProps((
+        display: flex,
+      ));
+    }
   }
 }

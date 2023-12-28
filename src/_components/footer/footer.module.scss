@@ -41,6 +41,13 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      @include arrayProps((
+        width: '100%' auto
+      ));
+
+      .socialCarousel {
+        display: flex
+      }
     }
   }
 

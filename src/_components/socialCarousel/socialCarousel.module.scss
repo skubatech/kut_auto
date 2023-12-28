@@ -5,6 +5,9 @@
   gap: 34px;
   
   @include arrayProps((
-    gap: 20px null 24px 34px  
+    display: flex none,
+    gap: 20px null 24px 34px,
+    justify-content: space-between,
+    width: '100%' auto 
   ));
 }

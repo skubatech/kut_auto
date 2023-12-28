@@ -45,6 +45,18 @@
         display: none flex
       ));
     }
+
+    .socialBurger {
+      @include arrayProps((
+        display: flex none,
+        justify-content: space-between,
+        width: '100%'
+      ));
+    
+      img {
+        width: 50px;
+      }
+    }
   }
 
   .low {
@@ -106,14 +118,3 @@
   }
 }
 
-.socialBurger {
-  @include arrayProps((
-    display: flex none,
-    justify-content: space-between,
-    width: '100%'
-  ));
-
-  img {
-    width: 50px;
-  }
-}

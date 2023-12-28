@@ -42,7 +42,7 @@ export const Connect = () => {
       </div>
       <div className={styles.social}>
         <span className={styles.title}>Социальные сети</span>
-        <SocialCarousel colored/>
+        <SocialCarousel colored className={styles.socialCarousel}/>
       </div>
     </div>
   );

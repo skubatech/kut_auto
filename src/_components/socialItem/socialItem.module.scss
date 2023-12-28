@@ -1,5 +1,13 @@
+@import 'src/theme/scss/helpers';
+
 .link {
     transition: all .3s ease-in-out;
+
+    img {
+        @include arrayProps((
+            width: 50px auto
+        ));
+    }
     &:hover {
         transform: scale(1.07);
     }
