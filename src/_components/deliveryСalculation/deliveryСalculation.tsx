@@ -285,7 +285,9 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
         sx={{
           padding: {
             sm: '16px',
-            md: '50px'
+            md: '50px',
+            lg: '40px',
+            xl: '40px',
           },
           maxWidth: '1146px',
           borderRadius: '30px',

@@ -60,15 +60,15 @@
     text-transform: uppercase;
 
     @include arrayProps((
-      font-size: 16px 28px null 32px 
+      font-size: 16px 28px null null 32px 
     ));
   }
 
   .price {
     @include text(64px, normal, 700, normal);
     @include arrayProps((
-      font-size: 24px 48px 52px 58px,
-      margin-top: 8px 16px 0 18px
+      font-size: 24px 48px 52px 48px 58px,
+      margin-top: 8px 16px 0 12px 18px
     ));
   }
 
@@ -97,8 +97,8 @@
   .totalWrap {
     
     @include arrayProps((
-      margin-top: 16px 20px null 24px,
-      margin-bottom: 16px 20px null 24px,
+      margin-top: 16px 20px null 16px 24px,
+      margin-bottom: 16px 20px null 16px 24px,
     ));
 
     .totalTitle {
