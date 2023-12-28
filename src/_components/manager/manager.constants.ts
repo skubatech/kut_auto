@@ -1,8 +1,8 @@
 export const linksMoscow = {
     whats: 'https://wa.me/79154243000',
-    telegram: 'https://web.telegram.org/k/',
-    phoneLink: 'tel:+7-961-111-05-01', 
-    phone: '+7 (961)-111-05-01', 
+    telegram: 'https://t.me/kut_auto_msk',
+    phoneLink: 'tel:+7-915-424-30-00', 
+    phone: '+7 (915)-424-30-00', 
 }
 
 export const linksNovgorod = {

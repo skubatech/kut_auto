@@ -14,8 +14,8 @@ export const connectItemsMoscow = [
   {
     imgSrc: 'assets/icons/connectPhone.svg',
     imgAlt: 'Phone',
-    url: 'tel:+7-961-111-05-01',
-    text: '+7 (961)-111-05-01',
+    url: 'tel:+7-915-424-30-00',
+    text: '+7 (915) 424-30-00',
   },
 ];
 
