@@ -41,7 +41,7 @@ export const App = () => {
     const hash = window.location.hash;
 
     if (hash) {
-      scrollTo(3);
+      scrollTo(2);
     }
   }, []);
 

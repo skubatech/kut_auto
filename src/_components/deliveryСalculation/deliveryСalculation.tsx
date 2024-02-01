@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, {FC, ForwardedRef, forwardRef, useEffect, useState} from 'react';
 import styles from './deliveryСalculation.module.scss';
 import { CustomSelect } from '../customSelect';
 import { CustomInput } from '../customInput';
@@ -13,7 +13,7 @@ interface Props {
   scrollTo: (num: number) => void;
 }
 
-export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
+export const DeliveryCalculation = forwardRef<HTMLDivElement, Props>(({ scrollTo }, ref) => {
   const [finalCarPrice, setFinalCarPrice] = useState(0);
   const [res, setRes] = useState(0);
   const [sbor, setSbor] = useState(0);
@@ -248,6 +248,7 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
 
   return (
     <>
+      <div className={styles.anchor} ref={ref}></div>
       <div className={styles.wrapper}>
         <CustomSelect
           id='age'
@@ -375,4 +376,4 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
       </DialogCustom>
     </>
   );
-};
+});

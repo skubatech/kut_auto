@@ -10,12 +10,11 @@ interface Props {
 
 export const Calculator = forwardRef<HTMLDivElement, Props>(({ scrollTo }, ref) => {
   return (
-    <div className={cn('container', styles.wrapper)} ref={ref}>
-        <a></a>
+    <div className={cn('container', styles.wrapper)}>
       <div className={styles.back}></div>
       <h4 className={styles.title}>сколько стоит привезти ваш автомобиль</h4>
       <div className={styles.calculatorWrap}>
-        <DeliveryCalculation scrollTo={scrollTo}/>
+        <DeliveryCalculation scrollTo={scrollTo} ref={ref}/>
         <CalculatorExample />
       </div>
     </div>
