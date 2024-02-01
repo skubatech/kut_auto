@@ -1,12 +1,12 @@
 @import 'src/theme/scss/helpers';
 
 .wrapper {
-    display: grid;
+    display: flex;
     position: relative;
 
     @include arrayProps((
         gap: 50px null 80px,
-        grid-template-columns: 'repeat(1, 1fr)' 'repeat(2, 1fr)' 
+        flex-direction: column row
     ));
 
     .back {

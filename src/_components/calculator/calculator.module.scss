@@ -31,11 +31,11 @@
 
   .calculatorWrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
 
     @include arrayProps((
       flex-direction: 'column-reverse' 'row',
-      gap: 30px 0
     ));
   }
 

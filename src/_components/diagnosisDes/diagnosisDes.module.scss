@@ -2,9 +2,12 @@
 
 .wrapper {
     display: flex;
-    flex-direction: column;
-    
+
+
   @include arrayProps((
-    gap: 10px 30px
+    gap: 10px 30px,
+          width: 100% auto,
+          flex-direction: row column,
+          justify-content: space-evenly normal
   ));
 }

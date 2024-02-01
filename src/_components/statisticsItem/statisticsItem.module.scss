@@ -18,6 +18,7 @@
     @include text(14px, normal, 500, normal);
 
     @include arrayProps((
+      text-align: center normal,
       font-size: 10px 12px null 14px
     ));
   }

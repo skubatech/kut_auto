@@ -2,12 +2,15 @@
 
 .wrapper {
     display: flex;
-    flex-direction: row;
+
     gap: 45px;
     cursor: pointer;
     
     @include arrayProps((
-      gap: 15px 25px 35px 45px
+      gap: 15px 25px 35px 45px,
+      flex-direction: column row,
+            align-items: center inherit,
+            text-align: center left
     ));
 
     img {
@@ -41,8 +44,8 @@
 
     img {
       @include arrayProps((
-        width: 14px 36px null 42px,
-        height: 14px 36px null 42px,
+        width: 44px 36px null 42px,
+        height: 44px 36px null 42px,
       ));
     }
 
@@ -60,14 +63,15 @@
         @include text(10px, normal, 500, normal, var(--grey-text));
         text-transform: uppercase;
         @include arrayProps((
-          font-size: 4px 9px 12px 14px
+          font-size: 10px 9px 12px 14px
         ));
       }
     
       .text {
         @include text(9px, normal, 500, normal, var(--grey-text));
         @include arrayProps((
-          font-size: 4px 9px 12px 14px
+          font-size: 4px 9px 12px 14px,
+                display: none block
         ));
       }
     }

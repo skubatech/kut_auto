@@ -1,11 +1,17 @@
 @import 'src/theme/scss/helpers';
 
 .wrapper {
+  video[poster]{
+    height:100%;
+    width:100%;
+  }
+
   .video {
+
     border-radius: 10px;
+    width: 100%;
 
     @include arrayProps((
-      width: '100%' null 416px 483px 625px,
       height: 260px null 332px 380px 427px
   ));
   }

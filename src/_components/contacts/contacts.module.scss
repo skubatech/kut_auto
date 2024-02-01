@@ -17,6 +17,11 @@
     ));
   }
 
+  .map {
+    width: 500px;
+    height: 500px;
+  }
+
   .contacts {
     display: flex;
     justify-content: space-between;
@@ -28,8 +33,12 @@
     ));
   }
 
+  iframe {
+    border: 1px solid transparent;
+  }
+
   .map {
-    border-radius: 50px;
+    border-radius: 25px;
     
     @include arrayProps((
       width: '100%' '50%' 434px 500px 700px,

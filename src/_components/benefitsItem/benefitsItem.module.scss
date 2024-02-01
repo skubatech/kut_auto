@@ -17,7 +17,7 @@
     @include text(32px, normal, 700, 120%);
     max-width: 489px;
     @include arrayProps((
-      font-size: 24px null 32px,
+      font-size: 24px 16px null 32px,
     ));
   }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {MutableRefObject, useEffect, useRef, useState} from 'react';
 import './App.module.scss';
 import { Header } from './_components/header';
 import { Benefits } from './_components/benefits';
@@ -13,23 +13,27 @@ import { Questions } from './_components/questions';
 import { Calculator } from './_components/calculator';
 import { Manager } from './_components/manager';
 import styles from './App.module.scss';
+import {useLocation} from "./App.helpers";
 
 export const App = () => {
-  const pageRef = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
+  const [pageRef, setState] = useState([useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)]);
+  const [f, setF] = useState(false);
+  useLocation();
 
-  useEffect(() => {
-    if (!localStorage.getItem('location')) {
-      localStorage.setItem('location', 'Москва');
-    }
-  }, []);
-
-  const handleClick = (ref) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  const handleClick = (ref: MutableRefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth', block: "start", inline: 'center' });
+    if(!f) setTimeout(() => {
+        ref.current?.scrollIntoView({ behavior: 'smooth', block: "start", inline: 'center' });
+    }, 400)
   };
 
-  const scrollTo = (num) => {
+    useEffect(() => {
+    }, [pageRef]);
+
+  const scrollTo = (num: number) => {
     if (num < pageRef.length) {
       handleClick(pageRef[num]);
+        setF(true);
     }
   };
 

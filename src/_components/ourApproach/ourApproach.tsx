@@ -10,25 +10,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
   const [cnDetail, setCnDetail] = useState<string[]>([]);
-  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
-    gsap.fromTo(
-      '#car',
-      {
-        opacity: 0.5,
-        y: '100%',
-      },
-      {
-        opacity: 1,
-        duration: 1,
-        delay: 1.5,
-        y: 0,
-        scrollTrigger: {
-          trigger: '#diagnosis',
-          start: 'top center'
-        },
-      }
-    );
+    onMouseEnterHandler('двигатель')
   }, []);
  
   useEffect(() => {
@@ -102,17 +86,19 @@ export const OurApproach = forwardRef<HTMLDivElement, object>((_, ref) => {
         </span>
         <div className={styles.diagnosis}>
           <DiagnosisDes values={diagnosisDesLeft} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}/>
-          <img src='assets/icons/diagnosisCar.png' alt='Car' id='car' className={styles.porshe}/>
-          {
-            cnDetail.map(item => (
-              <div className={styles[item]} id='porshe'/>
-            ))
-          }
+          <div style={{position: "relative"}}>
+            <img src='assets/icons/diagnosisCar.png' alt='Car' id='car' className={styles.porshe}/>
+            {
+              cnDetail.map(item => (
+                  <div className={styles[item]} id='porshe'/>
+              ))
+            }
+          </div>
           <DiagnosisDes values={diagnosisDesRight} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}/>
         </div>
       </div>
       <div>
-        <h5 className={styles.whiteTitle} ref={ref}>перечень услуг</h5>
+        <h5 className={styles.whiteTitle} ref={ref}>процесс работы</h5>
         <StepperCustom />
       </div>
     </div>

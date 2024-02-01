@@ -12,7 +12,7 @@ export const NavItem: FC<Props> = ({ text, scrollTo }) => {
     <div className={styles.outer}>
       <div className={cn(styles.back)}>
         <div className={styles.inner}>
-          <li onClick={scrollTo}>{text}</li>
+          <a onClick={scrollTo} >{text}</a>
         </div>
       </div>
     </div>

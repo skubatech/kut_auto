@@ -6,9 +6,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+iframe#webpack-dev-server-client-overlay{display:none!important}
+
 html,
 body {
   margin: 0;
+}
+
+.css-1igyjm1-MuiSelect-select-MuiInputBase-input-MuiInput-input.MuiSelect-select {
+  z-index: 1;
+  padding: 20px;
 }
 
 html {

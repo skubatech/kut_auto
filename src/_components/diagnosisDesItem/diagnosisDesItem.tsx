@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styles from './diagnosisDesItem.module.scss';
+import {Tooltip} from "@mui/material";
 
 interface Props {
   imgSrc: string;

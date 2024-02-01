@@ -4,6 +4,8 @@ import styles from './chooseLocation.module.scss';
 import { FC } from 'react';
 import { DialogContent } from '@mui/material';
 import { ButtonCustom } from '../button';
+import {redirect} from "react-router-dom";
+import {redirects} from "../../App.constants";
 
 interface Props {
   open: boolean;
@@ -13,6 +15,7 @@ interface Props {
 export const ChooseLocation: FC<Props> = ({ open, onClose }) => {
   const changeLocation = (loc: string) => {
     localStorage.setItem('location', loc);
+    window.location.href = redirects[loc]
     window.dispatchEvent(new Event('storage'));
     onClose();
   };

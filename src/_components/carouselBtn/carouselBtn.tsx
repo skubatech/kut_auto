@@ -18,10 +18,7 @@ export const CarouselBtn: FC<Props> = ({ items, active, onClick }) => {
           className={cn(styles.btnCarousel, {
             [styles.active]: active === i,
           })}
-          onClick={() => {
-            console.log(i)
-            onClick(i)
-          }}
+          onClick={() => onClick(i)}
         ></div>
       ))}
     </div>

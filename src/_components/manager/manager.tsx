@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import styles from './manager.module.scss';
 import cn from 'classnames';
 import gsap from 'gsap';
-import { linksMinsk, linksMoscow, linksNovgorod } from './manager.constants';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
+import {citiesLinks} from "./manager.constants";
 
 export const Manager = () => {
   const [location, setLocation] = useState(localStorage.getItem('location'));
   const [open, setOpen] = useState(false);
   const [visibleIcon, setVisibleIcon] = useState(false);
+  const [links, setLinks] = useState(citiesLinks['Москва'])
   
   const openBlock = () => {
     setOpen((prev) => !prev);
@@ -29,18 +30,9 @@ export const Manager = () => {
     window.removeEventListener('scroll', show);
   };
 
-  const getLinks = () => {
-    switch (location) {
-      case 'Москва':
-        return linksMoscow;
-      case 'Нижний Новгород':
-        return linksNovgorod;
-      case 'Минск':
-        return linksMinsk;
-      default:
-        return linksMoscow;
-    }
-  };
+  useEffect(() => {
+    setLinks(citiesLinks[location])
+  }, [location])
 
   useEffect(() => {
     window.addEventListener('storage', () => {
@@ -96,22 +88,22 @@ export const Manager = () => {
             </div>
             <div className={styles.linksWrap}>
               <a
-                href={getLinks().whats}
+                href={links.whats}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <img src='assets/icons/managerWhatsApp.svg' alt='Icon' className={styles.linkIcon}/>
               </a>
               <a
-                href={getLinks().telegram}
+                href={links.telegram}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 <img src='assets/icons/managerTelegram.svg' alt='Icon' className={styles.linkIcon} />
               </a>
             </div>
-            <a href={getLinks().phoneLink} className={styles.phone}>
-              {getLinks().phone}
+            <a href={links.phoneLink} className={styles.phone}>
+              {links.phone}
             </a>
           </div>
           <button className={styles.btn} onClick={openBlock}>

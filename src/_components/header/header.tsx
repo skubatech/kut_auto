@@ -28,7 +28,8 @@ export const Header: FC<Props> = ({ scrollTo }) => {
     window.addEventListener('storage', () => {
       setLocation(localStorage.getItem('location'));
     });
-  }, []);
+    console.log(location)
+  }, [localStorage.getItem('location')]);
 
   const openBurgerMenu = () => {
     setOpenBurger(true);

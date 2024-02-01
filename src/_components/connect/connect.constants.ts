@@ -2,7 +2,7 @@ export const connectItemsMoscow = [
   {
     imgSrc: 'assets/icons/connectTelegram.svg',
     imgAlt: 'Telegram',
-    url: 'https://web.telegram.org/k/',
+    url: 'https://t.me/kut_auto_msk ',
     text: 'Связаться с нами в Telegram',
   },
   {
@@ -29,14 +29,14 @@ export const connectItemsNovgorod = [
   {
     imgSrc: 'assets/icons/connectWhatsapp.svg',
     imgAlt: 'Whatsapp',
-    url: 'https://wa.me/79933981637',
+    url: 'https://wa.me/79611110501',
     text: 'Связаться с нами в WhatsApp',
   },
   {
     imgSrc: 'assets/icons/connectPhone.svg',
     imgAlt: 'Phone',
-    url: 'tel:+7-993-398-16-37',
-    text: '+7 (993) 398-16-37',
+    url: 'tel:+7-961-111-05-01',
+    text: '+7 (961) 111-05-01',
   },
 ];
 

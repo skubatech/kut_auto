@@ -6,6 +6,8 @@ import { CustomRadio } from '../customRadio';
 import { ButtonCustom } from '../button';
 import { calculatorSum, values } from './deliveryCalculation.constants';
 import { DialogCustom } from '../dialogCustom';
+import {CustomCheckBox} from "../customCheckbox";
+import {Tooltip} from "@mui/material";
 
 interface Props {
   scrollTo: (num: number) => void;
@@ -47,7 +49,7 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
 
   function customCalculations(res, capacity) {
     let fullCustom;
-    if (parseInt(form.age, 10) < 3) {
+    if (parseInt(form.age) < 3) {
       fullCustom = res;
     } else {
       if (capacity <= 2500) {
@@ -56,29 +58,39 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
         fullCustom = Number(res) + 1800;
       }
     }
-    fullCarPrice(fullCustom, parseInt(form.price, 10));
+    console.log(fullCustom, form.price)
+    fullCarPrice(fullCustom, parseInt(form.price))
+
   }
 
   function checkFunc(age, price, capacity, engine) {
     if (engine === 'Электро') {
-      formula(0, 0);
+      if(form.sellLessThanThreeYears === 'true') {
+        const a = (price * 15) / 100;
+        setRes(a)
+        customCalculations(a, capacity);
+        return a;
+      }
+      else formula(0, 0);
     } else {
       naturalPerson(age, price, capacity);
     }
   }
 
   function formula(cap, euro) {
-    setRes((cap * euro) / 2);
-    customCalculations(res, cap);
+    const temp = (cap * euro) / 2;
+    setRes(temp);
+    customCalculations(temp, cap);
 
-    return res;
+    return temp;
   }
 
   function naturalPerson(age, price, capacity) {
     if (age < 3) {
-      setRes(price * 0.4);
-      customCalculations(res, capacity);
-      return res;
+      const pr = price * 0.4;
+      setRes(pr);
+      customCalculations(pr, capacity);
+      return pr;
     } else if (age >= 3 && age <= 5) {
       if (capacity <= 1000) {
         formula(capacity, 1.5);
@@ -128,6 +140,7 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
     nds: 'Только брутто',
     engine: 'Бензин/дизель',
     volumeEngine: '',
+    sellLessThanThreeYears: 'false',
   });
   const [error, setError] = useState(false);
 
@@ -135,11 +148,9 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
     if (
       form.age !== '' &&
       form.price !== '' &&
-      form.volumeEngine !== '' &&
-      form.age !== ''
+      form.engine === 'Электро' ? true : form.volumeEngine !== ''
     ) {
       setError(false);
-      console.log(form);
       checkFunc(form.age, form.price, form.volumeEngine, form.engine);
       utilSbor(form.age, form.engine);
       setOpen(true);
@@ -201,6 +212,14 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
   };
 
   const onChange = (fieldId: string, value: string) => {
+    if(value === 'Электро') {
+      setForm({
+        ...form,
+        [fieldId]: value,
+      });
+      return
+    }
+    console.log(fieldId,value, form)
     setForm({
       ...form,
       [fieldId]: value,
@@ -209,7 +228,7 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
 
   const changeArray = () => {
     const newCalculatorSum = calculatorSum.map((item, i, arr) => {
-      if (i === arr.length - 2) {
+      if (i === arr.length - 1) {
         item = `${item} ${changeEndingCity('to')}.`;
       }
       return item;
@@ -262,14 +281,24 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
           value={form.engine}
           onChange={onChange}
         />
-        <CustomInput
-          id='volumeEngine'
-          value={form.volumeEngine}
-          title='Объем двигателя'
-          placeholder='См 3'
-          error={form.volumeEngine === '' && error}
-          onChnage={onChange}
-        />
+        {form.engine !== 'Электро' &&
+            <CustomInput
+              id='volumeEngine'
+              value={form.volumeEngine}
+              title='Объем двигателя'
+              placeholder='См 3'
+              error={form.volumeEngine === '' && error}
+              onChnage={onChange}
+        />}
+        {(form.engine === 'Электро' && location==='Минск') &&
+            <CustomCheckBox
+                title='Тип двигателя'
+                labelLeft='Продажа до 3-ех лет'
+                id='sellLessThanThreeYears'
+                value={form.sellLessThanThreeYears}
+                onChange={onChange}
+            />}
+
         <ButtonCustom
           text='рассчитать'
           textTransform='uppercase'
@@ -296,8 +325,7 @@ export const DeliveryCalculation: FC<Props> = ({ scrollTo }) => {
         }}
       >
         <div className={styles.dialogWrap}>
-          <div className={styles.titleWrap}>
-            <div />
+          <div className={styles.titleWrap}><div/>
             <span className={styles.title}>стоимость авто под ключ в</span>
             <button className={styles.btn} onClick={handleClose}>
               <img src='assets/icons/close.svg' alt='Icon' />

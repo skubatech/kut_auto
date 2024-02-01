@@ -2,8 +2,7 @@
 
 .wrapper {
   @include arrayProps((
-    padding-left: 24px 50px 80px 120px,
-    padding-right: 24px 50px 80px 120px,
+     padding: '40px 24px' '40px 50px' '40px 80px' '30px 120px',
   ));
 
   .top {

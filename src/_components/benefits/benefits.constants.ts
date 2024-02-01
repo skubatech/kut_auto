@@ -4,15 +4,11 @@ export const benefits = [
     icon: 'assets/icons/document.svg',
   },
   {
-    title: 'Экономия от 10 до 40%',
+    title: 'Предоплата от 10%',
     icon: 'assets/icons/star.svg',
   },
   {
     title: 'Срок доставки от 7 дней ',
     icon: 'assets/icons/headphones.svg',
-  },
-  {
-    title: 'Предоплата от 10%',
-    icon: 'assets/icons/star.svg',
   },
 ];

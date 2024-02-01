@@ -1,0 +1,38 @@
+@import 'src/theme/scss/helpers';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    @include text(42px, normal, 700, normal);
+
+    @include arrayProps((
+      font-size: 24px null 42px
+    ));
+  }
+
+  .formWrapper {
+    .radioGroup {
+      display: flex;
+      flex-direction: row;
+      gap: 10%;
+    }
+    .label {
+      display: flex;
+      align-items: center;
+      span {
+        @include arrayProps((
+          font-size: 14px 16px null 28px
+        ));
+      }
+    }
+      .radio {
+        img {
+          @include arrayProps((
+            width: 15px null 16px 24px
+          ));
+        }
+      }
+  }
+}

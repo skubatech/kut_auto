@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, {FC, useRef, useState} from 'react';
 import styles from './customSelect.module.scss';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -29,6 +29,7 @@ export const CustomSelect: FC<Props> = ({
   onChange,
 }) => {
   const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null)
 
   const handleClose = () => {
     setOpen(false);
@@ -44,9 +45,12 @@ export const CustomSelect: FC<Props> = ({
       <FormControl variant='standard' fullWidth error={error}>
         <InputLabel
           id={`${id}-label`}
+          onClick={handleOpen}
+          onBlur={handleClose}
           sx={{
-            paddingTop: '19px',
-            paddingLeft: '29px',
+            marginTop: '19px',
+            marginLeft: '29px',
+            zIndex: 2,
           }}
         >
           {title}
@@ -59,22 +63,22 @@ export const CustomSelect: FC<Props> = ({
             onChange(id, event.target.value);
           }}
           label={title}
-          open={open}
-          onClose={handleClose}
           onOpen={handleOpen}
+          onClose={handleClose}
+          open={open}
           IconComponent={() => (
             <img
               src='assets/icons/arrowUp.svg'
               alt='Arrow icon'
-              style={{ transform: open ? '' : 'rotate(180deg)' }}
+              style={{ transform: open ? '' : 'rotate(180deg)', position: "absolute", right: 16, zIndex: -1 }}
             />
           )}
           sx={{
-            paddingRight: '16px',
-            paddingLeft: '29px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            position: 'relative',
+            zIndex: 1,
           }}
         >
           {options.map((item) => (
