@@ -1,7 +1,9 @@
+const hash = window.location.hash;
+
 export const redirects = {
-    "Москва": '/',
-    'Минск': '/minsk',
-    'Нижний Новгород': '/nn'
+    "Москва": hash ? '/#calculator' : '/',
+    'Минск': hash ? '/minsk#calculator' :'/minsk',
+    'Нижний Новгород': hash ? '/nn#calculator' : '/nn'
 }
 
 export const redirectsR = {

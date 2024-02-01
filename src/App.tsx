@@ -37,6 +37,14 @@ export const App = () => {
     }
   };
 
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      scrollTo(3);
+    }
+  }, []);
+
   return (
     <div className={styles.main}>
       <Header scrollTo={scrollTo}/>
