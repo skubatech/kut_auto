@@ -21,9 +21,9 @@ export const citiesLinks: { [key in cities]: Links }= {
         phone: '+7 (961) 111-05-01',
     },
     'Минск': {
-        whats: 'https://wa.me/375259564276',
+        whats: 'https://wa.me/375255460976',
         telegram: 'https://t.me/kutauto',
-        phoneLink: 'tel:+375-25-956-42-76',
-        phone: '+375 (25) 956-42-76',
+        phoneLink: 'tel:+375-25-546-09-76',
+        phone: '+375 (25) 546-09-76',
     }
 }
