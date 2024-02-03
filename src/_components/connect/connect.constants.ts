@@ -56,8 +56,8 @@ export const connectItemsMinsk = [
   {
     imgSrc: 'assets/icons/connectPhone.svg',
     imgAlt: 'Phone',
-    url: 'tel:+375-25-956-42-76',
-    text: '+375 (25) 956-42-76',
+    url: 'tel:+375-25-546-09-76',
+    text: '+375 (25) 546-09-76',
   },
 ];
 

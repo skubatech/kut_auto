@@ -19,7 +19,7 @@ export const Footer = () => {
           <SocialCarousel colored={false} className={styles.socialCarousel}/>
         </div>
       </div>
-      <span className={styles.reserved}>2023 KUT. All right reserved.</span>
+      <span className={styles.reserved}>2024 KUT. All right reserved.</span>
     </footer>
   );
 };
