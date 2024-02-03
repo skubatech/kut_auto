@@ -50,7 +50,7 @@ export const connectItemsMinsk = [
   {
     imgSrc: 'assets/icons/connectWhatsapp.svg',
     imgAlt: 'Whatsapp',
-    url: 'https://wa.me/375259564276',
+    url: 'https://wa.me/375255460976',
     text: 'Связаться с нами в WhatsApp',
   },
   {
