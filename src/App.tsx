@@ -53,7 +53,8 @@ export const App = () => {
       <Youtube />
       <Cases ref={pageRef[0]}/>
       <OurApproach ref={pageRef[1]} />
-      <Calculator ref={pageRef[2]} scrollTo={scrollTo}/>
+      <Calculator ref={pageRef[2]} scrollTo={scrollTo} type={'europe'}/>
+      <Calculator scrollTo={scrollTo} type='korea'/>
       <Price scrollTo={scrollTo}/>
       <Contacts ref={pageRef[3]}/>  
       <Questions ref={pageRef[4]} />

@@ -250,6 +250,7 @@ export const DeliveryCalculation = forwardRef<HTMLDivElement, Props>(({ scrollTo
     <>
       <div className={styles.anchor} ref={ref}></div>
       <div className={styles.wrapper}>
+      <span className={styles.title}>Расчет по параметрам</span>
         <CustomSelect
           id='age'
           title='Возраст автомобиля'

@@ -1,16 +1,34 @@
 @import 'src/theme/scss/helpers';
 
 .wrapper {
-  video[poster]{
-    width:100%;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
-  .video {
-    border-radius: 10px;
-    width: 100%;
+  .title {
+    @include text(42px, normal, 700, normal);
 
     @include arrayProps((
-      height: 260px null 332px 380px 427px
-  ));
+            font-size: 24px null 42px
+    ));
   }
+
+  .description {
+    @include text(16px, normal, 300, 19px);
+  }
+
+  .btn {
+    @include arrayProps((
+            font-size: 24px null null 32px
+    ));
+  }
+
+  //.video {
+  //  border-radius: 10px;
+  //  width: 100%;
+  //
+  //  @include arrayProps((
+  //    height: 260px null 332px 380px 427px
+  //));
+  //}
 }

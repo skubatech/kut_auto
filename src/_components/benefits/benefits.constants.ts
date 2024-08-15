@@ -1,6 +1,6 @@
 export const benefits = [
   {
-    title: 'Официальный автокредит на автомобили под заказ из Европы',
+    title: 'Официальный договор на доставку автомобиля',
     icon: 'assets/icons/document.svg',
   },
   {

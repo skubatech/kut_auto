@@ -3,7 +3,7 @@ import styles from './customInput.module.scss';
 import { TextField } from '@mui/material';
 
 interface Props {
-  title: string;
+  title?: string;
   placeholder: string;
   id: string;
   value: string;

@@ -22,7 +22,8 @@ export const Banner: FC<Props> = ({ scrollTo }) => {
       <h3 className={styles.title}>
         качественные
         <br /> автомобили из
-        <br /> европы под заказ
+        <br /> европы и кореи
+        <br />  под заказ
       </h3>
       <span className={styles.description}>
         Наша компания предоставляет полный комплекс услуг, связанных с

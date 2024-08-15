@@ -8,6 +8,14 @@
   flex-direction: column;
   gap: 45px;
 
+  .title {
+    @include text(42px, normal, 700, normal);
+
+    @include arrayProps((
+            font-size: 24px null 42px
+    ));
+  }
+
   @include arrayProps((
     max-width: '100%' '50%' null auto,
     gap: 15px 40px null 45px

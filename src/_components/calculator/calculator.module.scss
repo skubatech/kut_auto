@@ -27,6 +27,22 @@
       max-width: '100%' null,
       line-height: 'normal' null null 68px
     ));
+
+    .europe {
+      display: inline;
+      background-color: yellow;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .korea {
+      display: inline;
+      background-color: red;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .calculatorWrap {
