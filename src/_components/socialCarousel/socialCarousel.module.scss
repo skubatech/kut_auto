@@ -7,7 +7,7 @@
   @include arrayProps((
     display: flex none,
     gap: 20px null 24px 34px,
-    justify-content: space-between flex-start,
-    width: '100%' auto 
+    width: '100%' auto,
+    justify-content: 'space-between' 'flex-end',
   ));
 }

@@ -50,19 +50,34 @@ export const Header: FC<Props> = ({ scrollTo }) => {
   return (
     <header className={cn('container', styles.wrapper)}>
       <section className={styles.top}>
-        <span className={styles.location} onClick={handleClickOpen}>
-          {location ?? 'Москва'}
-        </span>
-        <img src='assets/icons/logo.svg' alt='Logo' loading='lazy' className={ styles.logo } />
-        <SocialCarousel colored={false} className={styles.social} />
+        <span className={styles.span}></span>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <img src="assets/icons/logo.svg" alt="Logo" loading="lazy" className={styles.logo}/>
+
+        </div>
+        <SocialCarousel colored={false} className={styles.social}/>
+        <img
+            src={
+              openBurger
+                  ? 'assets/icons/closeBurger.png'
+                  : 'assets/icons/burger.png'
+            }
+            alt="menu icon"
+            className={styles.burger}
+            onClick={
+              openBurger
+                  ? closeBurgerMenu
+                  : openBurgerMenu
+            }
+        />
       </section>
       <nav className={styles.low}>
-        <ul className={cn(styles.nav, { [styles.burgerNav]: openBurger })} id="burger">
-          <NavItem text='Кейсы' scrollTo={() => scrollTo(0)} />
-          <NavItem text='Услуги' scrollTo={() => scrollTo(1)} />
+        <ul className={cn(styles.nav, {[styles.burgerNav]: openBurger})} id="burger">
+          <NavItem text="Кейсы" scrollTo={() => scrollTo(0)}/>
+          <NavItem text="Услуги" scrollTo={() => scrollTo(1)}/>
           <NavItem
-            text='Калькулятор'
-            scrollTo={() => scrollTo(2)}
+              text="Калькулятор"
+              scrollTo={() => scrollTo(2)}
           />
           <NavItem text='Вопросы' scrollTo={() => scrollTo(4)} />
           <ButtonCustom
@@ -75,22 +90,8 @@ export const Header: FC<Props> = ({ scrollTo }) => {
           />
           <SocialCarousel colored={false} className={cn(styles.social, styles.socialBurger)} />
         </ul>
-        <img
-          src={
-            openBurger
-              ? 'assets/icons/closeBurger.png'
-              : 'assets/icons/burger.png'
-            }
-            alt='menu icon'
-            className={styles.burger}
-            onClick={
-              openBurger
-                ? closeBurgerMenu
-                : openBurgerMenu
-            }
-        />
       </nav>
-      <ChooseLocation open={open} onClose={handleClose}/>
+      {/*<ChooseLocation open={open} onClose={handleClose}/>*/}
     </header>
   );
 };

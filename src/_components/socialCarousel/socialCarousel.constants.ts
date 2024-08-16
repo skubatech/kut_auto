@@ -14,11 +14,6 @@ export const social = [
     imgSrc: 'assets/icons/instagram.svg',
     imgAlt: 'Instagram',
   },
-  {
-    href: 'https://vk.com/kut_auto',
-    imgSrc: 'assets/icons/vk.svg',
-    imgAlt: 'VK',
-  },
 ];
 
 export const socialColor = [
@@ -36,11 +31,6 @@ export const socialColor = [
     href: 'https://www.youtube.com/@kut_auto',
     imgSrc: 'assets/icons/youtubeColor.svg',
     imgAlt: 'Youtube',
-  },
-  {
-    href: 'https://vk.com/kut_auto',
-    imgSrc: 'assets/icons/vkColor.svg',
-    imgAlt: 'VK',
   },
 ];
 

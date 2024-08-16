@@ -62,7 +62,7 @@ export const Manager = () => {
       <div className={styles.wrapper}>
       {!open && (
         <img
-          src='assets/icons/managerIcon.svg'
+          src='assets/icons/menedger.jpg'
           alt='Manager'
           className={cn({
             [styles.iconDefault]: visibleIcon,
@@ -76,12 +76,12 @@ export const Manager = () => {
         <div className={styles.blockWrap} id='block'>
           <div className={styles.block} id='block'>
             <img
-              src='assets/icons/managerIcon.svg'
+              src='assets/icons/menedger.jpg'
               alt='Manager'
               className={styles.icon}
             />
             <div className={styles.titleWrap}>
-              <span className={styles.title}>Денис Дуенин</span>
+              <span className={styles.title}>Менеджер КУТ</span>
               <span className={styles.description}>
                 Позвоните эксперту для консультации
               </span>

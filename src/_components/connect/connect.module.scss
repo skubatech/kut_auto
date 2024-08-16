@@ -25,6 +25,7 @@
     .socialCarousel {
       @include arrayProps((
         display: flex,
+              justify-content: flex-start,
       ));
     }
   }

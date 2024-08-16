@@ -10,7 +10,7 @@ type cities = 'Москва' | 'Нижний Новгород' | 'Минск'
 export const citiesLinks: { [key in cities]: Links }= {
     'Москва': {
         whats: 'https://wa.me/79154243000',
-        telegram: 'https://t.me/kut_auto_msk',
+        telegram: 'https://t.me/kut_manager',
         phoneLink: 'tel:+7-915-424-30-00',
         phone: '+7 (915)-424-30-00',
     },

@@ -250,7 +250,7 @@ export const DeliveryCalculation = forwardRef<HTMLDivElement, Props>(({ scrollTo
     <>
       <div className={styles.anchor} ref={ref}></div>
       <div className={styles.wrapper}>
-      <span className={styles.title}>Расчет по параметрам</span>
+      {/*<span className={styles.title}>Расчет по параметрам</span>*/}
         <CustomSelect
           id='age'
           title='Возраст автомобиля'
@@ -328,18 +328,18 @@ export const DeliveryCalculation = forwardRef<HTMLDivElement, Props>(({ scrollTo
       >
         <div className={styles.dialogWrap}>
           <div className={styles.titleWrap}><div/>
-            <span className={styles.title}>стоимость авто под ключ в</span>
+            <span className={styles.title}>стоимость авто под ключ</span>
             <button className={styles.btn} onClick={handleClose}>
               <img src='assets/icons/close.svg' alt='Icon' />
             </button>
           </div>
-          <h5 className={styles.title}>{changeEndingCity('in')}</h5>
           <span className={styles.price}>{finalCarPrice.toFixed(2)} €</span>
           <div className={styles.description}>
             <span className={styles.textUpper}>
-              {`На выходе вы получаете готовый автомобиль в ${changeEndingCity(
-                'in'
-              )}.`}
+              На выходе вы получаете готовый автомобиль в Москве.
+              {/*{`На выходе вы получаете готовый автомобиль в ${changeEndingCity(*/}
+              {/*  'in'*/}
+              {/*)}.`}*/}
             </span>
             <span>
               {`Вам остается его поставить на учет в ${changeCountry()} или везти в другую
@@ -353,14 +353,22 @@ export const DeliveryCalculation = forwardRef<HTMLDivElement, Props>(({ scrollTo
               )} под ключ со всем перечнем услуг:`}
             </span>
             <ul className={styles.totalList}>
-              {changeArray().map((item) => {
-                return (
-                  <li key={item} className={styles.totalListItem}>
-                    {item}
-                  </li>
-                );
-              })}
+              {/*{changeArray().map((item) => {*/}
+              {/*  return (*/}
+              {/*    <li key={item} className={styles.totalListItem}>*/}
+              {/*      {item}*/}
+              {/*    </li>*/}
+              {/*  );*/}
+              {/*})}*/}
+              {
+                calculatorSum.map((item) => (
+                    <li key={item} className={styles.totalListItem}>
+                      {item}
+                    </li>
+                ))
+              }
             </ul>
+            <span className={styles.starText}>* Расчет стоимости автомобиля под ключ является приблизительным</span>
           </div>
           <ButtonCustom
             text='связаться с нами'

@@ -2,7 +2,7 @@ export const connectItemsMoscow = [
   {
     imgSrc: 'assets/icons/connectTelegram.svg',
     imgAlt: 'Telegram',
-    url: 'https://t.me/kut_auto_msk ',
+    url: 'https://t.me/kut_manager',
     text: 'Связаться с нами в Telegram',
   },
   {
